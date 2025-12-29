@@ -1,0 +1,41 @@
+[project]
+domains = []
+name = "nikcub-me"
+
+[crawler]
+max_pages = 500
+delay_ms = 100
+timeout_ms = 60000
+user_agent = ""
+follow_redirects = true
+concurrency = 5
+per_host_concurrency = 5
+per_host_delay_ms = 200
+include = []
+exclude = ["/fb-table.html", "/reports/nikcub.me-report.html"]
+allow_query_params = []
+drop_query_prefixes = ["utm_", "gclid", "fbclid"]
+respect_robots = true
+breadth_first = true
+max_prefix_budget = 0.25
+
+[rules]
+enable = ["*"]
+disable = [
+  "security/leaked-secrets",
+  "links/broken-links",
+  "perf/ttfb",
+  "crawl/schema-noindex-conflict",
+  "content/meta-in-body",
+]
+
+[external_links]
+enabled = true
+cache_ttl_days = 7
+timeout_ms = 10000
+concurrency = 5
+
+[output]
+format = "console"
+
+[rule_options]
