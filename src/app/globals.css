@@ -22,7 +22,7 @@
   --secondary: oklch(0.94 0.01 85);
   --secondary-foreground: oklch(0.25 0.01 45);
   --muted: oklch(0.92 0.01 85);
-  --muted-foreground: oklch(0.45 0.02 45);
+  --muted-foreground: oklch(0.37 0.02 45);
   --accent: oklch(0.55 0.12 35);
   --accent-foreground: oklch(0.98 0.005 85);
   /* New highlight color - a rich violet/purple */
