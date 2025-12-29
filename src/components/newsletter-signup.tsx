@@ -61,7 +61,9 @@ export function NewsletterSignup({
               disabled={status === "loading"}
               className="h-11 rounded-sm bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90 disabled:opacity-50"
             >
-              {status === "loading" ? "Subscribing..." : "Subscribe"}
+              {status === "loading"
+                ? "Subscribing..."
+                : "Subscribe to newsletter"}
             </button>
           </form>
         )}
@@ -114,7 +116,9 @@ export function NewsletterSignup({
               disabled={status === "loading"}
               className="h-10 rounded-sm bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90 disabled:opacity-50"
             >
-              {status === "loading" ? "Subscribing..." : "Subscribe"}
+              {status === "loading"
+                ? "Subscribing..."
+                : "Subscribe to newsletter"}
             </button>
           </form>
         )}

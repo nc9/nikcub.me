@@ -92,7 +92,7 @@ export function ArticleLayout({ post, children }: ArticleLayoutProps) {
             href="/subscribe"
             className="text-highlight underline underline-offset-2 hover:text-highlight/80"
           >
-            subscribe
+            subscribe to the newsletter
           </Link>{" "}
           to get new posts.
         </p>
