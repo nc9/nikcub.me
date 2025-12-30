@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
@@ -7,21 +9,34 @@ import { SiteHeader } from "@/components/site-header";
 import { getAllPosts } from "@/lib/mdx";
 import { generatePageMetadata } from "@/lib/metadata";
 
-export const metadata = generatePageMetadata({
-  title: "Articles",
-  description: "Long-form writing on security, privacy, and technology",
-  path: "/posts",
-});
-
 const POSTS_PER_PAGE = 10;
 
 interface PostsPageProps {
   searchParams: Promise<{ page?: string }>;
 }
 
+export async function generateMetadata({
+  searchParams,
+}: PostsPageProps): Promise<Metadata> {
+  const params = await searchParams;
+  const page = Number(params.page) || 1;
+  const suffix = page > 1 ? ` - Page ${page}` : "";
+
+  return generatePageMetadata({
+    title: `Articles${suffix}`,
+    description: `Long-form writing on security, privacy, and technology${suffix}`,
+    path: page > 1 ? `/posts?page=${page}` : "/posts",
+  });
+}
+
 export default async function PostsPage({ searchParams }: PostsPageProps) {
   const params = await searchParams;
-  const currentPage = Number(params.page) || 1;
+  const rawPage = Number(params.page) || 1;
+  if (params.page === "1") {
+    const { redirect } = await import("next/navigation");
+    redirect("/posts");
+  }
+  const currentPage = rawPage;
 
   const allPosts = getAllPosts();
   const articles = allPosts.filter((p) => p.type === "article");
@@ -64,18 +79,20 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
                 {currentPage > 1 && (
                   <Link
                     href={`/posts?page=${currentPage - 1}`}
+                    aria-label={`Previous page, page ${currentPage - 1}`}
                     className="inline-flex items-center gap-1 rounded-md border border-border px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                   >
                     <ChevronLeft className="h-4 w-4" />
-                    Previous
+                    Previous page
                   </Link>
                 )}
                 {currentPage < totalPages && (
                   <Link
                     href={`/posts?page=${currentPage + 1}`}
+                    aria-label={`Next page, page ${currentPage + 1}`}
                     className="inline-flex items-center gap-1 rounded-md border border-border px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                   >
-                    Next
+                    Next page
                     <ChevronRight className="h-4 w-4" />
                   </Link>
                 )}
