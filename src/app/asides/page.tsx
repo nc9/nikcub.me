@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
@@ -7,16 +9,24 @@ import { SiteHeader } from "@/components/site-header";
 import { getAllPosts } from "@/lib/mdx";
 import { generatePageMetadata } from "@/lib/metadata";
 
-export const metadata = generatePageMetadata({
-  title: "Brief Notes & Asides",
-  description: "Short observations on security, technology, and current events",
-  path: "/asides",
-});
-
 const ASIDES_PER_PAGE = 10;
 
 interface AsidesPageProps {
   searchParams: Promise<{ page?: string }>;
+}
+
+export async function generateMetadata({
+  searchParams,
+}: AsidesPageProps): Promise<Metadata> {
+  const params = await searchParams;
+  const page = Number(params.page) || 1;
+  const suffix = page > 1 ? ` - Page ${page}` : "";
+
+  return generatePageMetadata({
+    title: `Brief Notes & Asides${suffix}`,
+    description: `Short observations on security, technology, and current events${suffix}`,
+    path: page > 1 ? `/asides?page=${page}` : "/asides",
+  });
 }
 
 export default async function AsidesPage({ searchParams }: AsidesPageProps) {
@@ -64,18 +74,20 @@ export default async function AsidesPage({ searchParams }: AsidesPageProps) {
                 {currentPage > 1 && (
                   <Link
                     href={`/asides?page=${currentPage - 1}`}
+                    aria-label={`Previous page, page ${currentPage - 1}`}
                     className="inline-flex items-center gap-1 rounded-md border border-border px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                   >
                     <ChevronLeft className="h-4 w-4" />
-                    Previous
+                    Previous page
                   </Link>
                 )}
                 {currentPage < totalPages && (
                   <Link
                     href={`/asides?page=${currentPage + 1}`}
+                    aria-label={`Next page, page ${currentPage + 1}`}
                     className="inline-flex items-center gap-1 rounded-md border border-border px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                   >
-                    Next
+                    Next page
                     <ChevronRight className="h-4 w-4" />
                   </Link>
                 )}
