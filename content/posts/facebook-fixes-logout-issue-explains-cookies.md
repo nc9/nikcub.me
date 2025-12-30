@@ -12,7 +12,7 @@ In summary, Facebook has made changes to the logout process and they have explai
 
 ## The Data
 
-To help better understand the cookie data that we have collected, I have formatted it into a table that displays the lifetime of each cookie across a number of different web requests. The table can be found on a [separate page here](/fb-table.html). You can find the raw output from my Firefox session [here](/fb-headers.txt).
+To help better understand the cookie data that we have collected, I have formatted it into a table that displays the lifetime of each cookie across a number of different web requests. The table can be found on a [separate page with cookie data](/fb-table.html). You can find the [raw Firefox session headers](/fb-headers.txt) as well.
 
 The rows of the table represent each cookie found throughout the debugging session. The first column is the name of the cookie. Each subsequent column shows how the value of the cookie was altered (or not) throughout the following four page requests:
 
@@ -50,7 +50,7 @@ The `lu` cookie is also set the first time a browser visits facebook.com and is 
 
 These cookies, by the very purpose they serve, uniquely identify the browser being used – even after logout. As a user, you have to take Facebook at their word that the purpose of these cookies is only for what is being described. The previous `a_user` cookie that was fixed identified your user account and has been fixed, these cookies identify the browser and are not re-associated with your logged in account.
 
-Most of the remaining cookies are not very interesting – they set things like the language of your browser and device dimensions. The most interesting cookie, for me (after the userid, obviously), was `act`. The values for this cookie for the requests I logged were `1316962370811/2;`, `1316972790935/11;` and `1317032073811/0;`. It is a timestamp for each request, in milliseconds since [UNIX epoch](http://en.wikipedia.org/wiki/Unix_time) (1st January 1970). What interested me was that not only was the timestamp accurate to milliseconds (ie. thousandths of a second) but that an additional number was being added to it. My gut instinct was that the additional number (ie. the /11, /0 and /2 in those exaples) was being added to make the timestamp unique for each and every request. Facebook confirmed this:
+Most of the remaining cookies are not very interesting – they set things like the language of your browser and device dimensions. The most interesting cookie, for me (after the userid, obviously), was `act`. The values for this cookie for the requests I logged were `1316962370811/2;`, `1316972790935/11;` and `1317032073811/0;`. It is a timestamp for each request, in milliseconds since [UNIX epoch](https://en.wikipedia.org/wiki/Unix_time) (1st January 1970). What interested me was that not only was the timestamp accurate to milliseconds (ie. thousandths of a second) but that an additional number was being added to it. My gut instinct was that the additional number (ie. the /11, /0 and /2 in those exaples) was being added to make the timestamp unique for each and every request. Facebook confirmed this:
 
 > It is a monotonically increasing counter of actions since the start of logging. As we shared, this is for the collection of performance data — nothing else.
 
@@ -62,4 +62,4 @@ Facebook has changed as much as they can change with the logout issue. They want
 
 I discovered a lot of other issues and interesting areas ripe for further investigation while researching the cookie logout issue – and I will be taking each one of them up on the blog here in the near future.
 
-I must thank Gregg Stefancik, an engineer at Facebook who reached out (and also left the 'official' Facebook response as a comment on the previous post) and who worked with us on this issue. Thank you as well to other Facebook engineers who reached out. On my end [Ashkan Soltani](http://ashkansoltani.org/) and [Brian Kennish](http://twitter.com/byoogle) (author of the excellent [disconnect](http://disconnect.me/) browser plugins that every user should be running) were invaluable with providing tests, advice and additional sets of eyes.
+I must thank Gregg Stefancik, an engineer at Facebook who reached out (and also left the 'official' Facebook response as a comment on the previous post) and who worked with us on this issue. Thank you as well to other Facebook engineers who reached out. On my end [Ashkan Soltani](https://ashkansoltani.org/) and [Brian Kennish](https://twitter.com/byoogle) (author of the excellent [disconnect](https://disconnect.me/) browser plugins that every user should be running) were invaluable with providing tests, advice and additional sets of eyes.

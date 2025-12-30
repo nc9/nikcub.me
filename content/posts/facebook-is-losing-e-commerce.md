@@ -4,7 +4,7 @@ date: 2012-02-19T02:45:12+00:00
 excerpt: Analysis of Facebook's declining e-commerce presence and why users prefer external shopping experiences over Facebook's platform integration
 ---
 
-Bloomberg has a report [out today](http://www.bloomberg.com/news/2012-02-17/f-commerce-trips-as-gap-to-penney-shut-facebook-stores-retail.html) about retailers shutting down their online Facebook stores due to lack of interest and activity from users. The headline example is Gamestop – who, despite having some 3.5 million fans on Facebook – recently shut down its Facebook shopfront because it didn't take off with users. From the article:
+Bloomberg has a report [out today](https://www.bloomberg.com/news/2012-02-17/f-commerce-trips-as-gap-to-penney-shut-facebook-stores-retail.html) about retailers shutting down their online Facebook stores due to lack of interest and activity from users. The headline example is Gamestop – who, despite having some 3.5 million fans on Facebook – recently shut down its Facebook shopfront because it didn't take off with users. From the article:
 
 > “There was a lot of anticipation that Facebook would turn into a new destination, a store, a place where people would shop,” Mulpuru said in a telephone interview. “But it was like trying to sell stuff to people while they’re hanging out with their friends at the bar.”
 
@@ -16,7 +16,7 @@ So what is going wrong at Facebook? How has Pinterest managed to capitalize on t
 
 ## The IPO
 
-Facebook recently filed an [S-1 with the SEC](http://sec.gov/Archives/edgar/data/1326801/000119312512034517/d287954ds1.htm) and intends to go public sometime in the next 3 months. While it is not yet known, it is said that Facebook are aiming for a valuation of between $75-100 Billion dollars.
+Facebook recently filed an [S-1 with the SEC](https://sec.gov/Archives/edgar/data/1326801/000119312512034517/d287954ds1.htm) and intends to go public sometime in the next 3 months. While it is not yet known, it is said that Facebook are aiming for a valuation of between $75-100 Billion dollars.
 
 The key numbers are:
 
@@ -47,7 +47,7 @@ It is hard to see how this will be achieved when major brands have attempted to 
 
 ## Social Commerce
 
-The market at the intersection of e-commerce and social has already been established and is growing rapidly, but it is leaving Facebook behind. Pinterest is one of the fastest growing products ever, and [recent estimates](http://techcrunch.com/2012/02/17/pinsanity/) (although possibly wildly inaccurate) suggest that the site is already achieving tens of millions of dollars in affiliate revenues from its 10 million (and rapidly growing) users.
+The market at the intersection of e-commerce and social has already been established and is growing rapidly, but it is leaving Facebook behind. Pinterest is one of the fastest growing products ever, and [recent estimates](https://techcrunch.com/2012/02/17/pinsanity/) (although possibly wildly inaccurate) suggest that the site is already achieving tens of millions of dollars in affiliate revenues from its 10 million (and rapidly growing) users.
 
 The expectation amongst technology commentators and analysts is that in the social era one social network (Facebook) would rule all. Facebook would leverage its large base of users to attack each vertical and in-turn switch on gushers of multiple-billion dollar revenue streams. The reality is that social networking online is becoming fragmented. Users of Pinterest can quickly re-create their social network on the site since it integrates with Facebook, and they are also offered the flexibility of a 'do-over' – deciding which contacts they want to share their shopping experiences with and which contacts they don't.
 
