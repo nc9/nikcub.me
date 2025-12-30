@@ -4,19 +4,19 @@ date: 2014-09-07T18:55:24+0000
 excerpt: A technical analysis of the FBI's claims about how they located Silk Road's server, showing their explanation doesn't match how Tor hidden services work
 ---
 
-The first incarnation of online drug marketplace [Silk Road](<http://en.wikipedia.org/wiki/Silk_Road_(marketplace)>) was shutdown in October 2013 resulting in the arrest of Ross Ulbricht. In [the indictment](http://www.scribd.com/doc/235866098/USA-v-Ross-Ulbricht) the Department of Justice contend that Ulbricht was Dread Pirate Roberts, the owner and administrator of Silk Road. The case has been in pretrial for some time now, with defense lawyers contesting many elements as part of a large and broad [motion to dismiss](http://www.scribd.com/doc/215745393/USA-v-Ulbricht-motion-to-dismiss-charges) ([subsequently denied](http://www.scribd.com/doc/233234104/Forrest-Denial-of-Defense-Motion-in-Silk-Road-Case)) and other filings.
+The first incarnation of online drug marketplace [Silk Road](<https://en.wikipedia.org/wiki/Silk_Road_(marketplace)>) was shutdown in October 2013 resulting in the arrest of Ross Ulbricht. In [the indictment](https://www.scribd.com/doc/235866098/USA-v-Ross-Ulbricht) the Department of Justice contend that Ulbricht was Dread Pirate Roberts, the owner and administrator of Silk Road. The case has been in pretrial for some time now, with defense lawyers contesting many elements as part of a large and broad [motion to dismiss](https://www.scribd.com/doc/215745393/USA-v-Ulbricht-motion-to-dismiss-charges) ([subsequently denied](https://www.scribd.com/doc/233234104/Forrest-Denial-of-Defense-Motion-in-Silk-Road-Case)) and other filings.
 
-The marketplace was hosted as a hidden service on [Tor](https://www.torproject.org/), a distributed network that provides a layer of anonymity for web and other traffic on the internet. Edward Snowden’s leaks revealed that the NSA [target Tor](http://www.theguardian.com/world/2013/oct/04/tor-attacks-nsa-users-online-anonymity) users and that the agency [has struggled](http://www.theguardian.com/world/interactive/2013/oct/04/tor-stinks-nsa-presentation-document) to deanonymize users on the network.
+The marketplace was hosted as a hidden service on [Tor](https://www.torproject.org/), a distributed network that provides a layer of anonymity for web and other traffic on the internet. Edward Snowden’s leaks revealed that the NSA [target Tor](https://www.theguardian.com/world/2013/oct/04/tor-attacks-nsa-users-online-anonymity) users and that the agency [has struggled](https://www.theguardian.com/world/interactive/2013/oct/04/tor-stinks-nsa-presentation-document) to deanonymize users on the network.
 
 One of the big outstanding issues was how the FBI managed to uncover the real IP address of the server hosting the Silk Road. The indictment is intentionally vague on the details of how the server was discovered, and the issue is important since a large number of users ([numbering in the millions](https://metrics.torproject.org/users.html)) rely on the Tor software network to protect their identity.
 
 Last month Ulbricht’s lawyers filed a motion seeking to uncover details on how the FBI located the server. The core of the issue for the defense is if the FBI violated Ulbricht’s Fourth Amendment right to privacy in tracking down the server IP address by using any unlawful techniques or a method that would have required a warrant. If the evidence is found to have been obtained unlawfully, then much of the case against Ulbricht would collapse as all subsequent evidence discovered as a result of the server being uncovered would be ruled inadmissible.
 
-On Friday [Wired reported](http://www.wired.com/2014/09/the-fbi-finally-says-how-it-legally-pinpointed-silk-roads-server/) that the FBI had responded with their own filing detailing how they uncovered the server:
+On Friday [Wired reported](https://www.wired.com/2014/09/the-fbi-finally-says-how-it-legally-pinpointed-silk-roads-server/) that the FBI had responded with their own filing detailing how they uncovered the server:
 
 > The FBI claims to have found the server’s location without the NSA’s help, simply by fiddling with the Silk Road’s login page until it leaked its true location.
 
-The government response consists of first [the DOJ filing](http://www.scribd.com/doc/238796613/Silk-Road-Prosecution-4th-Amendment-Rebuttall), and then the [affidavit from the FBI tech team](http://ia700603.us.archive.org/21/items/gov.uscourts.nysd.422824/gov.uscourts.nysd.422824.57.0.pdf) (PDF). The affidavit is more interesting since it delves into the “tech” of how the server was uncovered. Breaking it down:
+The government response consists of first [the DOJ filing](https://www.scribd.com/doc/238796613/Silk-Road-Prosecution-4th-Amendment-Rebuttall), and then the [affidavit from the FBI tech team](http://ia700603.us.archive.org/21/items/gov.uscourts.nysd.422824/gov.uscourts.nysd.422824.57.0.pdf) (PDF). The affidavit is more interesting since it delves into the “tech” of how the server was uncovered. Breaking it down:
 
 The first three sections go into the background and experience of the team investigating. The fourth briefly explains what Tor is, its purpose and how it works. The fifth section opens with:
 
@@ -44,7 +44,7 @@ These are the key pieces of information – the actions the agents took to uncov
 
 Anybody with knowledge of Tor and hidden services would not be able to read that description and have a complete understanding of the process that the agents followed to do what they claim to have done. Were the Silk Road site still live today, and in the same state it was as in back in June 2013 when the agents probed the server, you wouldn’t be able to reproduce or recreate what the agents describe in the affidavit.
 
-This is why there are so many different theories now on how they achieved what they claim to have achieved. The first conclusion to come out of this filing was the [“leaky CAPTCHA”](http://krebsonsecurity.com/2014/09/dread-pirate-sunk-by-leaky-captcha/) theory. This theory does not stand up to scrutiny because the Silk Road image CAPTCHA was hosted on the same server and at the same hidden URL as the Silk Road website. It was not, contrary to some reports, a third-party CAPTCHA. The CAPTCHA image was produced by a script that sat alongside the login and authentication endpoints.
+This is why there are so many different theories now on how they achieved what they claim to have achieved. The first conclusion to come out of this filing was the [“leaky CAPTCHA”](https://krebsonsecurity.com/2014/09/dread-pirate-sunk-by-leaky-captcha/) theory. This theory does not stand up to scrutiny because the Silk Road image CAPTCHA was hosted on the same server and at the same hidden URL as the Silk Road website. It was not, contrary to some reports, a third-party CAPTCHA. The CAPTCHA image was produced by a script that sat alongside the login and authentication endpoints.
 
 The CAPTCHA being hosted on the same server and endpoint as the main Silk Road application caused the site problems. Since generating a CAPTCHA is resource intensive, there was a DoS attack against Silk Road which did nothing more than continuously request CAPTCHA images. The site was later modified to use cached versions of the CAPTCHA images, but these too were served from the same host and onion as the web application.
 
@@ -70,17 +70,17 @@ Ross Ulbricht was not an experienced programmer and was learning how to develop 
 
 A much more plausible explanation is that the FBI discovered a security exploit or information leak in the login page, in the same way a number of other people discovered similar security holes or information leaks in both the login page and the Silk Road application itself.
 
-There is a history of users reporting such security exploits and information leaks in Silk Road on various forums. On the [27th of March 2013 a user posted on reddit “WARNING: The Silk Road Revealed it’s Public IP Last Night”](http://www.reddit.com/r/SilkRoad/comments/1b1lvy/warning_the_silk_road_revealed_its_public_ip_last/):
+There is a history of users reporting such security exploits and information leaks in Silk Road on various forums. On the [27th of March 2013 a user posted on reddit “WARNING: The Silk Road Revealed it’s Public IP Last Night”](https://www.reddit.com/r/SilkRoad/comments/1b1lvy/warning_the_silk_road_revealed_its_public_ip_last/):
 
 > I am a penetration tester by trade, and while I do not use SR, I do occasionally conduct informal tests of the security of various Tor Hidden Services.
 
-I referenced that thread in [my answer on Stack Exchange](http://security.stackexchange.com/a/43280/31518) on how the Silk Road server may have been discovered shortly after the site was taken down.
+I referenced that thread in [my answer on Stack Exchange](https://security.stackexchange.com/a/43280/31518) on how the Silk Road server may have been discovered shortly after the site was taken down.
 
 “If you know where to look”, as mentioned in the comment, is a suggestion that a hidden URL was found, or the login form was forced to error and produce some debug output.
 
-Further, on the 3rd of May 2013 there was a similar warning from another user on reddit, [“Should we be worried? Showing on login page”](http://www.reddit.com/r/SilkRoad/comments/1dmznd/should_we_be_worried_showing_on_login_page/)
+Further, on the 3rd of May 2013 there was a similar warning from another user on reddit, [“Should we be worried? Showing on login page”](https://www.reddit.com/r/SilkRoad/comments/1dmznd/should_we_be_worried_showing_on_login_page/)
 
-!["sr_reddit_screnshot"](/images/posts/sr_reddit_screnshot.webp)
+![Reddit post showing PHP server variable dump on Silk Road login page](/images/posts/sr_reddit_screnshot.webp)
 
 If this isn’t familiar to you, it is a `var_dump` of PHP’s `$_SERVER` variable. It would suggest somebody was debugging a problem on the server and editing live code, using the `var_dump` function to debug a problem (and inexperienced programmer would both edit on a live server and use `var_dump` to debug).
 
@@ -100,10 +100,10 @@ In this scenario, the description of packet sniffers and “inspecting each pack
 
 The FBI have good reason to not mention any bugs or forcing the server to do anything, and to pretend that they simply picked up the IP address from the wire, since such actions would raise concerns about how lawful their actions in uncovering the IP address were. What we do know is that their description of “packet sniffing” for the IP through a “leak” is impossible.
 
-_Thanks to: [harisec](http://www.twitter.com/harisec), [thegrugq](http://www.twitter.com/thegrugq) and the ever useful [Silk Road timeline](http://antilop.cc/sr/) by [moustach](https://twitter.com/lamoustache/) for links and tips._
+_Thanks to: [harisec](https://www.twitter.com/harisec), [thegrugq](https://www.twitter.com/thegrugq) and the ever useful [Silk Road timeline](http://antilop.cc/sr/) by [moustach](https://twitter.com/lamoustache/) for links and tips._
 
 ## Addendum
 
 **1.** If you still believe that the server was discovered in the way the FBI described it – _try it_. I did. I setup a virtual machine with a web server running a Tor hidden server. I then accessed the hidden server over Tor and looked at the traffic. No matter how much I intentionally misconfigured the server, or included scripts from clearnet hosts, I _never_ observed traffic from a non-Tor node or a “real” IP address.
 
-**2.** Many enquiries in various comment threads about how best to setup a hidden service so that application layer bugs won’t expose your real IP address. The answer is to host the web application in a virtual machine that is on a private network isolated behind a gateway that will only forward Tor traffic. This also works for Tor clients (to prevent malware based attacks such as the that [used by the FBI](http://www.wired.com/2013/09/freedom-hosting-fbi/)). I’ll likely write up details for both client and server isolated VM setups in the future.
+**2.** Many enquiries in various comment threads about how best to setup a hidden service so that application layer bugs won’t expose your real IP address. The answer is to host the web application in a virtual machine that is on a private network isolated behind a gateway that will only forward Tor traffic. This also works for Tor clients (to prevent malware based attacks such as the that [used by the FBI](https://www.wired.com/2013/09/freedom-hosting-fbi/)). I’ll likely write up details for both client and server isolated VM setups in the future.
