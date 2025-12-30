@@ -18,7 +18,7 @@ Go to [Security Settings](https://www.facebook.com/settings?tab=security%C2%A7io
 
 Click on the 'Facebook Ads' tab in Settings. Click on both 'Edit third party ad settings' and 'Edit social ad settings' and make sure both are set to share to 'no one'.
 
-While you are here in settings, click on 'General' and then 'Password' and change your password. See this Microsoft guide on [choosing a strong password](http://www.microsoft.com/security/online-privacy/passwords-create.aspx).
+While you are here in settings, click on 'General' and then 'Password' and change your password. See this Microsoft guide on [choosing a strong password](https://www.microsoft.com/security/online-privacy/passwords-create.aspx).
 
 ## Step 2. Settings up Privacy Settings
 
@@ -32,7 +32,7 @@ Go to the [Privacy Settings](https://www.facebook.com/settings/?tab=privacy) pre
 
 To disable it:
 
-1. On the [](https://www.facebook.com/settings/?tab=privacy) page click 'edit settings' next to 'Apps and Websites'
+1. On the [Privacy Settings](https://www.facebook.com/settings/?tab=privacy) page click 'edit settings' next to 'Apps and Websites'
 1. Click 'edit settings' next to 'Instant Personalization'
 1. Click 'close' on the 'Understanding Instant Personalization' dialog
 1. Uncheck the 'Enable Instant Personalization' checkbox
@@ -50,17 +50,17 @@ The best way to privately browse the web without widgets and other beacons sendi
 
 **Browser 2** is used for Facebook and other social networks. Clear all cookies again and login to your social networks here. Do not use this browser for other web surfing.
 
-A good browser choice is to use two of Safari, [Chrome](http://www.google.com/chrome) or [Firefox](http://www.getfirefox.com).
+A good browser choice is to use two of Safari, [Chrome](https://www.google.com/chrome) or [Firefox](https://www.getfirefox.com).
 
 Install the following private browsing plugins:
 
-**Disconnect**: [Disconnect](http://disconnect.me) is a browser plugin for Chrome, Firefox or Safari that will block all widgets from the common social networks and other sites that run third-party apps.
+**Disconnect**: [Disconnect](https://disconnect.me) is a browser plugin for Chrome, Firefox or Safari that will block all widgets from the common social networks and other sites that run third-party apps.
 
 **Adblock**: Install AdBlock for [Chrome](https://chrome.google.com/webstore/detail/gighmmpiobklfepjocnamgkkbiglidom) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/)
 
 Further, by going into the preferences of the browser that you use for web surfing, you can set it to clear all cookies when the browser is closed. You can also manually delete all the cookies on this browser. Since you only use this browser for general web surfing, you do not need to retain the cookies.
 
-See the following guide on [how to delete cookies](http://www.aboutcookies.org/Default.aspx?page=2). There are instructions there for multiple browsers.
+See the following guide on [how to delete cookies](https://www.aboutcookies.org/Default.aspx?page=2). There are instructions there for multiple browsers.
 
 By following these steps, you go some way to both securing your account and browsing the web privately without any information being leaked. If you have any other tips, feel free to leave them in the comments.
 
