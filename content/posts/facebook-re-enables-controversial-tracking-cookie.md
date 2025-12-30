@@ -4,13 +4,13 @@ date: 2011-10-03T18:21:30+00:00
 excerpt: Facebook quietly re-enabled the datr tracking cookie on third-party sites after previously removing it, setting cookies on users who never visited Facebook
 ---
 
-In May of this year the [Wall Street Journal reported](http://online.wsj.com/article/SB10001424052748704281504576329441432995616.html) that Facebook like buttons and other website widgets were setting cookies on visiting browsers. This cookie could then be read later and used to track the user across different web properties and back to the Facebook site. The cookie was being set even if the user had never been to the Facebook site, and even if they didn't click a 'like' or 'share' button.
+In May of this year the [Wall Street Journal reported](https://online.wsj.com/article/SB10001424052748704281504576329441432995616.html) that Facebook like buttons and other website widgets were setting cookies on visiting browsers. This cookie could then be read later and used to track the user across different web properties and back to the Facebook site. The cookie was being set even if the user had never been to the Facebook site, and even if they didn't click a 'like' or 'share' button.
 
 <s>As a result of that report, Ashkan Soltani filed a bug with Facebook</s>, which was fixed, and the cookie in question – `datr` – was removed and was no longer being set for logged in or logged out users when they visited a page integrating Facebook. (Update: Ashkan tells me that he didn't file a bug, but that the cookie was removed by Facebook prior to the WSJ story being published).
 
 Today, that cookie is back. It is being set by all the third-party sites that we tested.
 
-![facbeook datr cookie](/images/posts/facebook-reenable01.webp)
+![Chrome developer tools showing the datr cookie set by Facebook on a third-party site](/images/posts/facebook-reenable01.webp)
 
 _Image: Screenshot from Chrome showing the datr cookie being set by Facebook on a third party site_
 
@@ -26,9 +26,9 @@ Note that the response from the previous post mentions that the cookie is not se
 
 It is the first cookie that is set, for all users of Facebook, and right now is being set for everybody on any Facebook integrated site – logged in or not logged in.
 
-The recent [EU vs Facebook](http://europe-v-facebook.org) revelations about the data that Facebook stores for each users gave an interesting insight into the `datr` cookie. Below is a screenshot of some data from a user who retrieved their information using Europe vs Facebook. It shows machine ID's that were used to access that account, and the other accounts associated with that machine id.
+The recent [EU vs Facebook](https://europe-v-facebook.org) revelations about the data that Facebook stores for each users gave an interesting insight into the `datr` cookie. Below is a screenshot of some data from a user who retrieved their information using Europe vs Facebook. It shows machine ID's that were used to access that account, and the other accounts associated with that machine id.
 
-![facbeook datr cookie](/images/posts/facebook-reenable02.webp)
+![Facebook user data showing machine IDs and associated accounts linked by the datr cookie](/images/posts/facebook-reenable02.webp)
 
 _Image: Data captured from a Facebook user showing machine identification and association users_
 
@@ -38,7 +38,7 @@ We believe that the identifier used to associate each user with the machine ID i
 
 ## Facebook on Datr
 
-In [Facebook's response](http://www.datatilsynet.no/upload/Dokumenter/utredninger%20av%20Datatilsynet/From%20Facebook%20-%20Norway-DPA.pdf) to a questions from Norway's Data Inspectorate they state:
+In [Facebook's response](https://www.datatilsynet.no/upload/Dokumenter/utredninger%20av%20Datatilsynet/From%20Facebook%20-%20Norway-DPA.pdf) to a questions from Norway's Data Inspectorate they state:
 
 > For Facebook users, we obtain the consent for the use of a range of cookies when they sign up to our service. Our Privacy Policy makes it clear that these cookies may be accessed both on facebook.com and when they are visiting other websites with Facebook social plugins.
 
@@ -46,7 +46,7 @@ There is no mention of the `datr` cookie or collecting information on non-Facebo
 
 ## Tracking
 
-In the [WSJ article](http://online.wsj.com/article/SB10001424052748704281504576329441432995616.html), Bret Taylor, the CTO of Facebook said about the `datr` and other cookies:
+In the [WSJ article](https://online.wsj.com/article/SB10001424052748704281504576329441432995616.html), Bret Taylor, the CTO of Facebook said about the `datr` and other cookies:
 
 > “We don't use them for tracking and they're not intended for tracking,” he says.
 
@@ -62,4 +62,4 @@ Facebook can't help but to track, since they are being sent the cookie by the br
 
 At a minimum they are tracking by reading the cookies, and if you look further into some of [the patents](https://www.seobythesea.com/2011/09/facebook-patent-application-target-ads) that Facebook has filed, as well as their business model (advertising), it is not a big leap to make to conclude that Facebook are tracking users and analyzing that data.
 
-_Thanks to [@jonathanmayer](http://twitter.com/#!/jonathanmayer) on Twitter who first noticed the cookies again and reported the issue_. Also, all credit for the Facebook patent find should go to [Bill Slawski](http://www.seobythesea.com/2011/09/facebook-patent-application-target-ads) who did the leg work and wrote the original post. There have been a few other posts that didn't credit Slawski with the find.
+_Thanks to [@jonathanmayer](https://twitter.com/#!/jonathanmayer) on Twitter who first noticed the cookies again and reported the issue_. Also, all credit for the Facebook patent find should go to [Bill Slawski](https://www.seobythesea.com/2011/09/facebook-patent-application-target-ads) who did the leg work and wrote the original post. There have been a few other posts that didn't credit Slawski with the find.

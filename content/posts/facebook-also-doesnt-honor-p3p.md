@@ -4,9 +4,9 @@ date: 2012-02-21T04:40:52+00:00
 excerpt: Microsoft called out Google for P3P bypass but ignored Facebook doing the same thing - and a survey shows 5% of top sites set invalid P3P headers
 ---
 
-There is [a post](http://blogs.msdn.com/b/ie/archive/2012/02/20/google-bypassing-user-privacy-settings.aspx) today on a Microsoft MSDN blog about how Google bypasses third-party cookie control in Internet Explorer by setting a false P3P header. The post author is Dean Hachamovitch, who is the VP for IE, and follows up from a [big story last week](http://online.wsj.com/article/SB10001424052970204880404577225380456599176.html) about how Google and a number of other ad networks are bypassing third-party cookie blocking in Safari by using a workaround (the workaround involves an IFRAME and a form that is submitted automatically using Javascript).
+There is [a post](https://blogs.msdn.com/b/ie/archive/2012/02/20/google-bypassing-user-privacy-settings.aspx) today on a Microsoft MSDN blog about how Google bypasses third-party cookie control in Internet Explorer by setting a false P3P header. The post author is Dean Hachamovitch, who is the VP for IE, and follows up from a [big story last week](https://online.wsj.com/article/SB10001424052970204880404577225380456599176.html) about how Google and a number of other ad networks are bypassing third-party cookie blocking in Safari by using a workaround (the workaround involves an IFRAME and a form that is submitted automatically using Javascript).
 
-The case with IE is different. Google (and many other sites) are taking advantage of the [P3P protocol](http://en.wikipedia.org/wiki/P3P) (a privacy extension to HTTP) to set third-party cookies. Here is a summary of what Google is doing, from the article:
+The case with IE is different. Google (and many other sites) are taking advantage of the [P3P protocol](https://en.wikipedia.org/wiki/P3P) (a privacy extension to HTTP) to set third-party cookies. Here is a summary of what Google is doing, from the article:
 
 > By default, IE blocks third-party cookies unless the site presents a P3P Compact Policy Statement indicating how the site will use the cookie and that the site’s use does not include tracking the user.
 
@@ -56,7 +56,7 @@ Date: Tue, 21 Feb 2012 04:01:27 GMT
 Content-Length: 0
 ```
 
-The reason Facebook gives for this header in the page [that is linked](http://www.facebook.com/help/?page=219494461411349) from it is:
+The reason Facebook gives for this header in the page [that is linked](https://www.facebook.com/help/?page=219494461411349) from it is:
 
 > The organization that established P3P, the World Wide Web Consortium, suspended its work on this standard several years ago because most modern web browsers do not fully support P3P. As a result, the P3P standard is now out of date and does not reflect technologies that are currently in use on the web, so most websites currently do not have P3P policies.
 
