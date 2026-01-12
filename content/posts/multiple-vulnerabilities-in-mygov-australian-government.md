@@ -4,7 +4,7 @@ date: 2014-05-15T03:56:45+0000
 excerpt: Discovering XSS, SQL injection indicators, and poor cookie security in Australia's myGov portal that could expose 2.2 million citizens' tax and health records
 ---
 
-**Update:** This story has been published by Fairfax [on the Sydney Morning Herald website](http://www.smh.com.au/it-pro/security-it/revealed-serious-flaws-in-mygov-site-exposed-millions-of-australians-private-information-20140515-zrczw.html).
+**Update:** This story has been published by Fairfax [on the Sydney Morning Herald website](https://www.smh.com.au/it-pro/security-it/revealed-serious-flaws-in-mygov-site-exposed-millions-of-australians-private-information-20140515-zrczw.html).
 
 The previous Australian government introduced a policy called [Digital First](http://www.amta.org.au/articles/Delivering.user-friendly.Government.services.online), which is a mission to make the majority of Australian government services available online by 2017. The new government elected in 2013 adapted this policy and extended it further, requiring that 80% of government interfaces with [citizens be digital by 2020](http://www.archive.dbcde.gov.au/2013/september/national_digital_economy_strategy/advancing_australia_as_a_digital_economy/part_three_achieving_o%20ur_goalsbuilding_on_the_2011_national_digital_economystrategy/online_government_service_delivery).
 
@@ -16,7 +16,7 @@ myGov steadily rolled out and now has over 2.2 million users. Medicare was one o
 
 I found out after taking a look at the website that myGov was very insecure – leaving the private data of 2.2 million Australian citizens potentially compromised.
 
-Ben Grubb, an IT journalist at Fairfax (Sydney Morning Herald, The Age) [reported that](http://www.smh.com.au/it-pro/government-it/australians-private-government-details-at-mercy-of-hackers-say-it-security-experts-20140428-zqzkg.html) the secrets used to authenticate your identity to myGov were not very secret (using a Medicare number, which is easy to guess) and that hijacking a users identity is possible.
+Ben Grubb, an IT journalist at Fairfax (Sydney Morning Herald, The Age) [reported that](https://www.smh.com.au/it-pro/government-it/australians-private-government-details-at-mercy-of-hackers-say-it-security-experts-20140428-zqzkg.html) the secrets used to authenticate your identity to myGov were not very secret (using a Medicare number, which is easy to guess) and that hijacking a users identity is possible.
 
 It was that article, along with hearing that the Australian Tax Office would migrate users to myGov, which prompted me to look at the app in more detail.
 
@@ -80,12 +80,12 @@ The full document which I sent to the department is embedded below.
 
 ## Security report sent to the Department of Human Services
 
-[Australian Government myGov Website Security Issues](http://www.scribd.com/doc/224070691/Australian-Government-myGov-Website-Security-Issues?secret_password=xDLo231FFKMT9GPQnDlP) by [nikcub](http://www.scribd.com/nikcub)
+[Australian Government myGov Website Security Issues](https://www.scribd.com/doc/224070691/Australian-Government-myGov-Website-Security-Issues?secret_password=xDLo231FFKMT9GPQnDlP) by [nikcub](https://www.scribd.com/nikcub)
 
-<iframe data-aspect-ratio="0.7068965517241379" data-auto-height="false" frameborder="0" scrolling="no" src="//www.scribd.com/embeds/224070691/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-0NVekfWBPaKGMp7lca97&amp;show_recommendations=true"></iframe>
+<iframe title="Australian Government myGov Website Security Issues - Security Report" data-aspect-ratio="0.7068965517241379" data-auto-height="false" frameborder="0" scrolling="no" width="100%" height="600" src="//www.scribd.com/embeds/224070691/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-0NVekfWBPaKGMp7lca97&amp;show_recommendations=true"></iframe>
 
 ## Government Response
 
-[MyGov Security Gov Response](http://www.scribd.com/doc/224260090/MyGov-Security-Gov-Response) by [nikcub](http://www.scribd.com/nikcub)
+[MyGov Security Gov Response](https://www.scribd.com/doc/224260090/MyGov-Security-Gov-Response) by [nikcub](https://www.scribd.com/nikcub)
 
-<iframe data-aspect-ratio="0.7061128526645768" data-auto-height="false" frameborder="0" scrolling="no" src="//www.scribd.com/embeds/224260090/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-j9B707GMs1zWZwc5kLui&amp;show_recommendations=true"></iframe>
+<iframe title="MyGov Security - Government Response Document" data-aspect-ratio="0.7061128526645768" data-auto-height="false" frameborder="0" scrolling="no" width="100%" height="600" src="//www.scribd.com/embeds/224260090/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-j9B707GMs1zWZwc5kLui&amp;show_recommendations=true"></iframe>
