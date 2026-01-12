@@ -4,13 +4,13 @@ date: 2014-08-07T01:00:19+0000
 excerpt: How weak session ID generation using uniqid() in CS-Cart allows session hijacking through targeted brute-force, plus a frustrating disclosure timeline
 ---
 
-**Vendor**: [CS-Cart](http://www.cs-cart.com/)
+**Vendor**: [CS-Cart](https://www.cs-cart.com/)
 
 **Affected versions**: up to v4.2.0
 
 **Patched:** v4.2.1 released
 
-[CS-Cart](http://www.cs-cart.com/) is a semi-popular open source e-commerce shopping cart application. It contains a homebrew session management system that utilizes an insecure source of randomness to generate session tokens. The poor source of randomness combined with other bugs makes it possible to hijack an administrators session with a small brute-force window.
+[CS-Cart](https://www.cs-cart.com/) is a semi-popular open source e-commerce shopping cart application. It contains a homebrew session management system that utilizes an insecure source of randomness to generate session tokens. The poor source of randomness combined with other bugs makes it possible to hijack an administrators session with a small brute-force window.
 
 The exploit involves a number of steps, and i’ll set them all out below along with background on each step.
 
@@ -18,7 +18,7 @@ The exploit involves a number of steps, and i’ll set them all out below along 
 
 In the file `./app/Tygh/Session.php` line 49:
 
-A session key based on `uniqid`, which is not cryptographically secure. This is what [the PHP manual](http://au1.php.net/uniqid) says about `uniqid`:
+A session key based on `uniqid`, which is not cryptographically secure. This is what [the PHP manual](https://au1.php.net/uniqid) says about `uniqid`:
 
 > **Warning** This function does not create random nor unpredictable strings. This function must not be used for security purposes. Use a cryptographically secure random function/generator and cryptographically secure hash functions to create unpredictable secure IDs.
 
@@ -91,5 +91,5 @@ Here is the source:
 **10th June 2014** – Reported to CS-Cart<br/>
 **17th June 2014** – Bugs confirmed by CS-Cart, offered a free license of their software. I replied asking when the fix will be out – no response.<br/>
 **20th June 2014** – Sent them an email telling them I have more bugs – no response.<br/>
-**21st July 2014** – [CS-Cart announce v4.2.1](http://blog.cs-cart.com/2014/07/21/cs-cart-4-2-1-released-new-styles-e-mail-marketing-and-more/) with no mention of security patches, bury the details [in the changelog without mentioning security](http://www.cs-cart.com/changelog421.html) (no credit).<br/>
+**21st July 2014** – [CS-Cart announce v4.2.1](https://blog.cs-cart.com/2014/07/21/cs-cart-4-2-1-released-new-styles-e-mail-marketing-and-more/) with no mention of security patches, bury the details [in the changelog without mentioning security](https://www.cs-cart.com/changelog421.html) (no credit).<br/>
 **7th Aug 2014** – I find out they patched the bugs weeks ago only because I checked the latest version myself.
