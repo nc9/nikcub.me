@@ -10,7 +10,7 @@ Today we are launching [Frictionless](https://chrome.google.com/webstore/detail/
 
 If you are a Facebook user, you have probably seen the new social-news sharing applications such as the Washington Post Social Reader, The Guardian application and the WSJ app. They are the apps that send out notifications to your Facebook stream when you read an article, and also filter up popular read articles from your friends into your newsfeed.
 
-The problem with these applications is that they share almost every user action by default. Further, most of these applications require the user to authorize the application (which means it can read all of your profile data) in order to read a story. Since the launch of the new Open Graph API and these social applications, there has also been much criticism in the media and [amongst bloggers](http://news.cnet.com/8301-31322_3-57324406-256/how-facebook-is-ruining-sharing/). You have probably come across a story in your timeline and clicked on it only to be confronted by a dialog box that looks like this:
+The problem with these applications is that they share almost every user action by default. Further, most of these applications require the user to authorize the application (which means it can read all of your profile data) in order to read a story. Since the launch of the new Open Graph API and these social applications, there has also been much criticism in the media and [amongst bloggers](https://news.cnet.com/8301-31322_3-57324406-256/how-facebook-is-ruining-sharing/). You have probably come across a story in your timeline and clicked on it only to be confronted by a dialog box that looks like this:
 
 _[Image unavailable - Skitch service discontinued]_
 
@@ -24,4 +24,4 @@ You can install the plugin by visiting the [Chrome Web Store](https://chrome.goo
 
 This is also just a first release that solves the reading portion of Facebook sharing. In the next release, we will be including a way to share stories you have read (opt-in) from any website into the Facebook social stream.
 
-This plugin was conceived on Facebook a couple of days ago and was written by [Brian Kennish](http://twitter.com/byoogle) of [Disconnect](http://disconnect.me/) and myself. Feedback and bugs can be [filed at GitHub](http://github.com/byoogle/frictionless/issues), by emailing either of us or finding us [on Twitter](http://www.twitter.com/nikcub). Hope you enjoy the extension.
+This plugin was conceived on Facebook a couple of days ago and was written by [Brian Kennish](https://twitter.com/byoogle) of [Disconnect](https://disconnect.me/) and myself. Feedback and bugs can be [filed at GitHub](https://github.com/byoogle/frictionless/issues), by emailing either of us or finding us [on Twitter](https://www.twitter.com/nikcub). Hope you enjoy the extension.

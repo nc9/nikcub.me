@@ -4,7 +4,7 @@ date: 2012-05-24T04:16:17+00:00
 excerpt: Yahoo shipped their Axis browser extension with the private certificate file used to sign it, allowing attackers to create forged extensions that Chrome trusts
 ---
 
-Yahoo! today announced their new [Axis](http://axis.yahoo.com) web browser. It is implemented as an extension to Chrome, Firefox and Internet Explorer.
+Yahoo! today announced their new [Axis](https://axis.yahoo.com) web browser. It is implemented as an extension to Chrome, Firefox and Internet Explorer.
 
 I installed the [Chrome extension](http://sxp.yimg.com/ei/ynano/YAxis_Chrome_v1_0_20120520.crx) (direct link to original Chrome extension, probably not a good idea to install it) with the idea of checking out the source code. The first thing I noticed is that the source package contains their private certificate file used to sign the extension:
 
@@ -16,7 +16,7 @@ The certificate file is used by Yahoo! to sign the extension package, which is u
 
 To demonstrate the vulnerability, I cloned the source to the extension and added a content script that will prompt a Javascript alert. I then signed my forged extension with the Yahoo! certificate, and installed it in Chrome.
 
-The code for the original Yahoo! extension, and the forged extension I created have been checked into GitHub in a repository at [http://github.com/nikcub/yahoo-spoof](http://github.com/nikcub/yahoo-spoof)
+The code for the original Yahoo! extension, and the forged extension I created have been checked into GitHub in a repository at [https://github.com/nikcub/yahoo-spoof](https://github.com/nikcub/yahoo-spoof)
 
 The source is the same as the original Yahoo! Axis extension except for [this content script](https://github.com/nikcub/yahoo-spoof/blob/master/src/content.js#L2) which triggers an alert.
 
@@ -28,7 +28,7 @@ This is a proof of concept. When you click on that link it will install the exte
 
 ## Removing the Extension
 
-See the [detailed instructions on the Google Support website on managing extensions](http://support.google.com/chrome/bin/answer.py?hl=en&answer=187443). There is also a page detailing [how to remove extensions permanently](http://support.google.com/chrome/bin/answer.py?hl=en&answer=113907).
+See the [detailed instructions on the Google Support website on managing extensions](https://support.google.com/chrome/bin/answer.py?hl=en&answer=187443). There is also a page detailing [how to remove extensions permanently](https://support.google.com/chrome/bin/answer.py?hl=en&answer=113907).
 
 First open the Chrome Extensions setting window.
 
