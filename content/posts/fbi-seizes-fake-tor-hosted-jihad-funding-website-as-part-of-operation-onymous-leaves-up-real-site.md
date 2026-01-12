@@ -10,7 +10,7 @@ The problem, as with a lot of the other seizures as part of Operation Onymous, i
 
 Here is what the site looks like right now:
 
-<img alt="jihad website" src="/images/posts/Fund-20The-20Islamic-20Struggle-20Anonymously.webp"/>
+<img alt="Fake Tor-hosted jihad funding website seized by FBI" width="800" height="600" src="/images/posts/Fund-20The-20Islamic-20Struggle-20Anonymously.webp"/>
 
 The Bitcoin address on the website, [13Pcmh4dKJE8Aqrhq4ZZwmM1sbKFcMQEEV](https://blockchain.info/address/13Pcmh4dKJE8Aqrhq4ZZwmM1sbKFcMQEEV), shows that just over 5 BTC has been donated to it.
 
