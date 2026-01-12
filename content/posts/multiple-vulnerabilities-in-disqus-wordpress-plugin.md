@@ -4,7 +4,7 @@ date: 2014-08-12T21:08:35+0000
 excerpt: Disclosure and fixes for a number of bugs in the Wordpress plugin for the popular Disqus commenting system
 ---
 
-**Vendor**: [Disqus for WordPress](http://www.disqus.com/)
+**Vendor**: [Disqus for WordPress](https://www.disqus.com/)
 
 **Affected versions**: up to v2.7.5
 
@@ -12,7 +12,7 @@ excerpt: Disclosure and fixes for a number of bugs in the Wordpress plugin for t
 
 **Exploit:** [Manage.php CSRF+XSS admin exploit](https://gist.github.com/nikcub/cb5dc7a5464276c8424a)
 
-[Disqus](http://disqus.com/) is an extremely popular third-party commenting system used on blogs and media sites. The [disqus plugin for WordPress](http://wordpress.org/plugins/disqus-comment-system/) has been installed over a million times and is the [15th most popular overall](http://wordpress.org/plugins/browse/popular/) WordPress plugin.
+[Disqus](https://disqus.com/) is an extremely popular third-party commenting system used on blogs and media sites. The [disqus plugin for WordPress](https://wordpress.org/plugins/disqus-comment-system/) has been installed over a million times and is the [15th most popular overall](https://wordpress.org/plugins/browse/popular/) WordPress plugin.
 
 I recently performed a penetration test where the website was running the latest version with a small number of plugins, one of which was Disqus – which lead me to dive into the code. Grepping the codebase for POST and GET parameters pretty quickly yielded code blocks where parameters were being passed and output without any filtering.
 
@@ -20,7 +20,7 @@ I recently performed a penetration test where the website was running the latest
 
 In the file `manage.php` which handles the plugin settings there is this block of code (line 60 onwards):
 
-The parameters `disqus_replace`, `disqus_public_key` and `disqus_secret_key` are being passed to WordPress’s `update_option` function directly with no filtering. The [documentation for update_option](http://codex.wordpress.org/Function_Reference/update_option) says that it will take any value passed to it and store it in the database. It is up to the plugin author to filter and validate variables here, since there are cases where you want to store HTML or other types of raw data.
+The parameters `disqus_replace`, `disqus_public_key` and `disqus_secret_key` are being passed to WordPress’s `update_option` function directly with no filtering. The [documentation for update_option](https://codex.wordpress.org/Function_Reference/update_option) says that it will take any value passed to it and store it in the database. It is up to the plugin author to filter and validate variables here, since there are cases where you want to store HTML or other types of raw data.
 
 Further down in `manage.php` we can see that the options are read out of the database again using `get_option` (line 245):
 
@@ -42,7 +42,7 @@ That exploit payload, `&lt;/textarea&gt;&lt;script&gt;alert(1);&lt;/script&gt;&l
 
 This is what it looks like:
 
-<img alt="Disqus WordPress plugin XSS vulnerability demonstration" src="/images/posts/Disqus-20-E2-80-B9-20nikcub-20test-20-E2-80-94-20WordPress.webp"/>
+<img alt="Disqus WordPress plugin XSS vulnerability demonstration" width="800" height="600" src="/images/posts/Disqus-20-E2-80-B9-20nikcub-20test-20-E2-80-94-20WordPress.webp"/>
 
 The last little touch on our exploit is that we trigger the form submit on pageload. I successfully utilized this exploit against a live environment as part of a pen test via a spearphish email to an administrator (my exploit was a little more sophisticated and the payload useful).
 
@@ -52,7 +52,7 @@ This one is less serious, but on the same advanced settings page for the plugin 
 
 Exploit here is simple again, take the last exploit and remove all the fields and add one for 'reset'. Deliver to a victim and we can trigger the reset or a delete action.
 
-The form includes a nonce, but it isn't being checked on submit. The `wp_verify_nonce` function ([documentation](http://codex.wordpress.org/Function_Reference/wp_verify_nonce)) should be called on submit.
+The form includes a nonce, but it isn't being checked on submit. The `wp_verify_nonce` function ([documentation](https://codex.wordpress.org/Function_Reference/wp_verify_nonce)) should be called on submit.
 
 ## Issue 3: Unfiltered parameter in upgrade script
 
