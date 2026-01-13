@@ -4,15 +4,15 @@ date: 2014-12-03T16:13:03+0000
 excerpt: Helping Blockchain.info become the second site after Facebook to offer a Tor hidden service with a CA-signed SSL certificate, protecting users from MITM attacks
 ---
 
-Over the past couple of weeks there has been a marked increase in the number of man-in-the-middle (MITM) attacks against Tor users of web based Bitcoin wallet provider Blockchain.info. One user reported [63 bitcoin](https://bitcointalk.org/index.php?topic=875805.0) stolen, and there were [many](http://www.reddit.com/r/Bitcoin/comments/2nrf12/my_blockchaininfo_account_was_hacked_thanksgiving/) [other examples](http://www.reddit.com/r/Bitcoin/comments/2nkias/this_is_a_list_of_rbitcoin_users_who_had_their/) as the thefts continued [despite warnings](https://twitter.com/blockchain/status/522454637115617280) to users. The attacks were so successful that Blockchain resorted to blocking all traffic to the wallet service from Tor exit nodes.
+Over the past couple of weeks there has been a marked increase in the number of man-in-the-middle (MITM) attacks against Tor users of web based Bitcoin wallet provider Blockchain.info. One user reported [63 bitcoin](https://bitcointalk.org/index.php?topic=875805.0) stolen, and there were [many](https://www.reddit.com/r/Bitcoin/comments/2nrf12/my_blockchaininfo_account_was_hacked_thanksgiving/) [other examples](https://www.reddit.com/r/Bitcoin/comments/2nkias/this_is_a_list_of_rbitcoin_users_who_had_their/) as the thefts continued [despite warnings](https://twitter.com/blockchain/status/522454637115617280) to users. The attacks were so successful that Blockchain resorted to blocking all traffic to the wallet service from Tor exit nodes.
 
 I've been working with Blockchain since Saturday to implement a number of security measures to better protect users. The main result of these efforts is that today we are announcing that Blockchain is now available as a hidden service on Tor with a signed SSL[^1] certificate (provided by [DigiCert](https://www.digicert.com)) and HTTPS enforced across the site. The address is `https://blockchainbdgpzk.onion/`.
 
 Blockchain are now only the second site to offer an alternate service on the Tor network with a signed certificate after Facebook [announced their own](https://www.facebook.com/notes/protect-the-graph/making-connections-to-facebook-more-secure/1526085754298237) hidden service last month.
 
-<img alt="blockchain-tor" src="/images/posts/blockchain-tor.webp"/>
+<img alt="Blockchain.info hidden service with signed SSL certificate in Tor browser" src="/images/posts/blockchain-tor.webp" width="800" height="600"/>
 
-Along with the hidden service and signed certificate, Blockchain has switched to HTTPS across the site and enforced secure connections on both the clearweb domain and the onion site with [Strict Transport Security](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) (HSTS) (which will be preloaded for the clearweb domain in all major browsers, and hopefully also for the onion domain), and will also implement dynamic public key pinning with Public Key Pinning ([HPKP](http://tools.ietf.org/html/draft-ietf-websec-key-pinning-01)).
+Along with the hidden service and signed certificate, Blockchain has switched to HTTPS across the site and enforced secure connections on both the clearweb domain and the onion site with [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) (HSTS) (which will be preloaded for the clearweb domain in all major browsers, and hopefully also for the onion domain), and will also implement dynamic public key pinning with Public Key Pinning ([HPKP](https://tools.ietf.org/html/draft-ietf-websec-key-pinning-01)).
 
 With an authenticated hidden service Blockchain users are able to access their Bitcoin wallets with the added anonymity of Tor while avoiding exit nodes. For users of the regular clearweb Blockchain service the addition of HSTS and HPKP provide additional guarantees against MITM attacks and rogue or stolen site certificates.
 
@@ -24,11 +24,11 @@ This technique was detailed and presented by Moxie Marlinspike in a [2009 talk a
 
 In an SSL stripping attack, the attacker first inserts their machine as a proxy between the victim and target website. This can be achieved with arp spoofing on a LAN or WiFi network, with DNS poisoning, by seizing a VPN server or HTTP proxy or by running a Tor exit node. Once inserted on the path between the victim and the connection to a web server, the sslstrip attack will intercept requests to an HTTPS based service and proxy them back to the user over HTTP.
 
-<img alt="sslstrip" src="/images/posts/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf-20-page-2025-20of-2099-.webp"/>
+<img alt="Diagram showing how SSL stripping inserts a proxy between victim and server" src="/images/posts/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf-20-page-2025-20of-2099-.webp" width="800" height="600"/>
 
 It is an attack type that relies on the user not noticing that their connection is no longer secured. One of the most common SSL stripping techniques is to set a lock icon as the fav icon for the website to fool the user into not noticing they aren’t on a real HTTP page. Here is an example of the Gmail homepage with sslstrip placing a lock icon as a favicon, note the _HTTP_ URL:
 
-<img alt="gmail stripped" src="/images/posts/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf-20-page-2069-20of-2099-.webp"/>
+<img alt="Gmail login page with sslstrip showing fake lock favicon over HTTP" src="/images/posts/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf-20-page-2069-20of-2099-.webp" width="800" height="600"/>
 
 (Note: The last two slides are from Moxie’s [Black Hat talk](https://www.youtube.com/watch?v=MFol6IMbZ7Y), which is very accessible and worth seeing. His [followup talk](https://www.youtube.com/watch?v=ibF36Yyeehw) with details of other stripping techniques is also recommended, as is [Moxie’s blog](http://www.thoughtcrime.org).).
 
@@ -54,7 +54,7 @@ Hopefully between now and the November 2015 expiry date a solution will be reach
 
 Google has surged ahead with local name signed certificate deprecation by not validating them in Chromium. This means the Facebook and Blockchain hidden services are displayed as broken HTTPS connections despite all the certificates validating.
 
-<img alt="chromium-fail" src="/images/posts/Screen-20Shot-202014-12-04-20at-202.00.01-20AM.webp"/>
+<img alt="Chrome showing broken HTTPS for onion address with signed certificate" src="/images/posts/Screen-20Shot-202014-12-04-20at-202.00.01-20AM.webp" width="800" height="600"/>
 
 Chrome will only validate signed certificates for hostnames that belong to a TLD or country-level domain that is listed in the [public suffix list](https://publicsuffix.org/). This is a sound security decision, the problem is that .onion needs to be recognized as a proper TLD. If it isn’t recognized as a TLD, I hope that the browsers will include it as an exception.
 
