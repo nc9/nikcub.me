@@ -20,7 +20,7 @@ Amongst all the fuss around Firesheep a lot of blog posts and comments were made
 
 The problem with some of these plugins is that the initial request is still made over plain HTTP. They only switch over to HTTPS once the first request has been made. A second problem is that some do not protect requests that are made as part of widgets or share buttons embedded on other sites, such as Facebook like buttons (which send your session identifier as part of the request so that it can show you friends who have liked the item).
 
-My solution is a browser plugin I call [Fidelio](http://github.com/nikcub/fidelio). It is currently only available for Chrome, as I have only spent a few hours working on it so far.
+My solution is a browser plugin I call [Fidelio](https://github.com/nikcub/fidelio). It is currently only available for Chrome, as I have only spent a few hours working on it so far.
 
 Fidelio does the following:
 
