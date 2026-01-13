@@ -3,7 +3,7 @@ title: How Megaupload Was Investigated and Indicted
 date: 2012-01-20T16:47:06+00:00
 ---
 
-<img alt="Megaupload website logo" src="/images/posts/image66.webp"/> The popular file upload site Megaupload was [taken down](http://www.techmeme.com/120119/p97#a120119p97) today as part of a US DOJ investigation into the site for breaches of US copyright law.
+<img alt="Megaupload website logo" width="800" height="600" src="/images/posts/image66.webp"/> The popular file upload site Megaupload was [taken down](https://www.techmeme.com/120119/p97#a120119p97) today as part of a US DOJ investigation into the site for breaches of US copyright law.
 
 From reading [the indictment](https://www.scribd.com/doc/78800989/Mega-Indictment) and digging around online you can start to reverse-engineer how the investigation was carried out.
 
@@ -24,7 +24,7 @@ The PayPal records, including all the payment information and emails between Meg
 
 All of the other evidence is based on public records such as WHOIS records, blog posts, download links, etc.
 
-To establish a timeline, the New Zealand media reported that the FBI first got in touch with law enforcement officials in that country regarding Megaupload 'around a year ago'. This shows that the investigation had little to do with the recent high-profile release of a [supporters video](http://torrentfreak.com/riaa-label-artists-a-list-stars-endorse-megaupload-in-new-song-111209/) and music clip along with the associated lawsuits.
+To establish a timeline, the New Zealand media reported that the FBI first got in touch with law enforcement officials in that country regarding Megaupload 'around a year ago'. This shows that the investigation had little to do with the recent high-profile release of a [supporters video](https://torrentfreak.com/riaa-label-artists-a-list-stars-endorse-megaupload-in-new-song-111209/) and music clip along with the associated lawsuits.
 
 It is thus likely that this investigation began in 2010, at the latest. The emails in the indictment date until November 2011, so the search warrant must have been carried out late last year. The indictment was filed on the 5th of January this year and only unsealed yesterday. The grand jury must have taken place late last year (in 2010).
 
