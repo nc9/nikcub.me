@@ -4,9 +4,9 @@ date: 2011-08-19T04:40:44+0000
 excerpt: Using HTTP headers as unblockable super-cookies
 ---
 
-There was a big [story](http://ashkansoltani.org/docs/respawn_redux.html) last week about published research that claimed analytics company KissMetrics were tracking users across multiple sites using a unique `ETag`([spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19)). KissMetrics [denied](http://blog.kissmetrics.com/official-kissmetrics-response-to-data-collection-practices/) that they were using ETags to track users, <s>and they have filed a lawsuit against the author of the research piece</s> (**Note**: see update at the bottom of this post).
+There was a big [story](https://ashkansoltani.org/docs/respawn_redux.html) last week about published research that claimed analytics company KissMetrics were tracking users across multiple sites using a unique `ETag`([spec](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19)). KissMetrics [denied](https://blog.kissmetrics.com/official-kissmetrics-response-to-data-collection-practices/) that they were using ETags to track users, <s>and they have filed a lawsuit against the author of the research piece</s> (**Note**: see update at the bottom of this post).
 
-The ETag (short for '<strike>element</strike>_Entity_ tag') method of tracking users has been known and used in affiliate schemes since early [last decade](http://www.arctic.org/~dean/tracking-without-cookies.html). It is also known that the `Last-Modified`([spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29)) header can, in theory, be used to track users by setting a unique update time.
+The ETag (short for '<strike>element</strike>_Entity_ tag') method of tracking users has been known and used in affiliate schemes since early [last decade](http://www.arctic.org/~dean/tracking-without-cookies.html). It is also known that the `Last-Modified`([spec](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29)) header can, in theory, be used to track users by setting a unique update time.
 
 What I do not believe is well known is that the `Last-Modified` header accepts any random string – it does not have to be a verified date.
 
@@ -18,13 +18,13 @@ Here is the initial request to the server. Nothing unusual here.
 
 ## Server Response: Setting the token
 
-The server responds and sets a unique identifier (in this case an UUID that I generate) as the `Last-Modified`([spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25)) date:
+The server responds and sets a unique identifier (in this case an UUID that I generate) as the `Last-Modified`([spec](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25)) date:
 
 Note that normally if this method of caching is used the server response header will be a standard datetime string:
 
 **Subsequent Browser Requests**
 
-The browser now sends this token along with subsequent requests to the same URL using the `If-Modified-Since`([spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25)) header. It is asking _'if the modified date of this resource newer than this date, send it to me'_ – but it is replaying the unique identifier rather than a date.
+The browser now sends this token along with subsequent requests to the same URL using the `If-Modified-Since`([spec](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25)) header. It is asking _'if the modified date of this resource newer than this date, send it to me'_ – but it is replaying the unique identifier rather than a date.
 
 It works after closing and restarting the browser, and works in all the major browsers. The ETag method doesn't work in all cases, especially with web proxies, but the Last-Modified method does.
 
@@ -40,6 +40,6 @@ Try this bug out yourself by using the [demo page](/tracking-cookie) I have setu
 
 ## Addendum
 
-The privacy plugin that I am working on, [Parley](http://github.com/nikcub/parley), would solve the cross-site tracking aspect of this bug, since it blocks all third party requests. I am thinking of adding date verification and fudging to it as well. Something to work on the next time I pick that project up (there is only so much you can do with plugins, which leads to a temptation to fork Webkit and build a privacy and security-aware browser)
+The privacy plugin that I am working on, [Parley](https://github.com/nikcub/parley), would solve the cross-site tracking aspect of this bug, since it blocks all third party requests. I am thinking of adding date verification and fudging to it as well. Something to work on the next time I pick that project up (there is only so much you can do with plugins, which leads to a temptation to fork Webkit and build a privacy and security-aware browser)
 
-**Note:** In an earlier version of this post I said that KissMetrics had filed a lawsuit against the author of the ETag [research piece](http://ashkansoltani.org/docs/respawn_redux.html). This was not accurate. KissMetrics have filed a counter-suit against a law firm who have sued them and their clients. The author of the report, [Ashkan Soltani](http://ashkansoltani.org/), has nothing to do with the KissMetric lawsuit. Apologies to him for getting it mixed up.
+**Note:** In an earlier version of this post I said that KissMetrics had filed a lawsuit against the author of the ETag [research piece](https://ashkansoltani.org/docs/respawn_redux.html). This was not accurate. KissMetrics have filed a counter-suit against a law firm who have sued them and their clients. The author of the report, [Ashkan Soltani](https://ashkansoltani.org/), has nothing to do with the KissMetric lawsuit. Apologies to him for getting it mixed up.

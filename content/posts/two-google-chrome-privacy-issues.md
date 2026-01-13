@@ -43,7 +43,7 @@ An example of what it looks like:
 
 Any other user or process with access to the user profile can access this information.
 
-This issue was [files as a bug](http://code.google.com/p/chromium/issues/detail?id=137412) on the 14th of July.
+This issue was [files as a bug](https://code.google.com/p/chromium/issues/detail?id=137412) on the 14th of July.
 
 ## Issue 2: DNS prefetched domains are not deleted with browsing history
 
@@ -51,7 +51,7 @@ DNS is used to translate a domain name (eg. xyz.com) to an IP address. The DNS l
 
 To improve the performance and responsiveness of Google Chrome, the browser will 'pre-fetch' DNS queries and cache them in the user profile. It will perform DNS lookups in the background for any domain names it finds within a page you are visiting, and cache the results. When you click on one of the links, the cached result is used rather than a network lookup.
 
-Google wrote a [thorough blog post](http://blog.chromium.org/2008/09/dns-prefetching-or-pre-resolving.html) about DNS prefetching in Chrome, how it works and the benefits.
+Google wrote a [thorough blog post](https://blog.chromium.org/2008/09/dns-prefetching-or-pre-resolving.html) about DNS prefetching in Chrome, how it works and the benefits.
 
 In Chrome, if you open `chrome://dns` in the adress bar, you will see all the statistics for DNS prefetching.
 
@@ -61,9 +61,9 @@ Here is what the DNS prefetch information looks like in the Preferences file.
 
 _[Image unavailable - Skitch service discontinued]_
 
-This issue was [also filed as a bug](http://code.google.com/p/chromium/issues/detail?id=137414) on June the 17th.
+This issue was [also filed as a bug](https://code.google.com/p/chromium/issues/detail?id=137414) on June the 17th.
 
-There is a [blog post here](http://www.mydigitallife.info/turn-off-dns-prefetching-in-google-chrome-to-fix-resolving-host-and-cannot-load-page-error/) describing how to disable DNS prefetching in Chrome
+There is a [blog post here](https://www.mydigitallife.info/turn-off-dns-prefetching-in-google-chrome-to-fix-resolving-host-and-cannot-load-page-error/) describing how to disable DNS prefetching in Chrome
 
 ## Potential Impact
 
