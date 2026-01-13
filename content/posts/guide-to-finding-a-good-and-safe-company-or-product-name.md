@@ -26,16 +26,16 @@ The best result would be that a search for your product name returns very little
 
 There are a number of sites that can generate a name using the above technique. If you google for 'product OR company name generator' you will find a bunch more:
 
-- [Thesaurus.com](http://thesaurus.com) – Find an alternate words to use
-- [NameBoy](http://nameboy.com) – Generate a name and check TLDs
-- [Name Generator](http://www.company-name-generator.com/) – name generator.
-- [web 2.0 name generator](http://www.dotomator.com/web20.html)
+- [Thesaurus.com](https://thesaurus.com) – Find an alternate words to use
+- [NameBoy](https://nameboy.com) – Generate a name and check TLDs
+- [Name Generator](https://www.company-name-generator.com/) – name generator.
+- [web 2.0 name generator](https://www.dotomator.com/web20.html)
 
 ## Defensible
 
 This means a trademark, and/or the top domain name(s). Find links to do a trademark search below in 'tools'.
 
-[MarkMonitor](http://markmonitor.com/) is a commercial organization that handles trademarks and domain names for large organizations across the whole world. They have a near-monopoly on this service at the top end, and clients include Apple and Microsoft. If you are a large global org (or plan to be) and can justify the cost, they are a one-stop shop for name protection.
+[MarkMonitor](https://markmonitor.com/) is a commercial organization that handles trademarks and domain names for large organizations across the whole world. They have a near-monopoly on this service at the top end, and clients include Apple and Microsoft. If you are a large global org (or plan to be) and can justify the cost, they are a one-stop shop for name protection.
 
 ## Social Media
 
@@ -43,21 +43,21 @@ It is expected that your new company and product will have a presence on the usu
 
 These tools allow you to check all the social media sites:
 
-- [Knowem](http://knowem.com/) – Checks 400 (!) sites
-- [Namechk](http://namechk.com/) – Checks a bunch of sites (I found some bugs with short names)
-- [Usernamecheck](http://www.usernamecheck.com/) – Checks the top 20 sites
+- [Knowem](https://knowem.com/) – Checks 400 (!) sites
+- [Namechk](https://namechk.com/) – Checks a bunch of sites (I found some bugs with short names)
+- [Usernamecheck](https://www.usernamecheck.com/) – Checks the top 20 sites
 
 ## Domain Name
 
 The following tools will help you find a domain name (more in 'tools' below):
 
-- [InstantDomainSearch](http://instantdomainsearch.com/) – Instantly check the top TLDs
-- [EuroDNS search](http://www.eurodns.com/domain-name-search/) – search every TLD for a name
+- [InstantDomainSearch](https://instantdomainsearch.com/) – Instantly check the top TLDs
+- [EuroDNS search](https://www.eurodns.com/domain-name-search/) – search every TLD for a name
 
 For registering a domain, GoDaddy is the cheapest but you have to put up with their upsell (I once accidentally purchased hosting) and terrible management interface. The best combination for domain registration and then DNS hosting is joker.com and EasyDNS. I have been using the two of them for over ten years now, and couldn't be happier:
 
-- [Joker](http://joker.com/) – Domain registration. Simple interface and pricing in multiple currencies
-- [EasyDNS](http://www.easydns.com/) – Pricey, but excellent DNS hosting with wildcard support, email forwarding, and more.
+- [Joker](https://joker.com/) – Domain registration. Simple interface and pricing in multiple currencies
+- [EasyDNS](https://www.easydns.com/) – Pricey, but excellent DNS hosting with wildcard support, email forwarding, and more.
 
 ## Buying vs Registering
 
@@ -69,7 +69,7 @@ The problem with purchasing a domain may be that it has a poor history, which we
 
 ## Buying
 
-If you find a domain name that is already registered but it only contains ads on it (ie. is dormant) and wish to approach the owner, the easiest way is to visit the domain and look for a for sale link. The next step is to perform a whois lookup and to find a contact email (go to `whois.sc/` eg. `http://whois.sc/thedomain.com`).
+If you find a domain name that is already registered but it only contains ads on it (ie. is dormant) and wish to approach the owner, the easiest way is to visit the domain and look for a for sale link. The next step is to perform a whois lookup and to find a contact email (go to `whois.sc/` eg. `https://whois.sc/thedomain.com`).
 
 If there is more than one email address on the record, send your email to all of them. Even though many domain hoarders keep their domains registered privately, the response rate to emails is high. Your email to the domain owner should be as simple as:
 
@@ -83,39 +83,39 @@ If the name is a very short single-word, you can negotiate the option of the dom
 
 Once you have a name that is either available or that you are going to purchase from somebody, you need to make certain that it has not been blacklisted by Google or other services. You can also check the current SEO status. Starting with no ranking is fine, but starting with a negative ranking is an impediment that could be difficult to move out of.
 
-To check if a domain has been blacklisted on Google, use the [Google Blacklist Checker](http://vebtools.com/google-banned-checker/). Plug the domain name in, fill in the verification and you get a simple yes/no. [Vebtools.com](http://vebtools.com/) provide a number of other excellent tools that you can use to check the existing page rank of the site, inbound links, etc.
+To check if a domain has been blacklisted on Google, use the [Google Blacklist Checker](https://vebtools.com/google-banned-checker/). Plug the domain name in, fill in the verification and you get a simple yes/no. [Vebtools.com](https://vebtools.com/) provide a number of other excellent tools that you can use to check the existing page rank of the site, inbound links, etc.
 
-Use the wayback machine at [archive.org](http://archive.org) to check what the previous content on the domain was. If you find porn, affiliate links or anything that looks like spam, there is a chance that the site may be on other blacklists.
+Use the wayback machine at [archive.org](https://archive.org) to check what the previous content on the domain was. If you find porn, affiliate links or anything that looks like spam, there is a chance that the site may be on other blacklists.
 
 Check indexing status by searching Google for `site:domainname.com`
 
 There are a number of blacklists in use by browsers to check if a domain name is safe for visitors (these are different to the email blacklists and are used for actual sites). Getting a site listed on these blacklists is easy, getting them off is not. Google maintains a blacklist used in Chrome, but there are a number of others (mostly run by the anti-virus companies). Search the Google safe browsing list using:
 
-`http://www.google.com/safebrowsing/diagnostic?site=http://domain.com/`
+`https://www.google.com/safebrowsing/diagnostic?site=http://domain.com/`
 
 Replace `domain.com` in the URL with the domain you want to search.
 
 You should also check the domain against the following databases of bad domains:
 
-- [McAfee SiteAdvisor](http://www.siteadvisor.com)
-- [hosts-file.net](http://hosts-file.net/)
+- [McAfee SiteAdvisor](https://www.siteadvisor.com)
+- [hosts-file.net](https://hosts-file.net/)
 - [Norton Safeweb](https://safeweb.norton.com/)
-- [PhishTank](http://www.phishtank.com/)
+- [PhishTank](https://www.phishtank.com/)
 
 _Note: I can't believe there isn't a service that scans all 12+ major malware DB's at once, if you know of one let me know (the exploit kits have blacklist lookups). There are also a lot of discrepencies between lists_
 
 **Tools**
 
-- [Tess](http://tess2.uspto.gov/) – USPTO trademark search
-- [EuroDNS search](http://www.eurodns.com/domain-name-search/) – search every TLD for a name
-- [Instant Domain Search](http://instantdomainsearch.com) – Search the three major TLDs instantly to find an available domain
-- [Nxdom](http://www.nxdom.com/) – Find available domain names that begin or end with a word
+- [Tess](https://tess2.uspto.gov/) – USPTO trademark search
+- [EuroDNS search](https://www.eurodns.com/domain-name-search/) – search every TLD for a name
+- [Instant Domain Search](https://instantdomainsearch.com) – Search the three major TLDs instantly to find an available domain
+- [Nxdom](https://www.nxdom.com/) – Find available domain names that begin or end with a word
 - [Moniker](https://www.moniker.com/domainname.jsp) – search obscure TLDs
-- [NameBoy](http://nameboy.com) – Generate a name and check TLDs
-- [Thesaurus.com](http://thesaurus.com) – Find an alternate word to use
-- [Domaintools](http://www.domaintools.com) – Lookup a domain, find owner, email them (you can just type whois.sc/ into your address bar for a quick lookup).
+- [NameBoy](https://nameboy.com) – Generate a name and check TLDs
+- [Thesaurus.com](https://thesaurus.com) – Find an alternate word to use
+- [Domaintools](https://www.domaintools.com) – Lookup a domain, find owner, email them (you can just type whois.sc/ into your address bar for a quick lookup).
 - [Sedo](https://sedo.com) – Probably the largest domain aftermarket.
-- [NameJet](http://www.namejet.com/) – Another domain aftermarket.
-- [Name Generator](http://www.company-name-generator.com/) – name generator.
-- [web 2.0 name generator](http://www.dotomator.com/web20.html)
-- [VebTools](http://vebtools.com/) – Check the pagerank, indexing and a hundred other variables about a site or domain
+- [NameJet](https://www.namejet.com/) – Another domain aftermarket.
+- [Name Generator](https://www.company-name-generator.com/) – name generator.
+- [web 2.0 name generator](https://www.dotomator.com/web20.html)
+- [VebTools](https://vebtools.com/) – Check the pagerank, indexing and a hundred other variables about a site or domain
