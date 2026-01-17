@@ -1,5 +1,6 @@
 import { ArrowLeft } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import rehypeSlug from "rehype-slug";
@@ -9,6 +10,7 @@ import { mdxComponents } from "@/components/mdx/mdx-components";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getAllPageSlugs, getPageBySlug } from "@/lib/mdx";
+import { generatePageMetadata } from "@/lib/metadata";
 
 interface PageProps {
   params: Promise<{ slug: string[] }>;
@@ -27,17 +29,16 @@ export async function generateMetadata({ params }: PageProps) {
     return { title: "Page Not Found" };
   }
 
-  return {
+  const slugPath = `/${slug.join("/")}`;
+
+  return generatePageMetadata({
     title: page.frontmatter.title,
-    description: page.frontmatter.excerpt,
-    openGraph: {
-      title: page.frontmatter.title,
-      description: page.frontmatter.excerpt,
-      images: page.frontmatter.featureImage
-        ? [page.frontmatter.featureImage]
-        : undefined,
-    },
-  };
+    description:
+      page.frontmatter.excerpt ||
+      "Security researcher, technologist, and writer",
+    path: slugPath,
+    image: page.frontmatter.featureImage,
+  });
 }
 
 export default async function Page({ params }: PageProps) {
@@ -51,7 +52,7 @@ export default async function Page({ params }: PageProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <article className="mx-auto max-w-2xl px-6 py-12">
           {/* Header */}
           <header className="mb-12">
@@ -75,10 +76,13 @@ export default async function Page({ params }: PageProps) {
           {/* Featured Image */}
           {page.frontmatter.featureImage && (
             <div className="mb-8 border-b border-border pb-8">
-              <img
+              <Image
                 src={page.frontmatter.featureImage}
                 alt={page.frontmatter.featureImageAlt || page.frontmatter.title}
+                width={800}
+                height={600}
                 className="w-full rounded-lg border-2 border-gray-200"
+                priority
               />
               {page.frontmatter.featureImageAlt && (
                 <p className="mt-2 text-center text-sm text-muted-foreground">

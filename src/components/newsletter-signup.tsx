@@ -41,12 +41,19 @@ export function NewsletterSignup({
             onSubmit={handleSubmit}
             className="flex flex-col gap-3 sm:flex-row"
           >
+            <label htmlFor="email-inline" className="sr-only">
+              Email address
+            </label>
             <input
+              id="email-inline"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               required
+              aria-describedby={
+                status === "error" ? "email-error-inline" : undefined
+              }
               className="h-11 flex-1 rounded-sm border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
             />
             <button
@@ -87,12 +94,19 @@ export function NewsletterSignup({
             onSubmit={handleSubmit}
             className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center"
           >
+            <label htmlFor="email-section" className="sr-only">
+              Email address
+            </label>
             <input
+              id="email-section"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               required
+              aria-describedby={
+                status === "error" ? "email-error-section" : undefined
+              }
               className="h-10 rounded-sm border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 sm:w-64"
             />
             <button

@@ -4,7 +4,7 @@ date: 2011-09-27T13:53:48+00:00
 excerpt: Facebook fix their logged out user privacy issues in response to my earlier post
 ---
 
-I wrote [a post two days ago](/post/logging-out-of-facebook-is-not-enough) about privacy issues with the Facebook logout procedure which could lead to your subsequent web requests to third-party sites that integrate Facebook widgets being identifiable and linked back to your real account. Over the course of the past 48 hours since that post was published we have researched the issue further and have been in constant contact with Facebook on working out solutions and clarifying behavior on the site.
+I wrote [a post two days ago](/posts/logging-out-of-facebook-is-not-enough) about privacy issues with the Facebook logout procedure which could lead to your subsequent web requests to third-party sites that integrate Facebook widgets being identifiable and linked back to your real account. Over the course of the past 48 hours since that post was published we have researched the issue further and have been in constant contact with Facebook on working out solutions and clarifying behavior on the site.
 
 My goal was to both identify bugs in the logout process and see that they are fixed, and to communicate with Facebook in getting some of the unanswered questions answered so that the Facebook using public can be informed of how cookies are used on the site – especially with regard to third-party requests.
 

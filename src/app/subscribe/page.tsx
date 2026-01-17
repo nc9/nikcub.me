@@ -3,12 +3,20 @@ import { Rss, Mail } from "lucide-react";
 import { NewsletterSignup } from "@/components/newsletter-signup";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { generatePageMetadata } from "@/lib/metadata";
+
+export const metadata = generatePageMetadata({
+  title: "Subscribe",
+  description:
+    "Get notified when I publish new articles. Subscribe via email newsletter or RSS feed. No spam, unsubscribe anytime.",
+  path: "/subscribe",
+});
 
 export default function SubscribePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <div className="mx-auto max-w-2xl px-6 py-16">
           <header className="mb-12">
             <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">

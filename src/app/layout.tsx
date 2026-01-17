@@ -19,9 +19,24 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nikcub.me"),
+  title: {
+    default: "Nik Cubrilovic | Security Researcher & Writer",
+    template: "%s | Nik Cubrilovic",
+  },
   description:
     "Security researcher, technologist, and writer. Long-form articles and short observations on technology, privacy, and the web.",
-  generator: "v0.app",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://nikcub.me",
+    siteName: "Nik Cubrilovic",
+    images: ["/og-default.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@nikcub",
+  },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -48,7 +63,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-  title: "Nik Cubrilovic",
 };
 
 export default function RootLayout({
@@ -62,6 +76,12 @@ export default function RootLayout({
       className={`${sourceSerif.variable} ${jetbrainsMono.variable}`}
     >
       <body className="font-sans antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-foreground focus:text-background focus:px-4 focus:py-2 focus:rounded"
+        >
+          Skip to content
+        </a>
         {children}
         <Analytics />
       </body>

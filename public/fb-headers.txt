@@ -1,0 +1,15 @@
+Facebook Cookie Analysis - Raw HTTP Headers
+===========================================
+
+This file contains raw HTTP headers captured during Facebook session analysis
+for the post "Logging Out of Facebook Is Not Enough"
+
+The analysis examined how Facebook cookies behave across different states:
+1. Logged in request to facebook.com
+2. Request to logout action
+3. Immediate request to Facebook homepage
+4. Request after browser restart
+
+See /fb-table.html for formatted cookie data visualization.
+
+Note: Original raw headers from 2011 research session.

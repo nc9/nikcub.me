@@ -72,9 +72,9 @@ function ArticleItem({ post }: { post: Post }) {
     <article className="group">
       <Link href={`/posts/${post.slug}`} className="block">
         <div className="flex flex-col gap-2">
-          <h3 className="text-2xl font-semibold leading-tight text-foreground transition-colors group-hover:text-highlight">
+          <h2 className="text-2xl font-semibold leading-tight text-foreground transition-colors group-hover:text-highlight">
             {post.frontmatter.title}
-          </h3>
+          </h2>
           {post.frontmatter.excerpt && (
             <p className="text-[15px] leading-relaxed text-muted-foreground">
               {post.frontmatter.excerpt}
@@ -118,9 +118,9 @@ function AsideItem({ post }: { post: Post }) {
     <article className="group border-l-2 border-border pl-4 transition-colors hover:border-highlight">
       <Link href={`/posts/${post.slug}`} className="block">
         <div className="flex flex-col gap-1">
-          <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-highlight">
+          <h2 className="text-lg font-semibold text-foreground transition-colors group-hover:text-highlight">
             {post.frontmatter.title}
-          </h3>
+          </h2>
           {post.frontmatter.excerpt && (
             <p className="text-sm text-muted-foreground">
               {post.frontmatter.excerpt}

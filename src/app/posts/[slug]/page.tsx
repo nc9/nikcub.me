@@ -1,5 +1,6 @@
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -10,6 +11,7 @@ import { mdxComponents } from "@/components/mdx/mdx-components";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/mdx";
+import { generatePageMetadata } from "@/lib/metadata";
 import { formatDate } from "@/lib/utils";
 
 interface PostPageProps {
@@ -29,17 +31,14 @@ export async function generateMetadata({ params }: PostPageProps) {
     return { title: "Post Not Found" };
   }
 
-  return {
+  return generatePageMetadata({
     title: post.frontmatter.title,
-    description: post.frontmatter.excerpt,
-    openGraph: {
-      title: post.frontmatter.title,
-      description: post.frontmatter.excerpt,
-      images: post.frontmatter.featureImage
-        ? [post.frontmatter.featureImage]
-        : undefined,
-    },
-  };
+    description:
+      post.frontmatter.excerpt || "Security research and technology analysis",
+    path: `/posts/${slug}`,
+    image: post.frontmatter.featureImage,
+    type: "article",
+  });
 }
 
 export default async function PostPage({ params }: PostPageProps) {
@@ -53,7 +52,7 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <article className="mx-auto max-w-2xl px-6 py-12">
           {/* Header with metadata */}
           <header className="mb-12">
@@ -93,10 +92,13 @@ export default async function PostPage({ params }: PostPageProps) {
           {/* Featured Image */}
           {post.frontmatter.featureImage && (
             <div className="mb-8 border-b border-border pb-8">
-              <img
+              <Image
                 src={post.frontmatter.featureImage}
                 alt={post.frontmatter.featureImageAlt || post.frontmatter.title}
+                width={800}
+                height={600}
                 className="w-full rounded-lg border-2 border-gray-200"
+                priority
               />
               {post.frontmatter.featureImageAlt && (
                 <p className="mt-2 text-center text-sm text-muted-foreground">

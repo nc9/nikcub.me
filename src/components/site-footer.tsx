@@ -1,4 +1,5 @@
 import { Github, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
 
 import { NewsletterSignup } from "./newsletter-signup";
 
@@ -10,7 +11,15 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <div className="mx-auto max-w-2xl px-6 py-8">
           <div className="flex flex-col gap-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-            <p>© 1999 - {new Date().getFullYear()} Nik Cubrilovic</p>
+            <div className="flex gap-4">
+              <p>© 1999 - {new Date().getFullYear()} Nik Cubrilovic</p>
+              <Link
+                href="/privacy"
+                className="transition-colors hover:text-foreground"
+              >
+                Privacy
+              </Link>
+            </div>
             <div className="flex gap-4">
               <a
                 href="https://twitter.com/dir"

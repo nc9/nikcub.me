@@ -18,9 +18,9 @@ export function SiteHeader() {
             </Link>
             <div>
               <Link href="/" className="group">
-                <h1 className="text-2xl font-semibold tracking-tight text-foreground transition-colors group-hover:text-highlight">
+                <div className="text-2xl font-semibold tracking-tight text-foreground transition-colors group-hover:text-highlight">
                   Nik Cubrilovic
-                </h1>
+                </div>
               </Link>
               <p className="mt-1 text-sm text-muted-foreground">
                 Security researcher & technologist

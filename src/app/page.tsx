@@ -18,7 +18,7 @@ export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <div className="mx-auto max-w-2xl px-6 py-12">
           {/* Introduction */}
           <div className="mb-16">

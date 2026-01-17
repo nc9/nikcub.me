@@ -5,11 +5,13 @@ import { PostList } from "@/components/post-list";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getAllPosts } from "@/lib/mdx";
+import { generatePageMetadata } from "@/lib/metadata";
 
-export const metadata = {
-  title: "Asides",
-  description: "Brief notes and observations",
-};
+export const metadata = generatePageMetadata({
+  title: "Brief Notes & Asides",
+  description: "Short observations on security, technology, and current events",
+  path: "/asides",
+});
 
 const ASIDES_PER_PAGE = 10;
 
@@ -32,7 +34,7 @@ export default async function AsidesPage({ searchParams }: AsidesPageProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <div className="mx-auto max-w-2xl px-6 py-12">
           <div className="mb-12">
             <Link
