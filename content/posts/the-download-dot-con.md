@@ -4,7 +4,7 @@ date: 2011-12-08T17:15:33+00:00
 excerpt: Download.com are one of the largest propagators of malware on the web
 ---
 
-![download dot con](./../assets/download-dotcon.jpg)
+![download dot con](/images/posts/download-dotcon.webp)
 
 Fake software downloads are a huge problem on the web. A few weeks ago a non-technical friend called me and asked how to play some Xvid encoded movies he had downloaded. I told him that the best and easiest software to use is VLC Player. He asked if I could send him a copy or a link, and I said “it's ok, just Google for 'VLC download' and you will find it”. Big mistake.
 

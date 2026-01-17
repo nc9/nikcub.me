@@ -14,7 +14,7 @@ Prior to Firesheep, session hijacking was a very real threat, but it was never a
 
 ## Fidelio
 
-!["Fidelio screen](/images/posts/20101027-gak3mctyrk9nnmfabar2n1jq7y.jpg)
+_[Image unavailable - Skitch service discontinued]_
 
 Amongst all the fuss around Firesheep a lot of blog posts and comments were made with recommendations on what users can do to prevent against this attack. The most common suggestion was some form of browser plugin that forces the browser to request websites using SSL, such as the Firefox plugin [Force-TLS](https://addons.mozilla.org/en-US/firefox/addon/12714/).
 

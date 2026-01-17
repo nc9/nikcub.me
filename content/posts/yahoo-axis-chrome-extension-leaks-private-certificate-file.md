@@ -8,7 +8,7 @@ Yahoo! today announced their new [Axis](http://axis.yahoo.com) web browser. It i
 
 I installed the [Chrome extension](http://sxp.yimg.com/ei/ynano/YAxis_Chrome_v1_0_20120520.crx) (direct link to original Chrome extension, probably not a good idea to install it) with the idea of checking out the source code. The first thing I noticed is that the source package contains their private certificate file used to sign the extension:
 
-![yahoo private key](./../assets/yahoo-private-key.jpg)
+![yahoo private key](/images/posts/yahoo-private-key.webp)
 
 The certificate file is used by Yahoo! to sign the extension package, which is used by Chrome and the webstore to authenticate that the package comes from Yahoo!. With access to the private certificate file a malicious attacker is able to create a forged extension that Chrome will authenticate as being from Yahoo!
 
@@ -42,7 +42,7 @@ c) Visit the address `chrome://extensions` in your address bar. This works on al
 
 Then when you have the extensions setting page open. scroll down until you see the `Yahoo! Axis` extension and either uncheck the 'enabled' checkbox, or mouse over the trash icon to delete it.
 
-![disable yahoo extension](./../assets/yahoo-extension-disable.jpg)
+![disable yahoo extension](/images/posts/yahoo-extension-disable.webp)
 
 ### Implications
 

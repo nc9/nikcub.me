@@ -4,7 +4,7 @@ date: 2012-02-21T08:22:02+00:00
 excerpt: An update to the BlockPlus browser extension which removes Google+ and other sites from the Google homepage and other properties
 ---
 
-![](/images/posts/5909374213_cbae62eb55_m.jpg)
+![](/images/posts/5909374213_cbae62eb55_m.webp)
 
 Google recently added a Google+ widget to the search engine homepage. I wrote BlockPlus when Google+ was first released and first integrated into other Google properties. The idea was to remove all the links to Google+ and Google+ widgets from other Google properties so that you aren't distracted by them and so that the page would load faster.
 
@@ -22,4 +22,4 @@ If you are interested in porting the extension as a user script, a greasemonkey 
 
 # Screenshot
 
-![blockplus demo](/images/posts/5909661385_79445883de_b.jpg)
+![blockplus demo](/images/posts/5909661385_79445883de_b.webp)

@@ -10,7 +10,7 @@ In May of this year the [Wall Street Journal reported](http://online.wsj.com/art
 
 Today, that cookie is back. It is being set by all the third-party sites that we tested.
 
-![facbeook datr cookie](./../assets/facebook-reenable01.jpg)
+![facbeook datr cookie](/images/posts/facebook-reenable01.webp)
 
 _Image: Screenshot from Chrome showing the datr cookie being set by Facebook on a third party site_
 
@@ -28,7 +28,7 @@ It is the first cookie that is set, for all users of Facebook, and right now is 
 
 The recent [EU vs Facebook](http://europe-v-facebook.org) revelations about the data that Facebook stores for each users gave an interesting insight into the `datr` cookie. Below is a screenshot of some data from a user who retrieved their information using Europe vs Facebook. It shows machine ID's that were used to access that account, and the other accounts associated with that machine id.
 
-![facbeook datr cookie](./../assets/facebook-reenable02.jpg)
+![facbeook datr cookie](/images/posts/facebook-reenable02.webp)
 
 _Image: Data captured from a Facebook user showing machine identification and association users_
 

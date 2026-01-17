@@ -3,7 +3,7 @@ title: How Megaupload Was Investigated and Indicted
 date: 2012-01-20T16:47:06+00:00
 ---
 
-<img src="/images/posts/image66.png"/> The popular file upload site Megaupload was [taken down](http://www.techmeme.com/120119/p97#a120119p97) today as part of a US DOJ investigation into the site for breaches of US copyright law.
+<img src="/images/posts/image66.webp"/> The popular file upload site Megaupload was [taken down](http://www.techmeme.com/120119/p97#a120119p97) today as part of a US DOJ investigation into the site for breaches of US copyright law.
 
 From reading [the indictment](www.scribd.com/doc/78800989/Mega-Indictment) and digging around online you can start to reverse-engineer how the investigation was carried out.
 

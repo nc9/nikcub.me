@@ -60,7 +60,7 @@ Being able to POST an email address to `https://appleid.apple.com/account/valida
 
 **13.** The different file name formats, data inconsistencies and remnants such as Dropbox files being found in the dumps can be explained by the different recovery software used (some which restores original filenames, some doesn’t) and the dumpers and distributors frequently using Dropbox to share files. It is unknown how many hackers were involved in retrieving all the data, but the suggestion is that the list of celebrities was the internal list of one of the trading networks. Timestamps, forum posts and other data suggests that the collection was built up over a long period of time.
 
-![ransomware](./../assets/Screen_Shot_2014-09-03_at_6.22.13_AM.png)
+![ransomware](/images/posts/Screen_Shot_2014-09-03_at_6.22.13_AM.webp)
 
 **14.** On the topic of OPSEC. Tracking down one of the distributors who was posting ransomed private images to 4chan and reddit was simple. He posted a screenshot as part of pitching the sale of 60 or more images and videos for a single celebrity but didn’t black out his machine name or the machine names of the other computers on his local network. A user on reddit did a Google search and tracked down the company he worked for (although they picked the wrong employee). Tracking each of those names linked one of them back to a reddit account that had posted a screenshot of the exact same explorer interface (the guy had a bad habit of taking screenshots of his own machine). He has denied being the source of the images, but he is definitely a distributor who purchased them from within the network since the ransomed set he posted were all images that did not and have not yet leaked.
 

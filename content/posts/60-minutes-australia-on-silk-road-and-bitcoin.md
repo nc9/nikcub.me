@@ -4,7 +4,7 @@ date: 2014-09-14T14:41:46+0000
 excerpt: 60 Minutes airs a story on Silk road and it goes about as you'd expect it
 ---
 
-![60 minutes silk road](./../assets/60min-silkroad_export.jpg)
+![60 minutes silk road](/images/posts/60min-silkroad_export.webp)
 
 60 Minutes Australia tonight [aired a story](http://www.jump-in.com.au/show/60minutes/stories/2014/september/the-dark-web/) about Silk Road and Bitcoin. The video of the report, which is 14 minutes long, is [now available on their website](http://www.jump-in.com.au/show/60minutes/videos/3784171895001/) or [mirrored here on DailyMotion](http://www.dailymotion.com/video/x25y1be_60-minutes-australia-silk-road-and-bitcoin-story-september-2014_news).
 
@@ -26,7 +26,7 @@ And then in the story:
 
 First, there is an irony in this because if we go back to the beginning of the report, where Sarah was demonstrating Silk Road, the tab in her browser next to the tab showing Silk Road is a Google search results page for “list of tor sites silkroad”:
 
-!["60_screenshot_export"](./../assets/60_screenshot_export.jpg)
+!["60_screenshot_export"](/images/posts/60_screenshot_export.webp)
 
 If you [do the same search](https://encrypted.google.com/search?q=list+of+tor+sites+silkroad), you’ll find that the onion URL for Silk Road is in the top result. Darknet sites are only not indexed directly by Google because Google has chosen not to index them. DuckDuckGo, an alternate search engine, have considered indexing onion sites directly but decided not to as it would “tick some people off” (namely, the site administrators). There are also web services that proxy Darknet websites hosted as onion hidden services on Tor and make them accessible over the clearnet. [Tor2web](http://www.tor2web.org) is just one example, and the pages it hosts can sometime be found in the indexes of search engines (Note: do not use Tor2web to signup to any accounts on hidden services or enter your password anywhere – it breaks the security model of Tor, while it is useful if you ned to browse and read and don’t have Tor – you do lose your anonymity).
 
@@ -50,10 +50,10 @@ The story on 60 Minutes, which is a popular weekly current affairs program, prov
 
 Other reactions include a call to have such sites blocked, which suggests the story didn’t do a good job of explaining just where and how these sites are hosted (outside of them being “hidden”) while others ask how children are able to access and “afford” such software.
 
-!["tweet_04_exported"](./../assets/tweet_04_exported.jpg)
+!["tweet_04_exported"](/images/posts/tweet_04_exported.webp)
 
-!["tweet_03_exported"](./../assets/tweet_03_exported.jpg)
+!["tweet_03_exported"](/images/posts/tweet_03_exported.webp)
 
-!["tweet_02_exported"](./../assets/tweet_02_exported.jpg)
+!["tweet_02_exported"](/images/posts/tweet_02_exported.webp)
 
-!["tweet_01_exported"](./../assets/tweet_01_exported.jpg)
+!["tweet_01_exported"](/images/posts/tweet_01_exported.webp)

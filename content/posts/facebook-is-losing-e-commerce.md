@@ -62,11 +62,11 @@ Outside of the core Facebook features – notes and photos from friends, the des
 
 If I wanted to find a product on Facebook, I wouldn't even know where to start. Here is an example:
 
-<img alt="shopping on facebook" src="/images/posts/20120219-nd4peencu2b7kf9534juhb1ytc.jpg"/>
+_[Image unavailable - Skitch service discontinued]_
 
 The search box can only be used to find people or brands, and then only by name. Compare this to Pinterest:
 
-<img alt="shopping on pinterest" src="/images/posts/20120219-fjyq53h693eb4fnfitamgsmuc5.jpg"/>
+_[Image unavailable - Skitch service discontinued]_
 
 Leading brands have invested millions of dollars in promoting their Facebook pages through regular advertising channels, yet most of them offer very little functionality and if you like a product page you end up with a torrent of promotional material in your timeline.
 

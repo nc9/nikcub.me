@@ -80,7 +80,7 @@ I referenced that thread in [my answer on Stack Exchange](http://security.stacke
 
 Further, on the 3rd of May 2013 there was a similar warning from another user on reddit, [“Should we be worried? Showing on login page”](http://www.reddit.com/r/SilkRoad/comments/1dmznd/should_we_be_worried_showing_on_login_page/)
 
-!["sr_reddit_screnshot"](./../assets/sr_reddit_screnshot.png)
+!["sr_reddit_screnshot"](/images/posts/sr_reddit_screnshot.webp)
 
 If this isn’t familiar to you, it is a `var_dump` of PHP’s `$_SERVER` variable. It would suggest somebody was debugging a problem on the server and editing live code, using the `var_dump` function to debug a problem (and inexperienced programmer would both edit on a live server and use `var_dump` to debug).
 
