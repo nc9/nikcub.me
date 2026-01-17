@@ -32,13 +32,13 @@ My next test was to pop up an alert, which I knew would work:
 
 produced:
 
-<img alt="mygov javascript" src="http://i.imgur.com/gqvpbGx.png"/>
+<img alt="mygov javascript" src="/images/posts/gqvpbGx.png"/>
 
 Next step was to weaponize this exploit and attempt to steal session cookies. Some cross-site scripting attacks can be stopped or mitigated at this point as developers will prevent cookies from being read by Javascript, setting both the HttpOnly flag and the secure flag.
 
 On the myGov app I created some throwaway test accounts and inspected the cookies to see how they were set. These are the results of a typical logged in session:
 
-<img alt="mygov cookies" src="https://www.evernote.com/shard/s35/sh/b46b8373-1418-4619-9562-4931a6d26c2f/9336867de693693ed58636e4aa97e721/deep/0/myGov%20-%20Home.png"/>
+<img alt="mygov cookies" src="/images/posts/myGov-20-20Home.png"/>
 
 Most of the cookies were being set with no flags, being allowed to expire whenever. No HttpOnly or secure flags, meaning we can read the values in Javascript and the actual login cookie `PWSEAL-GOV-C` was a session cookie, not set to expire. The app was setting cookies and then relying on Javascript to expire them. There is a process, `sessionCheck()`, which would run every x seconds and check for user inactivity. If it was inactive for 5 minutes it would then run a function that would attempt to expire the cookies programatically.
 

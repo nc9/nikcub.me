@@ -8,19 +8,19 @@ With the death of Steve Jobs this week many users on Twitter added the Apple log
 
 [Mike Arrington at](http://twitter.com/arrington) [Uncrunched](http://uncrunched.com/) changed the title of [his blog in tribute to Jobs](http://uncrunched.com/2011/10/05/goodbye-steve/) to just the Apple logo character. It looks great on a Mac:
 
-<img src="https://img.skitch.com/20111008-g1bcmp8ga26gjs477c9j139m5x.jpg"/>
+<img src="/images/posts/20111008-g1bcmp8ga26gjs477c9j139m5x.jpg"/>
 
 On Windows XP with IE, not so great:
 
-<img src="https://img.skitch.com/20111008-djm4w7y32geng7t1nac7pdeds5.jpg"/>
+<img src="/images/posts/20111008-djm4w7y32geng7t1nac7pdeds5.jpg"/>
 
 Could be mistaken for a tombstone, or a coffin. Those users must be wondering what the hell is going on. Firefox users on Windows would also be confused:
 
-<img src="https://img.skitch.com/20111008-k83uume6jmy9tijijp9xyxnja6.jpg"/>
+<img src="/images/posts/20111008-k83uume6jmy9tijijp9xyxnja6.jpg"/>
 
 Same for Opera users on Windows:
 
-<img src="https://img.skitch.com/20111008-kr88iphs8ag6xd2qgkcfrse856.jpg"/>
+<img src="/images/posts/20111008-kr88iphs8ag6xd2qgkcfrse856.jpg"/>
 
 That icon with letters in it says 'F8FF' – which is the code for the character. It is sometimes substituted in when there is no character allocated in the codepage
 

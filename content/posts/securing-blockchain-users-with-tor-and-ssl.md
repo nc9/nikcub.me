@@ -10,7 +10,7 @@ I've been working with Blockchain since Saturday to implement a number of securi
 
 Blockchain are now only the second site to offer an alternate service on the Tor network with a signed certificate after Facebook [announced their own](https://www.facebook.com/notes/protect-the-graph/making-connections-to-facebook-more-secure/1526085754298237) hidden service last month.
 
-<img alt="blockchain-tor" src="https://www.evernote.com/shard/s35/sh/8e0d4d1b-9159-408d-8122-8b40c1fa7f2c/a89b2c699206d8d8178736fc7ecd2db1/deep/0/blockchain-tor.png"/>
+<img alt="blockchain-tor" src="/images/posts/blockchain-tor.png"/>
 
 Along with the hidden service and signed certificate, Blockchain has switched to HTTPS across the site and enforced secure connections on both the clearweb domain and the onion site with [Strict Transport Security](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) (HSTS) (which will be preloaded for the clearweb domain in all major browsers, and hopefully also for the onion domain), and will also implement dynamic public key pinning with Public Key Pinning ([HPKP](http://tools.ietf.org/html/draft-ietf-websec-key-pinning-01)).
 
@@ -24,11 +24,11 @@ This technique was detailed and presented by Moxie Marlinspike in a [2009 talk a
 
 In an SSL stripping attack, the attacker first inserts their machine as a proxy between the victim and target website. This can be achieved with arp spoofing on a LAN or WiFi network, with DNS poisoning, by seizing a VPN server or HTTP proxy or by running a Tor exit node. Once inserted on the path between the victim and the connection to a web server, the sslstrip attack will intercept requests to an HTTPS based service and proxy them back to the user over HTTP.
 
-<img alt="sslstrip" src="https://www.evernote.com/shard/s35/sh/40f5cab4-e0c6-4de5-b2d9-16c248a7a23f/750929f1155e71bf5b4153d967e33662/deep/0/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf%20(page%2025%20of%2099).png"/>
+<img alt="sslstrip" src="/images/posts/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf-20-page-2025-20of-2099-.png"/>
 
 It is an attack type that relies on the user not noticing that their connection is no longer secured. One of the most common SSL stripping techniques is to set a lock icon as the fav icon for the website to fool the user into not noticing they aren’t on a real HTTP page. Here is an example of the Gmail homepage with sslstrip placing a lock icon as a favicon, note the _HTTP_ URL:
 
-<img alt="gmail stripped" src="https://www.evernote.com/shard/s35/sh/9dc99adb-a06f-4ecd-98b4-e92e33b1a218/7c79cce675a35d993e63f7645f83d939/deep/0/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf%20(page%2069%20of%2099).png"/>
+<img alt="gmail stripped" src="/images/posts/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf-20-page-2069-20of-2099-.png"/>
 
 (Note: The last two slides are from Moxie’s [Black Hat talk](https://www.youtube.com/watch?v=MFol6IMbZ7Y), which is very accessible and worth seeing. His [followup talk](https://www.youtube.com/watch?v=ibF36Yyeehw) with details of other stripping techniques is also recommended, as is [Moxie’s blog](http://www.thoughtcrime.org).).
 
@@ -54,7 +54,7 @@ Hopefully between now and the November 2015 expiry date a solution will be reach
 
 Google has surged ahead with local name signed certificate deprecation by not validating them in Chromium. This means the Facebook and Blockchain hidden services are displayed as broken HTTPS connections despite all the certificates validating.
 
-<img alt="chromium-fail" src="https://www.evernote.com/shard/s35/sh/12dd1dcf-d869-4042-9aa9-234eb4fd91a8/f887664cbc9e3aa0d7f214786b3082a9/deep/0/Screen%20Shot%202014-12-04%20at%202.00.01%20AM.png"/>
+<img alt="chromium-fail" src="/images/posts/Screen-20Shot-202014-12-04-20at-202.00.01-20AM.png"/>
 
 Chrome will only validate signed certificates for hostnames that belong to a TLD or country-level domain that is listed in the [public suffix list](https://publicsuffix.org/). This is a sound security decision, the problem is that .onion needs to be recognized as a proper TLD. If it isn’t recognized as a TLD, I hope that the browsers will include it as an exception.
 

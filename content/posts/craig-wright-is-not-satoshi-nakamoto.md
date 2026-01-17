@@ -2,7 +2,7 @@
 title: Craig Wright is not Satoshi Nakamoto
 date: 2016-05-02T19:55:25+0000
 excerpt: Investigating the claim that Craig Wright is Bitcoin creator Satoshi Nakamoto
-featureImage: ../assets/craig_wright.png
+featureImage: /images/posts/craig_wright.png
 featureImageAlt: Craig Wright
 ---
 
@@ -85,7 +85,7 @@ and a [followup interview he conducted with Wired](https://www.wired.com/2016/05
 
 Wired found that Wright had manipulated and planted the old blog posts:
 
-![](https://pbs.twimg.com/media/ChcGSpBUUAArMOs.jpg)
+![](/images/posts/ChcGSpBUUAArMOs.jpg)
 
 #### He forged the PGP signatures and backdated them
 

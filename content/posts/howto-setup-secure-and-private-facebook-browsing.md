@@ -8,7 +8,7 @@ This howto guide will take you through securing your Facebook account, enable se
 
 ### Step 1. Securing your Facebook account
 
-<img src="https://img.skitch.com/20111002-k7kqk59geqtew44wwn9j1faxqg.jpg"/>
+<img src="/images/posts/20111002-k7kqk59geqtew44wwn9j1faxqg.jpg"/>
 
 Go to [Security Settings](https://www.facebook.com/settings?tab=security%C2%A7ion=browsing&t)
 
@@ -22,7 +22,7 @@ While you are here in settings, click on 'General' and then 'Password' and chang
 
 ### Step 2. Settings up Privacy Settings
 
-<img src="https://img.skitch.com/20111002-q6wnieyup6n94imj5m9mtqxe7f.jpg"/>
+<img src="/images/posts/20111002-q6wnieyup6n94imj5m9mtqxe7f.jpg"/>
 
 Go to the [Privacy Settings](https://www.facebook.com/settings/?tab=privacy) preference pane.
 

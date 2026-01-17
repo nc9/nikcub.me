@@ -8,7 +8,7 @@ I have recently discovered two privacy issues with Google Chrome that users shou
 
 A Google Chrome user can delete browser history by going into `Preferences -&gt; Show Adavanced Settings -&gt; Clear Browsing Data`. The following dialog is presented:
 
-<img alt="screenshot of Google Chrome clear browser history dialog" src="https://img.skitch.com/20120808-pknj5238qn115ekg8wq6webybb.jpg"/>
+<img alt="screenshot of Google Chrome clear browser history dialog" src="/images/posts/20120808-pknj5238qn115ekg8wq6webybb.jpg"/>
 
 If you then click the 'Clear browsing data' button you would expect that all traces of websites that have been visited from the machine would be erased, but there are two instances where user visit data is retained.
 
@@ -59,7 +59,7 @@ As with the zoom issue, Chrome does not delete this DNS prefetch information whe
 
 Here is what the DNS prefetch information looks like in the Preferences file.
 
-<img alt="screenshot of Google Chrome Preferences file showing DNS prefetch information" src="https://img.skitch.com/20120808-btitbkud6b5134gs67u3r2hcnk.jpg"/>
+<img alt="screenshot of Google Chrome Preferences file showing DNS prefetch information" src="/images/posts/20120808-btitbkud6b5134gs67u3r2hcnk.jpg"/>
 
 This issue was [also filed as a bug](http://code.google.com/p/chromium/issues/detail?id=137414) on June the 17th.
 

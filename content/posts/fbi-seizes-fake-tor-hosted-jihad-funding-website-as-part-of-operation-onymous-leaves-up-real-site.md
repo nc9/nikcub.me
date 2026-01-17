@@ -10,7 +10,7 @@ The problem, as with a lot of the other seizures as part of Operation Onymous, i
 
 Here is what the site looks like right now:
 
-<img alt="jihad website" src="https://www.evernote.com/shard/s35/sh/6f8f065f-0e9a-4c10-940d-1a5defa58845/756b9bd408320a2b82d87d83d32a2d47/deep/0/Fund%20The%20Islamic%20Struggle%20Anonymously.png"/>
+<img alt="jihad website" src="/images/posts/Fund-20The-20Islamic-20Struggle-20Anonymously.png"/>
 
 The Bitcoin address on the website, [13Pcmh4dKJE8Aqrhq4ZZwmM1sbKFcMQEEV](https://blockchain.info/address/13Pcmh4dKJE8Aqrhq4ZZwmM1sbKFcMQEEV), shows that just over 5 BTC has been donated to it.
 

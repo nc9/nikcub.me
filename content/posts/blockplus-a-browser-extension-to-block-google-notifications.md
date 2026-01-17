@@ -4,7 +4,7 @@ date: 2011-07-06T21:06:08+0000
 excerpt: I write a browser extension to remove Google+ since the company seems to be doing all it can to promote it
 ---
 
-<img src="http://farm6.static.flickr.com/5116/5909374213_cbae62eb55_m.jpg"/>
+<img src="/images/posts/5909374213_cbae62eb55_m.jpg"/>
 
 Google recently launched their much-publicized social network [Google+](http://plus.google.com). I [signed up](https://plus.google.com/105854725972317368943) early on, but found that having the new status bar across the top of all the other Google applications was becoming a distraction.
 
@@ -20,4 +20,4 @@ The project is hosted on my BitBucket, so you can download, fork and view the so
 
 # Screenshot
 
-<img src="http://farm6.static.flickr.com/5235/5909661385_79445883de_b.jpg"/>
+<img src="/images/posts/5909661385_79445883de_b.jpg"/>

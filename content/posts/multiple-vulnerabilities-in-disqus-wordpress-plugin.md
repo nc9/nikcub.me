@@ -42,7 +42,7 @@ That exploit payload, `&lt;/textarea&gt;&lt;script&gt;alert(1);&lt;/script&gt;&l
 
 This is what it looks like:
 
-<img src="https://www.evernote.com/shard/s35/sh/3bcf7315-b19b-4e17-968b-6a14054e6195/51ead6931ae315eb38fb0ae40997e58a/deep/0/Disqus%20%E2%80%B9%20nikcub%20test%20%E2%80%94%20WordPress.png"/>
+<img src="/images/posts/Disqus-20-E2-80-B9-20nikcub-20test-20-E2-80-94-20WordPress.png"/>
 
 The last little touch on our exploit is that we trigger the form submit on pageload. I successfully utilized this exploit against a live environment as part of a pen test via a spearphish email to an administrator (my exploit was a little more sophisticated and the payload useful).
 
