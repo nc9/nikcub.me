@@ -1,0 +1,20 @@
+{
+  "name": "Nik Cubrilovic",
+  "short_name": "Nik Cubrilovic",
+  "description": "Security researcher, technologist, and writer",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#8844dd",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
