@@ -159,8 +159,15 @@
 
 .prose pre code {
   @apply font-mono text-sm;
-  color: #e2e8f0 !important;
-  background: transparent !important;
+  display: grid;
+}
+
+.prose pre code [data-line] {
+  @apply px-4 border-l-2 border-transparent;
+}
+
+.prose pre code [data-highlighted-line] {
+  @apply bg-slate-800/50 border-l-blue-500;
 }
 
 /* Inline code */

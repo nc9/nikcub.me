@@ -12,7 +12,7 @@ The case with IE is different. Google (and many other sites) are taking advantag
 
 Here is what a valid P3P header looks like, as set by `microsoft.com`:
 
-```
+```bash
 $ nc microsoft.com 80
 HEAD / HTTP/1.1
 Host: www.microsoft.com
@@ -32,7 +32,7 @@ Cache-control: private
 
 If an invalid P3P header is set, or a header that doesn't state policy, Internet Explorer will by default accept the third-party cookies (this doesn't happen in IE9). This is what the P3P header looks like for google.com:
 
-```
+```http
 P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&amp;answer=151657 for more info."
 ```
 
@@ -40,7 +40,7 @@ Not mentioned in the Microsoft article is that Facebook are also setting an inva
 
 From facebook.com:
 
-```
+```bash
 $ nc facebook.com 80
 GET / HTTP/1.1
 Host: www.facebook.com

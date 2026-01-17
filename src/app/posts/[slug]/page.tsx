@@ -2,6 +2,7 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
@@ -113,7 +114,16 @@ export default async function PostPage({ params }: PostPageProps) {
               options={{
                 mdxOptions: {
                   remarkPlugins: [remarkGfm],
-                  rehypePlugins: [rehypeSlug],
+                  rehypePlugins: [
+                    rehypeSlug,
+                    [
+                      rehypePrettyCode,
+                      {
+                        theme: "github-dark",
+                        keepBackground: false,
+                      },
+                    ],
+                  ],
                 },
               }}
             />
