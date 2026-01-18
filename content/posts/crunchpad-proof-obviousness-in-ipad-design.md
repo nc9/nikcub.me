@@ -1,6 +1,7 @@
 ---
 title: The Crunchpad is proof of obviousness in the iPad design
 date: 2011-12-09T13:09:38+00:00
+excerpt: How the CrunchPad tablet project demonstrates the obviousness of the iPad's design, challenging Apple's claims of revolutionary innovation
 ---
 
 The patent case between Apple and Samsung regarding the iPad and Galaxytab has been an ongoing issue. Apple won an injunction against the sale of the Galaxy Tab in Australia, then saw the decision reversed, only for it to be re-applied by a higher court. A number of outlets [reported on](http://www.theverge.com/2011/12/2/2596527/apple-samsung-design-patent-iphone-ipad-work-around) the advice [Apple has given Samsung](http://assets.sbnation.com/assets/807407/Apple_Reply_Expert_declaration.pdf) in order to avoid its design patents.

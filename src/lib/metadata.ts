@@ -13,11 +13,10 @@ const SITE_URL = "https://nikcub.me";
 const DEFAULT_OG_IMAGE = "/og-default.png";
 
 /**
- * Ensure title meets minimum length (30 chars) by appending site name suffix
+ * Return title as-is - Next.js title template in layout.tsx handles suffix
  */
 export function ensureMinTitle(title: string, minLength = 30): string {
-  if (title.length >= minLength) return title;
-  return `${title} | ${SITE_NAME}`;
+  return title;
 }
 
 /**

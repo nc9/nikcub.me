@@ -85,7 +85,7 @@ and a [followup interview he conducted with Wired](https://www.wired.com/2016/05
 
 Wired found that Wright had manipulated and planted the old blog posts:
 
-![](/images/posts/ChcGSpBUUAArMOs.webp)
+![Craig Wright's tweet claiming to be Satoshi Nakamoto](/images/posts/ChcGSpBUUAArMOs.webp)
 
 #### He forged the PGP signatures and backdated them
 

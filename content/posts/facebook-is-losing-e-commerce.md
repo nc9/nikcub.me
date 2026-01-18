@@ -1,6 +1,7 @@
 ---
 title: Facebook Is Losing E-Commerce
 date: 2012-02-19T02:45:12+00:00
+excerpt: Analysis of Facebook's declining e-commerce presence and why users prefer external shopping experiences over Facebook's platform integration
 ---
 
 Bloomberg has a report [out today](http://www.bloomberg.com/news/2012-02-17/f-commerce-trips-as-gap-to-penney-shut-facebook-stores-retail.html) about retailers shutting down their online Facebook stores due to lack of interest and activity from users. The headline example is Gamestop – who, despite having some 3.5 million fans on Facebook – recently shut down its Facebook shopfront because it didn't take off with users. From the article:
