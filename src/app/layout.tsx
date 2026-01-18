@@ -21,11 +21,12 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nikcub.me"),
   title: {
-    default: "Nik Cubrilovic | Security Researcher & Writer",
+    default:
+      "Nik Cubrilovic | Engineer writing about AI, data, and digital society",
     template: "%s | Nik Cubrilovic",
   },
   description:
-    "Security researcher, technologist, and writer. Long-form articles and short observations on technology, privacy, and the web.",
+    "Engineer writing about AI, data engineering, and digital society. Long-form articles and observations on technology's impact on our world.",
   openGraph: {
     type: "website",
     locale: "en_US",

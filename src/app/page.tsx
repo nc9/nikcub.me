@@ -23,10 +23,9 @@ export default function HomePage() {
           {/* Introduction */}
           <div className="mb-16">
             <p className="text-lg leading-relaxed text-foreground">
-              I write about security, privacy, and the intersection of
-              technology and society. My work has uncovered vulnerabilities in
-              major platforms and investigated claims that shaped the crypto
-              industry.
+              I write about AI, data engineering, and the intersection of
+              technology and society. Building systems, exploring ideas, and
+              examining how technology shapes our digital world.
             </p>
             <Link
               href="/about"

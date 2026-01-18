@@ -23,7 +23,7 @@ export function SiteHeader() {
                 </div>
               </Link>
               <p className="mt-1 text-sm text-muted-foreground">
-                Security researcher & technologist
+                Engineer writing about AI, data & society
               </p>
             </div>
           </div>
