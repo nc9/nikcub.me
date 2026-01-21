@@ -1,5 +1,4 @@
 import { Mail, Twitter, Github, Linkedin, Key } from "lucide-react";
-import Link from "next/link";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -10,9 +9,26 @@ export const metadata = {
     "Get in touch with Nik Cubrilovic for collaboration or media inquiries.",
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Nik Cubrilovic",
+  url: "https://nikcub.me",
+  email: "nik@nikcub.me",
+  sameAs: [
+    "https://twitter.com/dir",
+    "https://github.com/nc9",
+    "https://linkedin.com/in/nikcub",
+  ],
+};
+
 export default function ContactPage() {
   return (
     <div className="flex min-h-screen flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <SiteHeader />
       <main className="flex-1">
         <div className="mx-auto max-w-2xl px-6 py-16">
