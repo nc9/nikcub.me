@@ -29,7 +29,7 @@ export function SiteHeader() {
           </div>
           <nav className="flex gap-6 text-sm">
             <Link
-              href="/"
+              href="/posts"
               className="text-muted-foreground transition-colors hover:text-highlight"
             >
               Writing
@@ -39,6 +39,12 @@ export function SiteHeader() {
               className="text-muted-foreground transition-colors hover:text-highlight"
             >
               About
+            </Link>
+            <Link
+              href="/contact"
+              className="text-muted-foreground transition-colors hover:text-highlight"
+            >
+              Contact
             </Link>
             <Link
               href="/subscribe"
