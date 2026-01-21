@@ -19,6 +19,7 @@ const personSchema = {
     "https://twitter.com/dir",
     "https://github.com/nc9",
     "https://linkedin.com/in/nikcub",
+    "https://en.wikipedia.org/wiki/Nik_Cubrilovic",
   ],
 };
 
