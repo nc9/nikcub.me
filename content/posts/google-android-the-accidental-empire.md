@@ -4,7 +4,7 @@ date: 2011-12-07T17:39:48+00:00
 excerpt: The story of how Google accidentally created the Android mobile empire
 ---
 
-What Google has done with Android is amazing. The mobile operating system is now [44% of the smartphone market](http://searchengineland.com/comscore-android-nears-50-us-smartphone-market-share-95768) and its rise, along with iOS, has contributed to the utter destruction of both [RIM](www.mondaynote.com/2011/12/05/behind-rim%E2%80%99s-485m-write-off/) (peak market cap of almost $80B, down to $8B today) and [Nokia](http://blogs.wsj.com/tech-europe/2011/02/09/full-text-nokia-ceo-stephen-elops-burning-platform-memo/) (peak market cap of $158B, down to $19.5B today).
+What Google has done with Android is amazing. The mobile operating system is now [44% of the smartphone market](http://searchengineland.com/comscore-android-nears-50-us-smartphone-market-share-95768) and its rise, along with iOS, has contributed to the utter destruction of both [RIM](https://www.mondaynote.com/2011/12/05/behind-rim%E2%80%99s-485m-write-off/) (peak market cap of almost $80B, down to $8B today) and [Nokia](http://blogs.wsj.com/tech-europe/2011/02/09/full-text-nokia-ceo-stephen-elops-burning-platform-memo/) (peak market cap of $158B, down to $19.5B today).
 
 I spent some time the other day standing in a cell phone store running the support gauntlet with my provider. While waiting on a staff member to help me, I was browsing all the latest phones and noticed something remarkable: every single phone in the main display area was an Android device. New devices from HTC, Motorola, Samsung, etc. indistinguishable from each other in many ways, but all running the Google mobile operating system.
 
