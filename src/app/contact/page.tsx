@@ -2,12 +2,14 @@ import { Mail, Twitter, Github, Linkedin, Key } from "lucide-react";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { generatePageMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: "Contact",
   description:
     "Get in touch with Nik Cubrilovic for collaboration or media inquiries.",
-};
+  path: "/contact",
+});
 
 const personSchema = {
   "@context": "https://schema.org",

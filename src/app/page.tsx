@@ -5,6 +5,15 @@ import { PostList } from "@/components/post-list";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getAllPosts } from "@/lib/mdx";
+import { generatePageMetadata } from "@/lib/metadata";
+
+export const metadata = generatePageMetadata({
+  title:
+    "Nik Cubrilovic | Engineer writing about AI, data, and digital society",
+  description:
+    "Engineer writing about AI, data engineering, and digital society. Long-form articles and observations on technology's impact on our world.",
+  path: "/",
+});
 
 export default function HomePage() {
   const allPosts = getAllPosts();
