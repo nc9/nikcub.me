@@ -1,7 +1,7 @@
 ---
 title: Securing Blockchain.info Users with Tor and SSL
 date: 2014-12-03T16:13:03+0000
-excerpt: We setup SSL on the blockchain.info Tor Hidden Service to better prevent recent phishing and MITM attacks
+excerpt: Helping Blockchain.info become the second site after Facebook to offer a Tor hidden service with a CA-signed SSL certificate, protecting users from MITM attacks
 ---
 
 Over the past couple of weeks there has been a marked increase in the number of man-in-the-middle (MITM) attacks against Tor users of web based Bitcoin wallet provider Blockchain.info. One user reported [63 bitcoin](https://bitcointalk.org/index.php?topic=875805.0) stolen, and there were [many](http://www.reddit.com/r/Bitcoin/comments/2nrf12/my_blockchaininfo_account_was_hacked_thanksgiving/) [other examples](http://www.reddit.com/r/Bitcoin/comments/2nkias/this_is_a_list_of_rbitcoin_users_who_had_their/) as the thefts continued [despite warnings](https://twitter.com/blockchain/status/522454637115617280) to users. The attacks were so successful that Blockchain resorted to blocking all traffic to the wallet service from Tor exit nodes.
@@ -16,7 +16,7 @@ Along with the hidden service and signed certificate, Blockchain has switched to
 
 With an authenticated hidden service Blockchain users are able to access their Bitcoin wallets with the added anonymity of Tor while avoiding exit nodes. For users of the regular clearweb Blockchain service the addition of HSTS and HPKP provide additional guarantees against MITM attacks and rogue or stolen site certificates.
 
-### MITM Attacks and SSL Stripping
+## MITM Attacks and SSL Stripping
 
 MITM attacks against users on Tor are simple to execute and remarkably effective. The type is attack is referred to as SSL stripping, where the MITM would intercept requests to an HTTPS service and downgrades the connection to plain unencrypted and unauthenticated HTTP. If the user doesn’t notice the switch to HTTP, or if the browser doesn’t enforce HTTPS, then any data or credentials submitted can be read and stored by the MITM.
 
@@ -34,7 +34,7 @@ It is an attack type that relies on the user not noticing that their connection 
 
 SSL Stripping is responsible for a large number of the attacks against Blockchain users, particularly those accessing the service over Tor. The recommended action for users it to always check the validity of their connection to the web server and to make sure it is secure and that the certificate they are presented validates (you can check this in most browsers by clicking on the (real) secure lock icon).
 
-### The 10-character Address
+## The 10-character Address
 
 `blockchainbdgpzk.onion` is a 10-character vanity onion address. It took around 40 hours to find using a large cluster of GPU instances on Amazon Web Services running [Scallion](https://github.com/lachesis/scallion). Utilizing spot instances across a variety of regions and zones over the weekend kept the costs reasonable.
 
@@ -42,7 +42,7 @@ Thank you to Scallion developer Eric Swanson for providing a great tool and for 
 
 I will be publishing my AMI shortly, if you need assistance in finding a vanity onion address for your own Tor hidden service [get in touch](/contact).
 
-### CA Signed Onion Addrees
+## CA Signed Onion Addrees
 
 We worked with [DigiCert](https://www.digicert.com) to get a certificate containing the new onion address for Blockchain signed (thank you to Jeremy and the team there, they leapt into action and helped us out when we found ourselves in an urgent situation). DigiCert also signed the certificate used by Facebook in their hidden service. Since .onion is a pseudo-TLD Tor hidden service host names cannot be specified as the common name in the certificate. With Facebook and Blockchain certificates were generated with the onion addresses specified in the Subject Area Name (SAN) field.
 
@@ -50,7 +50,7 @@ One problem with this approach is that the [CA/Browser Forum](https://cabforum.o
 
 Hopefully between now and the November 2015 expiry date a solution will be reached, as .onion _clearly_ isn’t a local name and should be a recognized TLD. There are a number of reasons why .onion has yet to be recognized, not least of which are the [fees sought by ICANN for new TLD registration](https://trac.torproject.org/projects/tor/ticket/6116) – a figure of approximately $200,000.
 
-### Chromium Verification Failure
+## Chromium Verification Failure
 
 Google has surged ahead with local name signed certificate deprecation by not validating them in Chromium. This means the Facebook and Blockchain hidden services are displayed as broken HTTPS connections despite all the certificates validating.
 
@@ -58,11 +58,11 @@ Google has surged ahead with local name signed certificate deprecation by not va
 
 Chrome will only validate signed certificates for hostnames that belong to a TLD or country-level domain that is listed in the [public suffix list](https://publicsuffix.org/). This is a sound security decision, the problem is that .onion needs to be recognized as a proper TLD. If it isn’t recognized as a TLD, I hope that the browsers will include it as an exception.
 
-### Encrypted Services
+## Encrypted Services
 
 Alternate services on Tor don’t need the server anonymity that hidden services provide. The location of the server in cases such as Facebook and Blockchain is no secret, so the Tor circuit could cut off the last hops to the hidden service and speed things up. Turns out there is an [old draft proposal](https://gitweb.torproject.org/torspec.git/blob_plain/HEAD:/proposals/ideas/xxx-encrypted-services.txt) for exactly that – it is referred to as Encrypted Services. With more alternate services popping up on Tor now would be a good time to dust that proposal off and investigate finishing the spec and getting it implemented.
 
-### Protocol Upgrade
+## Protocol Upgrade
 
 [HTTPSEverywhere](https://www.eff.org/HTTPS-EVERYWHERE) is a browser plugin from the EFF that automatically redirects web requests to secure versions of a website if it is available. It is built into the Tor browser by default. There is a fork of the plugin called [Darkweb Everywhere](https://github.com/chris-barry/darkweb-everywhere) which redirects clearweb visits to an equivalent onion site if one is available.
 
@@ -76,7 +76,7 @@ It would be preferable if configuration and maintenance of a clearweb to onion r
 
 We are planning on coming up with a solution that would redirect Tor users to onion sites (or i2p users to eepsites – keeping it protocol neutral) and rolling it out. If you have any ideas or proposals for a protocol that could work, [get in touch](/contact) on Twitter or on email.
 
-### Tor Use Cases
+## Tor Use Cases
 
 In the media Tor is most often associated with drug markets, the darkweb and whistleblowers, but there are [many other use cases](https://www.torproject.org/about/torusers.html.en) and applications for the network. It pairs perfectly with Bitcoin (although you [shouldn’t run](http://orbilu.uni.lu/bitstream/10993/18679/1/Ccsfp614s-biryukovATS.pdf) a full p2p Bitcoin client on Tor), can provide user anonymity and access to web services where they may otherwise be blocked or intercepted.
 

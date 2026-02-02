@@ -1,7 +1,7 @@
 ---
 title: Unicode U+F8FF - aka. The Apple Logo Character, on Macs
 date: 2011-10-08T07:31:40+00:00
-excerpt: Something funny happens when you include the Apple icon emoji and send it to users on non-Apple products
+excerpt: The Apple logo character U+F8FF only renders on Mac - on Windows it shows as boxes, Elvish, Tibetan, or embarrassingly as the Windows logo in Wingdings
 ---
 
 With the death of Steve Jobs this week many users on Twitter added the Apple logo to their names or to their tweets in tribute. Some bloggers also used the character in blog posts, which can be input by pressing option + shift + k. The logo is a Unicode character, at address [U+F8FF](http://en.wikipedia.org/wiki/U%2BF8FF). The problem: that character is a reserved character and only appears as the Apple logo on a Mac or iOS device.

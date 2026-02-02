@@ -1,7 +1,7 @@
 ---
 title: Guide to Finding a Good and Safe Company or Product Name
 date: 2010-11-04T14:07:06+00:00
-excerpt: My guide to selecting a good business or product name
+excerpt: A comprehensive guide to selecting a business or product name, covering domain availability, trademark safety, SEO considerations, and social media presence
 ---
 
 I enjoy the process of coming up with a new product or project name and finding a domain. I am currently in the process of doing this with my new startup (still negotiating the domain), and have gone through the process at least a dozen times in the past.

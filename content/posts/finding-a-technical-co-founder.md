@@ -1,7 +1,7 @@
 ---
 title: Finding a Technical Co-Founder
 date: 2010-11-05T12:51:34+00:00
-excerpt: My guide to finding a technical co-founder for a startup
+excerpt: Advice on finding a technical co-founder including where to network, how to prepare your startup materials, and evaluating technical capabilities
 ---
 
 My own anecdotal evidence indicates that the number of tech startups being founded is on the rise again. YCombinator received a record number of applicants in the most recent batch, and has extended the number of interview slots this year because of both the increased number of applicants and the quality of applicants. In the recent weeks, I have also had no less than three people email me and ask about finding a technical co-founder, which has also been [a very frequent topic](http://www.google.com/search?sourceid=chrome&ie=UTF-8&q=site:news.ycombinator.com+technical+AND+co-founder+OR+cofounder) on the Hacker News forums.

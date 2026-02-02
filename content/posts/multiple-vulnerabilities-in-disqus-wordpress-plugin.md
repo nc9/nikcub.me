@@ -16,7 +16,7 @@ excerpt: Disclosure and fixes for a number of bugs in the Wordpress plugin for t
 
 I recently performed a penetration test where the website was running the latest version with a small number of plugins, one of which was Disqus – which lead me to dive into the code. Grepping the codebase for POST and GET parameters pretty quickly yielded code blocks where parameters were being passed and output without any filtering.
 
-#### Issue 1: CSRF in Manage.php
+## Issue 1: CSRF in Manage.php
 
 In the file `manage.php` which handles the plugin settings there is this block of code (line 60 onwards):
 
@@ -42,11 +42,11 @@ That exploit payload, `&lt;/textarea&gt;&lt;script&gt;alert(1);&lt;/script&gt;&l
 
 This is what it looks like:
 
-<img src="/images/posts/Disqus-20-E2-80-B9-20nikcub-20test-20-E2-80-94-20WordPress.webp"/>
+<img alt="Disqus WordPress plugin XSS vulnerability demonstration" src="/images/posts/Disqus-20-E2-80-B9-20nikcub-20test-20-E2-80-94-20WordPress.webp"/>
 
 The last little touch on our exploit is that we trigger the form submit on pageload. I successfully utilized this exploit against a live environment as part of a pen test via a spearphish email to an administrator (my exploit was a little more sophisticated and the payload useful).
 
-#### Issue 2: No nonce check on setting reset and delete
+## Issue 2: No nonce check on setting reset and delete
 
 This one is less serious, but on the same advanced settings page for the plugin the submitted nonce isn't checked meaning we can use CSRF to trigger the 'reset' function or to delete any of the disqus plugin options.
 
@@ -54,7 +54,7 @@ Exploit here is simple again, take the last exploit and remove all the fields an
 
 The form includes a nonce, but it isn't being checked on submit. The `wp_verify_nonce` function ([documentation](http://codex.wordpress.org/Function_Reference/wp_verify_nonce)) should be called on submit.
 
-#### Issue 3: Unfiltered parameter in upgrade script
+## Issue 3: Unfiltered parameter in upgrade script
 
 The `step` parameter is stored unfiltered and then echo'd out, resulting in an XSS. Code path can be hit when Disqus install is out of date.
 
@@ -62,7 +62,7 @@ The `step` parameter is stored unfiltered and then echo'd out, resulting in an X
 <?php echo dsq_i('Upgrade Disqus Comments'); ?>
 ```
 
-#### Dislosure Timeline
+## Dislosure Timeline
 
 **June 9th 2014** - Reported to security@disqus<br/>
 **June 24th 2014** - Fixed in [Disqus for WordPress v2.7.6](https://wordpress.org/plugins/disqus-comment-system/other_notes/)

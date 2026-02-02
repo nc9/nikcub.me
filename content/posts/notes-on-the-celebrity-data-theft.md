@@ -1,7 +1,7 @@
 ---
 title: Notes on the Celebrity Data Theft
 date: 2014-09-02T19:40:28+0000
-excerpt: Lots of celebrities have their iCloud accounts hacked and their photos leaked. Digging into how and why it happen.
+excerpt: An in-depth look at the underground networks behind "The Fappening" - how they operate, the techniques used to compromise iCloud accounts, and Apple's security weaknesses
 ---
 
 An interesting aspect of information security is how periodically it collides with other industries and subcultures. With more information than ever being stored and shared online and on connected devices hacking stories are frequent and are mainstream news. This was the case yesterday as dozens of celebrities fell victim to hackers who leaked hundreds of private photographs and videos stolen from web based storage services.

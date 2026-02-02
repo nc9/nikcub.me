@@ -1,7 +1,7 @@
 ---
 title: Analyzing the FBI’s Explanation of How They Located Silk Road
 date: 2014-09-07T18:55:24+0000
-excerpt: When it comes to how the FBI located the Silk Road server, something doesn't add up
+excerpt: A technical analysis of the FBI's claims about how they located Silk Road's server, showing their explanation doesn't match how Tor hidden services work
 ---
 
 The first incarnation of online drug marketplace [Silk Road](<http://en.wikipedia.org/wiki/Silk_Road_(marketplace)>) was shutdown in October 2013 resulting in the arrest of Ross Ulbricht. In [the indictment](http://www.scribd.com/doc/235866098/USA-v-Ross-Ulbricht) the Department of Justice contend that Ulbricht was Dread Pirate Roberts, the owner and administrator of Silk Road. The case has been in pretrial for some time now, with defense lawyers contesting many elements as part of a large and broad [motion to dismiss](http://www.scribd.com/doc/215745393/USA-v-Ulbricht-motion-to-dismiss-charges) ([subsequently denied](http://www.scribd.com/doc/233234104/Forrest-Denial-of-Defense-Motion-in-Silk-Road-Case)) and other filings.
@@ -60,7 +60,7 @@ No matter how much the agents entered “miscellaneous entries” into the login
 
 Filling the login form with junk could only ever have altered what appeared in the application layer, and it is at the application layer that the FBI uncovered the IP address.
 
-### A More Likely Scenario
+## A More Likely Scenario
 
 Since the FBI explanation doesn’t hold up to the IP address being revealed at lower layers, and since “typing in miscellaneous entries into the username, password, and CAPTCHA fields” (aka fuzzing) could only alter application-layer data, we need to find an explanation for what the FBI did that fits both the reality of how Tor, hidden services and the Silk Road application work and what the FBI are describing in their legal affidavit.
 
@@ -102,7 +102,7 @@ The FBI have good reason to not mention any bugs or forcing the server to do any
 
 _Thanks to: [harisec](http://www.twitter.com/harisec), [thegrugq](http://www.twitter.com/thegrugq) and the ever useful [Silk Road timeline](http://antilop.cc/sr/) by [moustach](https://twitter.com/lamoustache/) for links and tips._
 
-### Addendum
+## Addendum
 
 **1.** If you still believe that the server was discovered in the way the FBI described it – _try it_. I did. I setup a virtual machine with a web server running a Tor hidden server. I then accessed the hidden server over Tor and looked at the traffic. No matter how much I intentionally misconfigured the server, or included scripts from clearnet hosts, I _never_ observed traffic from a non-Tor node or a “real” IP address.
 

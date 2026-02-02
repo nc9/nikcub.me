@@ -1,7 +1,7 @@
 ---
 title: Pain and Gain
 date: 2010-12-21T08:35:00+00:00
-excerpt: An insane crime story from Miami that has been optioned to become a film
+excerpt: The true story of Miami bodybuilders turned amateur criminals using torture as a motivational tool, later adapted into a Michael Bay film
 ---
 
 I can't remember how I found this story, but it is amazing. The incidents covered occurred during the early to mid 90s, and the Miami New Times article was published in 1999. The story is about the manager, some employees and members of a body building and gym club in Miami who move into violent crime to make some extra money.

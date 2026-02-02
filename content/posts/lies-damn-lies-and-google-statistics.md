@@ -1,7 +1,7 @@
 ---
 title: Lies, Damn Lies and Google+ Statistics
 date: 2011-10-11T00:46:03+00:00
-excerpt: Nobody knows how Google+ is doing, but it isn't stopping some people from guessing
+excerpt: Debunking the viral "Google+ traffic drops 60%" story based on flawed Chitika statistics with no published methodology - and misunderstanding launch bumps
 ---
 
 One of the [big stories](http://www.techmeme.com/111010/p53#a111010p53) making the rounds in the tech world today is that traffic at Google+ has 'plummeted' a full 60% this week over last week. All of these reports cite a graph from advertising company [Chitika](http://chitika.com) (who conveniently become a 'web analytics firm' in the <a href='http://www.dailymail.co.uk/news/article-2046955/Traffic-plunges-Google-60-users-log-off.html"'>Daily Mail</a> story).

@@ -1,7 +1,7 @@
 ---
 title: FBI seizes fake Tor hosted Jihad funding website as part of Operation Onymous, leaves up real site
 date: 2014-11-17T17:31:23+0000
-excerpt: One of the fake websites the FBI seized recently was a jihad funding site. The real site still lives.
+excerpt: During Operation Onymous the FBI seized a fake clone of a jihad funding site while leaving the real version online, highlighting the scattershot nature of the takedowns
 ---
 
 As part of Operation Onymous the FBI seized [some 276 Tor hidden services](https://www.nikcub.com/posts/onymous-part1/), many of which were clone or scam websites. One of the websites the FBI seized that we located during our crawl was titled “Fund the Islamic Struggle Anonymously”. The website had a short message for visitors where it asked for donations towards setting up “a new Islamic front in the USA and around the world”, and that visitors could send these donations “without leaving a trace”.

@@ -1,7 +1,7 @@
 ---
 title: The Google Firefox search deal, Chrome and Lady GaGa
 date: 2011-12-25T11:37:14+00:00
-excerpt: Finding an explination for why Google is investing so much in it's Chrome web browser
+excerpt: Why Google's claim that Chrome is purely altruistic doesn't match their $4.9B marketing spend including Lady Gaga ads and Super Bowl spots
 ---
 
 In a response to [MG Siegler's post](http://parislemon.com/post/14695710791/pay-to-stay) about the Google and Firefox deal, Chrome engineer Peter Kasting [posted to Google+](https://plus.google.com/114128403856330399812/posts/9dKsD7Mi7JU):
@@ -18,7 +18,7 @@ A lot of mainstream technology users now know what Chrome is because of this mar
 
 For some reason Google (or some Chrome developers, at least) want their effort to appear purely altruistic, while the marketing arm of the company is investing billions in attracting users to their platform. There is nothing wrong with this – Chrome is the best browser and spending to convert users to it is a huge favor to web application developers as well.
 
-<img src="/images/posts/20111225-pmyb3unhb18e2drdnyr1wuna5k.jpg-20class"/>
+<img alt="Google Chrome marketing budget comparison chart" src="/images/posts/20111225-pmyb3unhb18e2drdnyr1wuna5k.jpg-20class"/>
 
 As for MG's [other post today](http://techcrunch.com/2011/12/24/safari-and-chrome/) over at Techcrunch asking why Chrome took off where Safari didn't, I can think of a few reasons:
 

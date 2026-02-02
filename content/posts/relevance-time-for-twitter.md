@@ -1,7 +1,7 @@
 ---
 title: Relevance Time for Twitter
 date: 2010-10-29T13:57:31+00:00
-excerpt: Why Twitter will inevitably switch from displaying tweets in chronological order
+excerpt: Why chronological ordering in Twitter is baggage from old computer systems and why relevance-based sorting using user gestures is inevitable
 ---
 
 A little over a year ago on Techcrunch I wrote [Relevance over Time](http://techcrunch.com/2009/10/12/relevance-over-time/), a post about how the default view of chronological ordering of messages in applications was not suited to the web, where applications now have enough gestures from users to be able to sort by relevance.

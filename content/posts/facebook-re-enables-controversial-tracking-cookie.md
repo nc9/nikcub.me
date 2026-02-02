@@ -1,7 +1,7 @@
 ---
 title: Facebook Re-Enables Controversial Tracking Cookie
 date: 2011-10-03T18:21:30+00:00
-excerpt: It didn't take long for Facebook to bring back the cookies it uses to track all users across the web
+excerpt: Facebook quietly re-enabled the datr tracking cookie on third-party sites after previously removing it, setting cookies on users who never visited Facebook
 ---
 
 In May of this year the [Wall Street Journal reported](http://online.wsj.com/article/SB10001424052748704281504576329441432995616.html) that Facebook like buttons and other website widgets were setting cookies on visiting browsers. This cookie could then be read later and used to track the user across different web properties and back to the Facebook site. The cookie was being set even if the user had never been to the Facebook site, and even if they didn't click a 'like' or 'share' button.
@@ -14,7 +14,7 @@ Today, that cookie is back. It is being set by all the third-party sites that we
 
 _Image: Screenshot from Chrome showing the datr cookie being set by Facebook on a third party site_
 
-### The datr Cookie
+## The datr Cookie
 
 The `datr` cookie also came up in my previous post about the [Facebook logout issue](http://nikcub.appspot.com/logging-out-of-facebook-is-not-enough). You can see it in [the table published](http://nikcub.appspot.com/fb-table.html) accompanying that post.
 
@@ -36,7 +36,7 @@ We believe that the identifier used to associate each user with the machine ID i
 
 [Ashkan](https://twitter.com/ashk4n) has again submitted a bug report to Facebook about the `datr` cookie. We hope it is disabled again promptly. If this cookie was re-enabled accidently, it would be good to know how such a thing can happen. If it was enabled intentionally, despite all previous statements about third-party cookies being set, then a statement on why would be appropriate.
 
-### Facebook on Datr
+## Facebook on Datr
 
 In [Facebook's response](http://www.datatilsynet.no/upload/Dokumenter/utredninger%20av%20Datatilsynet/From%20Facebook%20-%20Norway-DPA.pdf) to a questions from Norway's Data Inspectorate they state:
 
@@ -44,7 +44,7 @@ In [Facebook's response](http://www.datatilsynet.no/upload/Dokumenter/utredninge
 
 There is no mention of the `datr` cookie or collecting information on non-Facebook users. A user who never visits Facebook and is not a user will still have Facebook cookies set on their computer whenever they visit an integrating site (currently one-third of the top 1000 sites on the web).
 
-### Tracking
+## Tracking
 
 In the [WSJ article](http://online.wsj.com/article/SB10001424052748704281504576329441432995616.html), Bret Taylor, the CTO of Facebook said about the `datr` and other cookies:
 

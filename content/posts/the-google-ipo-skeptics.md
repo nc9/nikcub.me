@@ -1,7 +1,7 @@
 ---
 title: The Google IPO Skeptics
 date: 2010-11-03T03:49:50+00:00
-excerpt: Many were skeptical at the prospects of the Google IPO
+excerpt: A look back at the skepticism that surrounded the Google IPO in 2004, when tech industry experts warned investors away from buying shares
 ---
 
 The market cap of Google today is $196 Billion. The company has grown to become one of the largest and most influential technology companies of all time. It is difficult to imagine, but there was a time where many were skeptical of Google and its potential to be successful. In August of 2004, in the leadup to the Google IPO, the New York Times published an article titled: [“Loving Google but not its public offering”](http://www.nytimes.com/2004/08/06/business/technology-loving-google-but-not-its-public-offering.html).

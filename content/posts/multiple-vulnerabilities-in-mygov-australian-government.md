@@ -1,7 +1,7 @@
 ---
 title: Multiple Vulnerabilities in MyGov, the Australian Government Single-sign-on Solution for Citizen Services.
 date: 2014-05-15T03:56:45+0000
-excerpt: I find numerous serious vulnerabilities in the Australian Governments new single sign-on portal for all citizens
+excerpt: Discovering XSS, SQL injection indicators, and poor cookie security in Australia's myGov portal that could expose 2.2 million citizens' tax and health records
 ---
 
 **Update:** This story has been published by Fairfax [on the Sydney Morning Herald website](http://www.smh.com.au/it-pro/security-it/revealed-serious-flaws-in-mygov-site-exposed-millions-of-australians-private-information-20140515-zrczw.html).
@@ -20,7 +20,7 @@ Ben Grubb, an IT journalist at Fairfax (Sydney Morning Herald, The Age) [reporte
 
 It was that article, along with hearing that the Australian Tax Office would migrate users to myGov, which prompted me to look at the app in more detail.
 
-### Developing a myGov exploit
+## Developing a myGov exploit
 
 I fired up Burp, opened the myGov website and then indexed all the public interfaces and crawled them. It wasn’t long before I started seeing 500 errors, crash reports and debug logs such as “Will not display in production: ” being displayed on the production server. One interface that was crashing on bad input looked like an SQL injection (it would give two different responses to a parameter of name `(select 1)` and `(select 1=2)`), any apostrophe or quote mark in any field name or value would crash the app, and worst thing I noticed is that the error messages were not filtering out the quote marks when referring to them in the logs.
 
@@ -62,7 +62,7 @@ I setup a website with a picture on it and included the exploit in an IFRAME in 
 
 I asked Ben if he gave me permission to hack him – he said yes and shortly after I had his cookies and was logged in as him.
 
-### Other Problems
+## Other Problems
 
 The problems with myGov aren’t just the blatantly poor input handling and escaping. I only tested the public interfaces and was able to crash the server reliably, find multiple instances off no output filtering, find different responses to SQL commands, no cookie expiry, no HttpOnly flags, etc. The list was a dozen issues long, so instead of just writing up the XSS and reporting it to the government I decided to sit down and write all of these down.
 
@@ -78,13 +78,13 @@ I never got any other response – no mention of which issues I listed they cons
 
 The full document which I sent to the department is embedded below.
 
-### Security report sent to the Department of Human Services
+## Security report sent to the Department of Human Services
 
 [Australian Government myGov Website Security Issues](http://www.scribd.com/doc/224070691/Australian-Government-myGov-Website-Security-Issues?secret_password=xDLo231FFKMT9GPQnDlP) by [nikcub](http://www.scribd.com/nikcub)
 
 <iframe data-aspect-ratio="0.7068965517241379" data-auto-height="false" frameborder="0" scrolling="no" src="//www.scribd.com/embeds/224070691/content?start_page=1&amp;view_mode=scroll&amp;access_key=key-0NVekfWBPaKGMp7lca97&amp;show_recommendations=true"></iframe>
 
-### Government Response
+## Government Response
 
 [MyGov Security Gov Response](http://www.scribd.com/doc/224260090/MyGov-Security-Gov-Response) by [nikcub](http://www.scribd.com/nikcub)
 

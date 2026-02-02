@@ -40,25 +40,25 @@ Here is a summary of our prior art from working on a cheap and portable tablet l
 
 As a reminder, the iPad was announced on the 27th of January 2010. Our timeline begins eighteen months prior to that.
 
-### First Announcement – 21st of July 2008
+## First Announcement – 21st of July 2008
 
 The [first post](http://techcrunch.com/2008/07/21/we-want-a-dead-simple-web-tablet-help-us-build-it/) about the Crunchpad went up including this prototype design, featuring a rectangle shape, rounded corners, a flat back, an LCD screen with a consistant margin around the outside and a touchscreen controller.
 
-<img src="/images/posts/2689708043_3afee5af69_o.webp"/>
+<img alt="Original CrunchPad tablet prototype design from 2008" src="/images/posts/2689708043_3afee5af69_o.webp"/>
 
-### Prototype A – August 2008
+## Prototype A – August 2008
 
 I built this prototype including a basic software stack, in 2008 shortly after the first announcement. A touch screen centered in a rectangle package with a flat back and a screen that was flush with the casing.
 
 _[Image no longer available - TechCrunch prototype photo from 2008]_
 
-### Prototype B – mid-2009
+## Prototype B – mid-2009
 
 Design drawings of a pre-manufacture prototype.
 
 _[Image unavailable - Skitch service discontinued]_
 
-### Prototype C – mid-late 2009
+## Prototype C – mid-late 2009
 
 We had two prototype designs manufactured. We had the orange model shown below, a white model and a black model. Again the points that Apple consider unique to the iPad were incorporated into this design:
 
@@ -70,12 +70,12 @@ _[Image unavailable - Skitch service discontinued]_
 
 _[Image unavailable - Skitch service discontinued]_
 
-### The Joojoo
+## The Joojoo
 
 The Crunchpad went on to launch as The JooJoo (long story).
 
 _[Image unavailable - Skitch service discontinued]_
 
-### Four months later, Jan 2010
+## Four months later, Jan 2010
 
 _[Image unavailable - Skitch service discontinued]_

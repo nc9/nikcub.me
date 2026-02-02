@@ -68,7 +68,7 @@ With my browser logged out of Facebook, whenever I visit any page with a Faceboo
 
 You can test this for yourself using any browser with developer tools installed. It is all hidden in plain sight.
 
-### An Experiment
+## An Experiment
 
 This brings me back to a story that I have yet to tell. A year ago I was screwing around with multiple Facebook accounts as part of some development work. I created a number of fake Facebook accounts after logging out of my browser. After using the fake accounts for some time, I found that they were suggesting my real account to me as a friend. Somehow Facebook knew that we were all coming from the same browser, even though I had logged out.
 
@@ -78,7 +78,7 @@ Facebook knows every account that has accessed Facebook from every browser and i
 
 I reported this issue to Facebook in a detailed email and got the bounce around. I emailed somebody I knew at the company and forwarded the request to them. I never got a response. The entire process was so flaky and frustrating that I haven't bothered sending them two XSS holes that I have also found in the past year. They really need to get their shit together on reporting privacy issues, I am sure they take security issues a lot more seriously.
 
-### The Rise of Privacy Awareness
+## The Rise of Privacy Awareness
 
 10-15 years ago when I first got into the security industry the awareness of security issues amongst users, developers and systems administrators was low. Microsoft Windows and IIS were swiss cheese in terms of security vulnerabilities. You could manually send malformed payloads to IIS 4.0 and have it crash with a stack or heap overflow, which would usually lead to a remote vulnerability.
 
@@ -88,13 +88,13 @@ Privacy today feels like what security did 10-15 years ago – there is an aware
 
 Facebook are front-and-center in the new privacy debate just as Microsoft were with security issues a decade ago. The question is what it will take for Facebook to address privacy issues and to give their users the tools required to manage their privacy and to implement clear policies – not pages and pages of confusing legal documentation, and 'logout' not really meaning 'logout'.
 
-### Update: Contact with Facebook
+## Update: Contact with Facebook
 
 To clarify, I first emailed this issue to Facebook on the 14th of November 2010. I also copied the email to their press address to get an official response on it. I never got any response. I sent another email to Facebook, press and copied it to somebody I know at Facebook on the 12th of January 2011. Again, I got no response. I have copies of all the emails, the subject lines were very clear in terms of the importance of this issue.
 
 I have been sitting on this for almost a year now. The renewed discussion about Facebook and privacy this weekend prompted me to write this post.
 
-### Update 2: Followup
+## Update 2: Followup
 
 The reaction to this story has been amazing. I am writing a followup that will analyze both the data that I have collected as well as the response from Facebook (which you can read below in the comments). If you wish to view the raw logs, [I have saved them here](/fb-headers.txt). Specifically the `datr` and `lu` cookies are retained after logout and on subsequent requests, and the `a_user` cookie, which contains your userid, is only cleared once the session is restarted. Most importantly, _connection state_ is retained through these HTTP connections. There is never a clean break between a logged in session and a logged out session – but I will have more on that in a follow-up post.
 

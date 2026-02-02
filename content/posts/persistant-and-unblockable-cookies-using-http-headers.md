@@ -12,11 +12,11 @@ What I do not believe is well known is that the `Last-Modified` header accepts a
 
 The best way to demonstrate this is to show an example. This example uses a [demo page](/tracking-cookie) I have setup that sets random modified dates. If you refresh after setting the modified field you can verify that your browser replays the unique string.
 
-#### Initial Request
+## Initial Request
 
 Here is the initial request to the server. Nothing unusual here.
 
-#### Server Response: Setting the token
+## Server Response: Setting the token
 
 The server responds and sets a unique identifier (in this case an UUID that I generate) as the `Last-Modified`([spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25)) date:
 
@@ -28,7 +28,7 @@ The browser now sends this token along with subsequent requests to the same URL 
 
 It works after closing and restarting the browser, and works in all the major browsers. The ETag method doesn't work in all cases, especially with web proxies, but the Last-Modified method does.
 
-#### Solutions
+## Solutions
 
 The problem with these techniques is that they bypass user and browser privacy settings centered around cookies. You can block all cookies and yet ETag, Last-Modified and other methods can be used to track your browser.
 
@@ -38,7 +38,7 @@ I will be filing a bug report with the open source browsers and requesting that 
 
 Try this bug out yourself by using the [demo page](/tracking-cookie) I have setup.
 
-#### Addendum
+## Addendum
 
 The privacy plugin that I am working on, [Parley](http://github.com/nikcub/parley), would solve the cross-site tracking aspect of this bug, since it blocks all third party requests. I am thinking of adding date verification and fudging to it as well. Something to work on the next time I pick that project up (there is only so much you can do with plugins, which leads to a temptation to fork Webkit and build a privacy and security-aware browser)
 

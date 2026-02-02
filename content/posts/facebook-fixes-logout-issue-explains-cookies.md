@@ -1,7 +1,7 @@
 ---
 title: Facebook Fixes Logout Issue, Explains Cookies
 date: 2011-09-27T13:53:48+00:00
-excerpt: Facebook fix their logged out user privacy issues in response to my earlier post
+excerpt: Follow-up on Facebook's response to the logout cookie tracking issue, detailing the fixes they made and their explanation of how each cookie is used
 ---
 
 I wrote [a post two days ago](/posts/logging-out-of-facebook-is-not-enough) about privacy issues with the Facebook logout procedure which could lead to your subsequent web requests to third-party sites that integrate Facebook widgets being identifiable and linked back to your real account. Over the course of the past 48 hours since that post was published we have researched the issue further and have been in constant contact with Facebook on working out solutions and clarifying behavior on the site.
@@ -10,7 +10,7 @@ My goal was to both identify bugs in the logout process and see that they are fi
 
 In summary, Facebook has made changes to the logout process and they have explained each part of the process and the cookies that the site uses in detail.
 
-### The Data
+## The Data
 
 To help better understand the cookie data that we have collected, I have formatted it into a table that displays the lifetime of each cookie across a number of different web requests. The table can be found on a [separate page here](/fb-table.html). You can find the raw output from my Firefox session [here](/fb-headers.txt).
 
@@ -23,7 +23,7 @@ The rows of the table represent each cookie found throughout the debugging sessi
 
 The table is color coded so that it is easier to see which cookies are altered and which cookies never change. **The data shows that five cookies retain value after the logout procedure and a browser restart, while a further two survive the logout procedure and remain as session cookies.**
 
-### The Fix
+## The Fix
 
 The five cookies that persist are `datr`, `lu`, `p`, `L` and `act`. The two cookies that also persist after the logout procedure as session cookies are `a_user` and `a_xs`.
 
@@ -36,7 +36,7 @@ The most important of these is `a_user`, which is the users ID. **As of today, t
 
 The other 'a' cookie, `a_xs`, is now also deleted on logout. `a_xs` is used to prevent cross-site request forgery.
 
-### The Other Cookies
+## The Other Cookies
 
 This leaves a number of other cookies, and I will be explaining the purpose of each one as per information from Facebook.
 
@@ -56,7 +56,7 @@ Most of the remaining cookies are not very interesting – they set things like 
 
 I understand the technical reason for that – they can store the timestamp as a primary key in their logging backend and not have to associate benchmarking of each request back to a user. I believe Facebook here when they say that although this is a unique identifier it isn't used to link back to a user id – but it is definitely being logged and it _can_ be linked to a user.
 
-### Where Now
+## Where Now
 
 Facebook has changed as much as they can change with the logout issue. They want to retain the ability to track browsers after logout for safety and spam purposes, and they want to be able to log page requests for performance reasons etc. I would still recommend that users clear cookies or use a separate browser, though. I believe Facebook when they describe what these cookies are used for, but that is not a reason to be complacent on privacy issues and to take initiative in remaining safe.
 

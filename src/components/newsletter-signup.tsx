@@ -76,9 +76,9 @@ export function NewsletterSignup({
     <section className="border-t border-border bg-muted/30">
       <div className="mx-auto max-w-2xl px-6 py-12">
         <div className="text-center">
-          <h3 className="font-serif text-xl text-foreground">
+          <p className="font-serif text-xl text-foreground">
             Subscribe to the newsletter
-          </h3>
+          </p>
           <p className="mt-2 text-sm text-muted-foreground">
             Occasional updates on security research, tech, and long-form
             writing. No spam.

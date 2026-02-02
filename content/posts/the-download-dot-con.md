@@ -1,7 +1,7 @@
 ---
 title: The Download Dot-Con
 date: 2011-12-08T17:15:33+00:00
-excerpt: Download.com are one of the largest propagators of malware on the web
+excerpt: How CNet's Download.com bundles adware and toolbars with popular open source software, making them no different from the fake download sites they claim to protect against
 ---
 
 ![download dot con](/images/posts/download-dotcon.webp)

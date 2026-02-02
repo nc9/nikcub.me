@@ -1,12 +1,12 @@
 ---
 title: How To Setup secure and private Facebook browsing
 date: 2011-10-02T07:20:31+00:00
-excerpt: A guide to setting up your Facebook for better privacy
+excerpt: Step-by-step guide to securing your Facebook account with two-factor authentication, disabling tracking features, and setting up private browsing
 ---
 
 This howto guide will take you through securing your Facebook account, enable settings for improved privacy, disabling features where your Facebook information can be shared with third-party sites, and finally setting up your browser for private sharing
 
-### Step 1. Securing your Facebook account
+## Step 1. Securing your Facebook account
 
 _[Image unavailable - Skitch service discontinued]_
 
@@ -20,7 +20,7 @@ Click on the 'Facebook Ads' tab in Settings. Click on both 'Edit third party ad 
 
 While you are here in settings, click on 'General' and then 'Password' and change your password. See this Microsoft guide on [choosing a strong password](http://www.microsoft.com/security/online-privacy/passwords-create.aspx).
 
-### Step 2. Settings up Privacy Settings
+## Step 2. Settings up Privacy Settings
 
 _[Image unavailable - Skitch service discontinued]_
 
@@ -42,7 +42,7 @@ To disable it:
 
 **4.** Go to the [Applications page](https://www.facebook.com/settings/?tab=applications) and remove all applications that you do not use.
 
-### Step 3. Setting up Private Browsing
+## Step 3. Setting up Private Browsing
 
 The best way to privately browse the web without widgets and other beacons sending data back to a social network is to use two browsers:
 

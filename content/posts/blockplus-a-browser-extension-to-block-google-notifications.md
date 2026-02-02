@@ -1,10 +1,10 @@
 ---
 title: BlockPlus - A browser extension to block Google+ notifications
 date: 2011-07-06T21:06:08+0000
-excerpt: I write a browser extension to remove Google+ since the company seems to be doing all it can to promote it
+excerpt: Releasing BlockPlus, a Chrome extension that removes Google+ links and notifications from the nav bar to prevent the constant distraction of the new social network
 ---
 
-<img src="/images/posts/5909374213_cbae62eb55_m.webp"/>
+<img alt="BlockPlus extension icon" src="/images/posts/5909374213_cbae62eb55_m.webp"/>
 
 Google recently launched their much-publicized social network [Google+](http://plus.google.com). I [signed up](https://plus.google.com/105854725972317368943) early on, but found that having the new status bar across the top of all the other Google applications was becoming a distraction.
 
@@ -18,6 +18,6 @@ The project is hosted on my BitBucket, so you can download, fork and view the so
 
 <button onclick="document.location='http://nikcub.appspot.com/static/blockplus-2.crx';return false;">Install BlockPlus for Chrome</button>
 
-# Screenshot
+## Screenshot
 
-<img src="/images/posts/5909661385_79445883de_b.webp"/>
+<img alt="BlockPlus Chrome extension blocking Google+ notifications" src="/images/posts/5909661385_79445883de_b.webp"/>

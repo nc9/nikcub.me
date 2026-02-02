@@ -1,7 +1,7 @@
 ---
 title: Facebook and many other sites also bypass Internet Explorer privacy controls
 date: 2012-02-21T04:40:52+00:00
-excerpt: Facebook and Google found to be setting false P3P headers to bypass third-party cookie control
+excerpt: Microsoft called out Google for P3P bypass but ignored Facebook doing the same thing - and a survey shows 5% of top sites set invalid P3P headers
 ---
 
 There is [a post](http://blogs.msdn.com/b/ie/archive/2012/02/20/google-bypassing-user-privacy-settings.aspx) today on a Microsoft MSDN blog about how Google bypasses third-party cookie control in Internet Explorer by setting a false P3P header. The post author is Dean Hachamovitch, who is the VP for IE, and follows up from a [big story last week](http://online.wsj.com/article/SB10001424052970204880404577225380456599176.html) about how Google and a number of other ad networks are bypassing third-party cookie blocking in Safari by using a workaround (the workaround involves an IFRAME and a form that is submitted automatically using Javascript).

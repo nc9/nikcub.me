@@ -1,7 +1,7 @@
 ---
 title: Cutting Off Burners
 date: 2010-11-30T14:36:07+00:00
-excerpt: Some management
+excerpt: The four burner theory from a management seminar - to be successful you have to cut off one burner, to be really successful you cut off two
 status: draft
 ---
 

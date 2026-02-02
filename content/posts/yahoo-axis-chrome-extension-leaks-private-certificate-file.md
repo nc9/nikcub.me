@@ -1,7 +1,7 @@
 ---
 title: Yahoo Axis Chrome Extension Leaks Private Certificate File
 date: 2012-05-24T04:16:17+00:00
-excerpt: Yahoo! launched a new browser extension today to much fanfare. I find that they leaked their private signing key.
+excerpt: Yahoo shipped their Axis browser extension with the private certificate file used to sign it, allowing attackers to create forged extensions that Chrome trusts
 ---
 
 Yahoo! today announced their new [Axis](http://axis.yahoo.com) web browser. It is implemented as an extension to Chrome, Firefox and Internet Explorer.
@@ -12,7 +12,7 @@ I installed the [Chrome extension](http://sxp.yimg.com/ei/ynano/YAxis_Chrome_v1_
 
 The certificate file is used by Yahoo! to sign the extension package, which is used by Chrome and the webstore to authenticate that the package comes from Yahoo!. With access to the private certificate file a malicious attacker is able to create a forged extension that Chrome will authenticate as being from Yahoo!
 
-### Demonstration
+## Demonstration
 
 To demonstrate the vulnerability, I cloned the source to the extension and added a content script that will prompt a Javascript alert. I then signed my forged extension with the Yahoo! certificate, and installed it in Chrome.
 
@@ -26,7 +26,7 @@ Here is [a link](https://github.com/nikcub/yahoo-spoof/raw/master/build/yahoo-sp
 
 This is a proof of concept. When you click on that link it will install the extension in Chrome.
 
-### Removing the Extension
+## Removing the Extension
 
 See the [detailed instructions on the Google Support website on managing extensions](http://support.google.com/chrome/bin/answer.py?hl=en&answer=187443). There is also a page detailing [how to remove extensions permanently](http://support.google.com/chrome/bin/answer.py?hl=en&answer=113907).
 
@@ -44,7 +44,7 @@ Then when you have the extensions setting page open. scroll down until you see t
 
 ![disable yahoo extension](/images/posts/yahoo-extension-disable.webp)
 
-### Implications
+## Implications
 
 The clearest implication is that with the private certificate file and a fake extension you can create a spoofed package that captures all web traffic, including passwords, session cookies, etc. The easiest way to get this installed onto a victims machine would be to DNS spoof the update URL. The next time the extension attempts to update it will silently install and run the spoofed extension.
 

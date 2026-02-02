@@ -20,6 +20,6 @@ If you are interested in porting the extension as a user script, a greasemonkey 
 
 <button onclick="document.location='https://github.com/nikcub/Blockplus/raw/master/chrome/build/blockplus-4.crx';return false;">Install BlockPlus for Chrome</button>
 
-# Screenshot
+## Screenshot
 
 ![blockplus demo](/images/posts/5909661385_79445883de_b.webp)

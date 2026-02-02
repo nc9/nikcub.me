@@ -1,10 +1,10 @@
 ---
 title: Introducing Frictionless - Taking the friction out of Facebook social-sharing applications
 date: 2011-12-04T21:02:09+00:00
-excerpt: We write a browser plugin to provide better privacy for Facebook users
+excerpt: Launching Frictionless, a Chrome extension that bypasses Facebook's social reader apps and takes you directly to the original article without sharing your activity
 ---
 
-<img src="/images/posts/promo.webp"/>
+<img alt="Frictionless browser plugin promotional banner" src="/images/posts/promo.webp"/>
 
 Today we are launching [Frictionless](https://chrome.google.com/webstore/detail/ajingfifiphifhhjfmfcpklnphcijocg), a browser extension (chrome only at the moment) that rewrites the default features of Facebook social-sharing and provides users with privacy and the ability to read the original source websites for shared articles.
 

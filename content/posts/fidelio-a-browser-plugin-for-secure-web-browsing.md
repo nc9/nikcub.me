@@ -1,7 +1,7 @@
 ---
 title: Fidelio - A browser plugin for secure web browsing
 date: 2010-10-27T09:20:57+00:00
-excerpt: I release a browser plugin that forces the browser to redirect to HTTPS versions of sites when available
+excerpt: Releasing Fidelio, a Chrome plugin that defends against Firesheep by forcing HTTPS, rewriting embedded widgets, and setting secure flags on existing cookies
 ---
 
 A Firefox plugin called [Firesheep](https://github.com/codebutler/firesheep) was released this week. It allows users to hijack sessions sniffed from WiFi or other network through simple point and click. Session hijacking is a well understood security risk, but the script kiddie nature of Firesheep has caused a lot of response and reactions. Website developers and administrators are scurrying to implement measures to prevent the Firesheep attack vector – with solutions ranging from forcing SSL for all requests through to a second, alternate, secure cookie being set.

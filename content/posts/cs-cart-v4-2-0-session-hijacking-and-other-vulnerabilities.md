@@ -1,7 +1,7 @@
 ---
 title: CS-Cart v4.2.0 Session Hijacking and Other Vulnerabilities
 date: 2014-08-07T01:00:19+0000
-excerpt: I send a vulnerability report to a popular e-commerce application and then deal with the developers
+excerpt: How weak session ID generation using uniqid() in CS-Cart allows session hijacking through targeted brute-force, plus a frustrating disclosure timeline
 ---
 
 **Vendor**: [CS-Cart](http://www.cs-cart.com/)
@@ -14,7 +14,7 @@ excerpt: I send a vulnerability report to a popular e-commerce application and t
 
 The exploit involves a number of steps, and i’ll set them all out below along with background on each step.
 
-#### Part 1: Weak Session ID Generation
+## Part 1: Weak Session ID Generation
 
 In the file `./app/Tygh/Session.php` line 49:
 
@@ -36,7 +36,7 @@ You can probably see already where this is heading. There are 999,999 usec’s p
 
 Exploiting this will require finding a way to force the user into recreating a session or figuring out when their session was created.
 
-#### Part 2: Regenerating the Administrators Session
+## Part 2: Regenerating the Administrators Session
 
 In the same `Session.php` file in the `start` method that is called on every request there is this little block of code:
 
@@ -58,7 +58,7 @@ The value of the cookie doesn’t matter. When an administrator visits that URL 
 
 We now have a way to force the admin user to re-crate the session. If we send the admin that link and hope they log in again we can narrow down the search field for the brute-force.
 
-#### Part 3: User-Agent Checking
+## Part 3: User-Agent Checking
 
 One problem with exploiting it is that the CS-Cart application stores the administrators user-agent in the session and checks it on every request. If the user-agent does not match the user agent stored for the user then the session is expired.
 
@@ -70,7 +70,7 @@ I have my own evil shortener that I use – it is hosted on a couple of innocent
 
 The URL would redirect to log them out on the CS-Cart admin backend. Hopefully the admin user would login again after seeing their session logout. Looking at the logs on the shortener, we now have the exact time the admin clicked the link and their exact user-agent.
 
-#### Part 4: The exploit
+## Part 4: The exploit
 
 We now have all the components we need to brute-force the session. Here is a simple python exploit (I used a multithreaded version that uses gevent)
 
@@ -78,7 +78,7 @@ We now have all the components we need to brute-force the session. Here is a sim
 
 Suggested improvements would be to distribute the load across more machines. I successfully hijacked a session using a small number of servers.
 
-#### Issue #2: secret_key is not random.
+## Issue #2: secret_key is not random.
 
 During install CS-Cart generates a secret key that is used in encryption routines and other security routines. The generation method is not random and is rather weak.
 
@@ -86,7 +86,7 @@ Here is the source:
 
 `str_shuffle` uses `rand`, which is also not secure.
 
-#### Disclosure Timeline
+## Disclosure Timeline
 
 **10th June 2014** – Reported to CS-Cart<br/>
 **17th June 2014** – Bugs confirmed by CS-Cart, offered a free license of their software. I replied asking when the fix will be out – no response.<br/>

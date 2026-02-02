@@ -1,7 +1,7 @@
 ---
 title: Two Google Chrome Privacy Issues
 date: 2012-08-08T14:12:17+00:00
-excerpt: Finding and reporting a couple of privacy issues in the Google Chrome browser
+excerpt: Two privacy issues in Chrome where browsing history data persists after deletion - zoom level settings and DNS prefetch data leave traces of visited domains
 ---
 
 I have recently discovered two privacy issues with Google Chrome that users should be aware of. They both relate to browsing history data not being deleted despite the user taking action to delete browsing history.
@@ -14,7 +14,7 @@ If you then click the 'Clear browsing data' button you would expect that all tra
 
 I have tested both of these issues with the latest Chrome versions (including Canary) on both Windows and Mac.<br/>
 
-### Issue 1: Zoom level information for a domain is retained
+## Issue 1: Zoom level information for a domain is retained
 
 When visiting a web site in Chrome, if you zoom in and out (cmd + +/- or view -&gt; zoom in/zoom out) the browser will remember your zoom setting for that website. The next time you visit the same site it will apply your previous zoom setting automatically.
 
@@ -45,7 +45,7 @@ Any other user or process with access to the user profile can access this inform
 
 This issue was [files as a bug](http://code.google.com/p/chromium/issues/detail?id=137412) on the 14th of July.
 
-### Issue 2: DNS prefetched domains are not deleted with browsing history
+## Issue 2: DNS prefetched domains are not deleted with browsing history
 
 DNS is used to translate a domain name (eg. xyz.com) to an IP address. The DNS lookup portion of a visit to a webpage can take anywhere from 10-50% of the load time, depending on the DNS server and network conditions.
 
@@ -65,7 +65,7 @@ This issue was [also filed as a bug](http://code.google.com/p/chromium/issues/de
 
 There is a [blog post here](http://www.mydigitallife.info/turn-off-dns-prefetching-in-google-chrome-to-fix-resolving-host-and-cannot-load-page-error/) describing how to disable DNS prefetching in Chrome
 
-### Potential Impact
+## Potential Impact
 
 If you are on a shared machine, such as a public terminal, you can learn the browsing habits and sites that are visited of previous users. This is most likely to be used in combination with other attacks.
 

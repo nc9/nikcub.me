@@ -1,7 +1,7 @@
 ---
 title: Craig Wright is not Satoshi Nakamoto
 date: 2016-05-02T19:55:25+0000
-excerpt: Investigating the claim that Craig Wright is Bitcoin creator Satoshi Nakamoto
+excerpt: A detailed investigation into Craig Wright's claim to be Bitcoin creator Satoshi Nakamoto, examining forged evidence, tax fraud allegations, and failed cryptographic proofs
 featureImage: /images/posts/craig_wright.webp
 featureImageAlt: Craig Wright
 ---
@@ -77,9 +77,9 @@ and a [followup interview he conducted with Wired](https://www.wired.com/2016/05
 
 ## Part 2. Evidence against Craig Wright being Satoshi Nakamoto
 
-### 2.1 He has a history of forgeries
+##2.1 He has a history of forgeries
 
-#### He forged old blog posts
+###He forged old blog posts
 
 [Wired](https://www.wired.com/2015/12/new-clues-suggest-satoshi-suspect-craig-wright-may-be-a-hoaxer/) and Gizmodo, along with a number of other news outlets, went on to debunk large parts of the evidence supporting Wright as Nakamoto, and further discovered evidence that Wright may have been manipulating and falsifying evidence in support of the claim:
 
@@ -87,7 +87,7 @@ Wired found that Wright had manipulated and planted the old blog posts:
 
 ![Craig Wright's tweet claiming to be Satoshi Nakamoto](/images/posts/ChcGSpBUUAArMOs.webp)
 
-#### He forged the PGP signatures and backdated them
+###He forged the PGP signatures and backdated them
 
 Bitcoin developer Greg Maxwell [found that](https://www.reddit.com/r/Bitcoin/comments/3w027x/dr_craig_steven_wright_alleged_satoshi_by_wired/cxslii7) the PGP key controlled by Wright and believed to be Satoshi’s was generated using PGP cipher-suites not available at the time:<br/>
 
@@ -97,7 +97,7 @@ and the Wright-Nakamoto key wasn’t on the keyserver at that date:
 
 > This key was also not on the keyservers in 2011 according to my logs; which doesn’t prove it was backdated, but there is basically no evidence that it wasn’t and significant evidence that it was. And it’s not turning up in any of the older key server dumps.
 
-#### The non-existing supercomputer
+###The non-existing supercomputer
 
 In a press release for his company CloudCroft, which owned the two super computers, Wright claimed to be in a strategic partnership with SGI, even quoting an SGI executive:
 
@@ -105,17 +105,17 @@ In a press release for his company CloudCroft, which owned the two super compute
 
 [SGI told Forbes](http://www.zdnet.com/article/sgi-denies-links-with-alleged-bitcoin-founder-craig-wright/) that Cloudcroft has never been an SGI customer, and they have no relationship with the company or with Craig Wright.
 
-#### He lied about his credentials
+###He lied about his credentials
 
 On his LinkedIn profile, Wright claimed to hold two Phd’s from Charles Sturt University. The University [told Forbes](http://www.forbes.com/sites/thomasbrewster/2015/12/11/bitcoin-creator-satoshi-craig-wright-lies-hoax/?platform=hootsuite) that it never granted Wright those Phd’s.
 
-#### He selectively revealed to be Nakamoto when it suited him financially
+###He selectively revealed to be Nakamoto when it suited him financially
 
 It is known that Wright told a small number of people that he was Nakamoto. This group seemed limited to a small number of executives in his company, some investors and then the Australian authorities – who were questioning him at the time about his large tax rebates. Being Nakamoto suited Wright in some circumstances, and his claims today that he didn’t seek to be known as Nakamoto doesn’t match with him mentioning it to the Australian Tax Office.
 
 <a></a>
 
-### 2.2 Australian Tax Office Investigation
+##2.2 Australian Tax Office Investigation
 
 Craig Wright is being investigated by the Australian Tax Office and appears to be accused of tax fraud. Wright operated under a number of different companies: Hotwire, DeMorgan, CloudCroft, Panopticrypt, Coin-Ex, Denariuz and at least a couple of others. We know that on the day the Wired and Gizmodo stories were written that Wright’s home and office in Sydney [were raided by agents](http://www.abc.net.au/news/2015-12-09/bitcoin-suspected-founder-craig-wright-home-raided-by-afp/7014254) investigating for the Australian Tax Office. It was speculated that this was because of Wright’s Bitcoin holdings, and Wright told The BBC he was “being audited”, but documents from the administrators of Wright’s companies tell a different story.
 
@@ -155,11 +155,11 @@ Wright’s investments in his ventures and the other related-party transactions 
 
 The story of Wright as Nakamoto is intricately linked with the story of Wright as the founder of a number of startup ventures that failed and the resulting tax issues. We will never completely understand the motives here until the full scope of what happen at these companies is understood and the Australians have completed their investigation.
 
-### 2.3. Personal Testimony of those who know Wright
+##2.3. Personal Testimony of those who know Wright
 
 The experience of those who have worked for or know Craig Wright. Sydney is a global city but in many ways it is a small town – I found out after the Wired report that I knew two people who had worked for Wright. Since the stories published today I have come to hear – either directly or second-hand – from a number of other people who either worked for or knew Wright. The conclusion is near-unanimous: Wright is not Satoshi Nakamoto, and is not capable of being Satoshi Nakamoto. One friend described how Wright is so convincing that even tho he knew he wasn’t capable of creating Bitcoin, he would at times even doubt himself. Another said that Wright has everybody convinced for at least a short period – but then it begins to unravel as his actions do not match his word. He came away from his experience convinced that Wright is a fraud. Yet another person who worked for Wright characterized him (via a third-party) as “the best conman i’ve ever met”
 
-### 2.4. Simple technical errors in Wright’s blog post providing signing signature
+##2.4. Simple technical errors in Wright’s blog post providing signing signature
 
 The problems with Wright’s blog post offering proof today. The most important was [found by JoukeH on reddit](https://www.reddit.com/r/Bitcoin/comments/4hf4xj/creator_of_bitcoin_reveals_identity/d2pf70v): is that the signature Wright offers as proof is from a much later Bitcoin transaction and _is not_ a signature of the Satre text. The details are explained [in this reddit post](https://www.reddit.com/r/Bitcoin/comments/4hflr3/craig_wrights_signature_is_worthless/):
 
@@ -167,7 +167,7 @@ The problems with Wright’s blog post offering proof today. The most important 
 
 So Craig Wright is once again shown to be a likely scammer. When will the media learn?
 
-### 2.5 Other errors in his technical proof
+##2.5 Other errors in his technical proof
 
 In the shell script provided by Wright in his blog post there [was a simple error](http://imgur.com/IPDPXZm) that would cause the script to not run. (via a [throwaway account on reddit](https://www.reddit.com/r/Bitcoin/comments/4hgas6/wrights_signature_verification_script_has_a_fatal/))
 
@@ -187,11 +187,11 @@ In a blog post titled [“Is Craig Wright?”](https://cp4space.wordpress.com/20
 
 It is worth reading – it covers a number of points.
 
-### 2.5. Delay in coming out and contradictions in motive
+##2.5. Delay in coming out and contradictions in motive
 
 The time gap between Wright being named and him coming out today. Why did it take Wright almost 6 months? Proving the ownership of addresses does not require so much time – it is a standard feature in many clients and certainly isn’t beyond what the creator of Bitcoin could do in a matter of minutes. Why did it have to be co-ordinated on an exclusive basis with three media organizations and two witnesses? Wright also claims to want to “keep his head down” and not seek the attention of the media. He told the BBC that he doesn’t want money and he doesn’t want fame – yet he said this during an elaborate and stage-managed exclusive media event organized by an agency on Wright’s behalf and involving months of negotiation.
 
-### 2.6. Evidence cannot be independently verified not is there corroborating independent evidence
+##2.6. Evidence cannot be independently verified not is there corroborating independent evidence
 
 There is very little, if nothing, in open source intelligence that connects Wright with Nakamoto. Researching based on nothing but what is publicly known about Nakamoto and Wright would not lead any reasonable researcher to conclude that the two are linked, or even suspected of being linked. Many others have written about this extensively – from differences in style and writing through to Wright’s casual disregard for the correct spelling of words (this also rules me out as being Nakamoto).
 
@@ -205,7 +205,7 @@ What Wright did offer, in a process that was stage managed, was very specific. T
 
 This should have been a huge red flag to anybody participating in this validation session. There is no reasonable conclusion to draw from the fact that Wright kept the resultant signatures to himself other than he was hiding something. Far too much of the process was in Wright’s control.
 
-### 2.7. Using Electrum for his signature proofs rather than the standard bitcoin client
+##2.7. Using Electrum for his signature proofs rather than the standard bitcoin client
 
 It is also notable that the Electrum Bitcoin client was used to validate the messages signed by Wright. Electrum is a thin client that doesn’t retain it’s own complete copy of the blockchain, but rather sends queries to a server or set of servers and then processes the response. The advantage for bitcoiners, and the reason why Electrum has become popular, is that you don’t need to download an entire copy of the blockchain to use the application (currently at 55GB). The downside is that you’re shifting trust from your own local client to a server that you may not know much about.
 
@@ -223,7 +223,7 @@ For now i’m leaning towards assuming that Wright spent the months between Dece
 
 Entirely plausible – and again, not proof of Wright as Satoshi.
 
-### 2.8. Craig Wright’s MtGox Account
+##2.8. Craig Wright’s MtGox Account
 
 MtGox suffered a number of breaches where user and trading data was leaked. On reddit users [winlifeat](https://www.reddit.com/user/winlifeat) and [apoefjmqdsfls](https://www.reddit.com/user/apoefjmqdsfls) published [Wright’s trading history on MtGox](https://www.reddit.com/r/Bitcoin/comments/4hx3q9/according_to_the_mtgox_leaks_from_early_2014_our/) and it does not reflect the the trades of the founder of Bitcoin who holds 1.1M coins:
 
@@ -235,7 +235,7 @@ His user details were posted in [“Craig Wright lost 14 Bitcoin at MtGox”](ht
 
 The highlights are that Wright not only lost coins on MtGox, but was purchasing Bitcoin at the very peak of the MtGox bubble ($1200 USD).
 
-### 2.9. Wright planning his own payments system 2011
+##2.9. Wright planning his own payments system 2011
 
 From [user avirunes on reddit](https://www.reddit.com/r/btc/comments/4i1hiv/if_you_want_proof_craig_wright_isnt_satoshi/), an archived [copy of his blog from 2011](http://archive.is/3UwA7) shows that Wright was planning his own online payments system backed by gold, making no reference to e-gold or Bitcoin:
 

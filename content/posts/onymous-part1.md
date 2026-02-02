@@ -24,13 +24,13 @@ The full table of seized onion sites discovered is below, an overview of the dat
 1. The website “Executive Outcomes”, which the FBI claims in seizure notices and press releases was a retailer of firearms was a well known scam site – it never shipped any weapons but took users funds.
 1. A clone of a Jihad funding website called “Fund the Islamic Struggle without leaving a trace” [was seized, while the real website remains live](https://www.nikcub.me/posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site/) (and has accepted over 5 BTC in donations)
 
-### Indications of Method
+## Indications of Method
 
 That the FBI seized so many clone and fake websites suggests a broad, untargeted sweep of hidden services rather than a targeted campaign. The slapshot nature of how sites were seized suggests that rather than starting with an onion address and then discovering the host server to seize, this campaign simply vacuumed up a large number of onion websites by targeting specific hosting companies. We have tracked down the hosting companies affected and the details will be published in a follow-up.
 
 On that note, if you were the administrator of a hidden site that was seized, be it a clone or a real site, please get in touch. I’ve spoken to a number of admins and hosting companies and have put together what the seized sites had in common in order to deduce the method used to locate them. Information from admins and hosts is invaluable in working out what the weaknesses of the seized sites was, and what can be learned from the seizures. There is a high likelihood that none of the seizures will be tested or revealed in court, at least not in the short term, so getting this information is important.
 
-### Tor Onion Data
+## Tor Onion Data
 
 The database of hidden sites, which I believe is the largest that has been collated, will be [posted to this GitHub repository](https://github.com/nikcub/tordata) sometime in the next couple of days. An earlier version of the crawler used is [also available on GitHub](https://github.com/nikcub/torsurvey). We are currently putting together an index of data from the seized sites, including the forums, and other Tor hidden services along with a search engine. If you’re interested in contributing or adding data to it send a pull request.
 

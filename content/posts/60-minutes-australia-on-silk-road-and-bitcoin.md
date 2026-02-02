@@ -1,7 +1,7 @@
 ---
 title: 60 Minutes Australia on Silk Road and Bitcoin
 date: 2014-09-14T14:41:46+0000
-excerpt: 60 Minutes airs a story on Silk road and it goes about as you'd expect it
+excerpt: A breakdown of 60 Minutes Australia's story on Silk Road and Bitcoin, including their confusion between the Deepweb and Darknet concepts
 ---
 
 ![60 minutes silk road](/images/posts/60min-silkroad_export.webp)
@@ -12,7 +12,7 @@ The story is about what you would expect from a major media current affairs prog
 
 The report is intertwined with the [story of Preston Bridge](http://www.abc.net.au/news/2014-06-09/perth-teenager-preston-bridge/5510606), a teenager who died after falling (or jumping) from the balcony after taking [NBOMe](http://en.wikipedia.org/wiki/25I-NBOMe), a synthetic form of LSD, that another person at the party had purchased from Silk Road. Also part of the report is an interview with FBI agent Christopher Tarbell – who was part of the investigation into Silk Road, which lead to the arrest of Ross Ulbricht. Tarbell is most infamous as the handler of Lulzsec hacker Sabu ([Hector Monsegur](http://en.wikipedia.org/wiki/Hector_Xavier_Monsegur)) and an author of the technical report released last week about [how the FBI located the Silk Road server](https://www.nikcub.me/posts/analyzing-fbi-explanation-silk-road/).
 
-### Deepweb or Darknet
+## Deepweb or Darknet
 
 What was more interesting to me about the story was how the terms “Deepweb” and “Darknet” were used interchangeably, and how the report spent some time describing how “most of the Internet” is hidden from ordinary web users.
 
@@ -44,7 +44,7 @@ It is true that the _Deepweb_ makes up some large amount of information and data
 
 The _Darknet_, which this story is about, is not 90% of the Internet nor is it large and very hidden.
 
-### Reactions from Viewers
+## Reactions from Viewers
 
 The story on 60 Minutes, which is a popular weekly current affairs program, provoked reactions on Twitter and other social media. The first tweet from the official program Twitter [account was “Are you aware of the Darkweb?”](https://twitter.com/60Mins/status/511102393665069056) – to which many replied a variation of “we are now”, which speaks to the [Streisand effect](http://en.wikipedia.org/wiki/Streisand_effect) of reporting on topics that were previously more obscure.
 
