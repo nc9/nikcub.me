@@ -47,13 +47,6 @@ export function SiteHeader() {
             >
               Contact
             </Link>
-            <Link
-              href="/subscribe"
-              aria-label="Subscribe to newsletter"
-              className="text-highlight font-medium transition-colors hover:text-highlight/80"
-            >
-              Subscribe
-            </Link>
           </nav>
         </div>
       </div>
