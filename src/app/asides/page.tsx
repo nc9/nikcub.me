@@ -15,19 +15,12 @@ interface AsidesPageProps {
   searchParams: Promise<{ page?: string }>;
 }
 
-export async function generateMetadata({
-  searchParams,
-}: AsidesPageProps): Promise<Metadata> {
-  const params = await searchParams;
-  const page = Number(params.page) || 1;
-  const suffix = page > 1 ? ` - Page ${page}` : "";
-
-  return generatePageMetadata({
-    title: `Brief Notes & Asides${suffix}`,
-    description: `Short observations on security, technology, and current events${suffix}`,
-    path: page > 1 ? `/asides?page=${page}` : "/asides",
-  });
-}
+export const metadata: Metadata = generatePageMetadata({
+  title: "Brief Notes & Asides — Short Observations",
+  description:
+    "Short observations on security, technology, and current events. Brief notes and links from Nik Cubrilovic on topics that matter.",
+  path: "/asides",
+});
 
 export default async function AsidesPage({ searchParams }: AsidesPageProps) {
   const params = await searchParams;
