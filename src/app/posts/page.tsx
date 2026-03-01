@@ -24,7 +24,7 @@ export async function generateMetadata({
 
   return generatePageMetadata({
     title: `Articles${suffix}`,
-    description: `Long-form writing on security, privacy, and technology${suffix}`,
+    description: `Long-form writing on security, privacy, technology, and digital society${suffix}`,
     path: page > 1 ? `/posts?page=${page}` : "/posts",
   });
 }

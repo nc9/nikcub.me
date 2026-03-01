@@ -24,7 +24,7 @@ export async function generateMetadata({
 
   return generatePageMetadata({
     title: `Brief Notes & Asides${suffix}`,
-    description: `Short observations on security, technology, and current events${suffix}`,
+    description: `Short observations on security, technology, and current events from Nik Cubrilovic${suffix}`,
     path: page > 1 ? `/asides?page=${page}` : "/asides",
   });
 }
