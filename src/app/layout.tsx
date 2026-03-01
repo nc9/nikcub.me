@@ -21,8 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nikcub.me"),
   title: {
-    default:
-      "Nik Cubrilovic | Engineer writing about AI, data, and digital society",
+    default: "Nik Cubrilovic — Engineer & Writer",
     template: "%s | Nik Cubrilovic",
   },
   description:

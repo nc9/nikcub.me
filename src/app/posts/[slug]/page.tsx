@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PostPageProps) {
   }
 
   const baseMeta = generatePageMetadata({
-    title: post.frontmatter.title,
+    title: post.frontmatter.seoTitle || post.frontmatter.title,
     description:
       post.frontmatter.excerpt || "Security research and technology analysis",
     path: `/posts/${slug}`,

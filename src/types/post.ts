@@ -2,6 +2,7 @@ export type PostType = "article" | "aside";
 
 export interface PostFrontmatter {
   title: string;
+  seoTitle?: string;
   date: string;
   excerpt: string;
   status?: "draft" | "published";

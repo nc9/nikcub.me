@@ -1,7 +1,8 @@
 ---
 title: Analyzing the FBI’s Explanation of How They Located Silk Road
+seoTitle: How the FBI Located the Silk Road Server
 date: 2014-09-07T18:55:24+0000
-excerpt: A technical analysis of the FBI's claims about how they located Silk Road's server, showing their explanation doesn't match how Tor hidden services work
+excerpt: A technical analysis of the FBI’s claims about how they located Silk Road’s server, showing their explanation doesn’t match how Tor hidden services work
 ---
 
 The first incarnation of online drug marketplace [Silk Road](<https://en.wikipedia.org/wiki/Silk_Road_(marketplace)>) was shutdown in October 2013 resulting in the arrest of Ross Ulbricht. In [the indictment](https://www.scribd.com/doc/235866098/USA-v-Ross-Ulbricht) the Department of Justice contend that Ulbricht was Dread Pirate Roberts, the owner and administrator of Silk Road. The case has been in pretrial for some time now, with defense lawyers contesting many elements as part of a large and broad [motion to dismiss](https://www.scribd.com/doc/215745393/USA-v-Ulbricht-motion-to-dismiss-charges) ([subsequently denied](https://www.scribd.com/doc/233234104/Forrest-Denial-of-Defense-Motion-in-Silk-Road-Case)) and other filings.
