@@ -171,8 +171,12 @@ export const mdxComponents: MDXComponents = {
       return (
         <section
           className="mt-12 border-t border-gray-200 pt-6 text-sm text-gray-700"
+          aria-labelledby="footnote-label"
           {...props}
         >
+          <h2 id="footnote-label" className="sr-only">
+            Footnotes
+          </h2>
           {children}
         </section>
       );
