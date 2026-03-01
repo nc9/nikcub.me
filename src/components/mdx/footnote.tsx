@@ -49,7 +49,7 @@ export function FootnoteContent({ id, children }: FootnoteProps) {
       <a
         href={`#${refId}`}
         className="ml-2 text-xs text-gray-500 no-underline hover:text-purple-600"
-        aria-label="Back to reference"
+        aria-label="↩ Back to reference"
       >
         ↩
       </a>

@@ -54,6 +54,20 @@ export const mdxComponents: MDXComponents = {
   a: ({ href, children, ...props }) => {
     if (!href) return <a {...props}>{children}</a>;
 
+    // Handle GFM footnote backref links: fix WCAG 2.5.3 (Label in Name) by ensuring
+    // the aria-label contains the visible ↩ character so the accessible name matches.
+    const isFootnoteBackref =
+      (props as Record<string, unknown>)["data-footnote-backref"] !== undefined;
+    if (isFootnoteBackref) {
+      const existingLabel = props["aria-label"] as string | undefined;
+      const accessibleLabel = existingLabel ? `↩ ${existingLabel}` : undefined;
+      return (
+        <a href={href} {...props} aria-label={accessibleLabel}>
+          {children}
+        </a>
+      );
+    }
+
     // External links
     if (href.startsWith("http")) {
       return (
@@ -89,23 +103,24 @@ export const mdxComponents: MDXComponents = {
   ),
 
   // Add more custom components as needed
-  h1: ({ children }) => (
-    <h1 className="mb-4 mt-8 text-4xl font-bold">{children}</h1>
+  // Preserve id and className from generated HTML (e.g. GFM footnote labels, rehype-slug anchors)
+  h1: ({ children, className, id, ...props }) => (
+    <h1 id={id} className={className || "mb-4 mt-8 text-4xl font-bold"} {...props}>{children}</h1>
   ),
-  h2: ({ children }) => (
-    <h2 className="mb-3 mt-6 text-3xl font-semibold">{children}</h2>
+  h2: ({ children, className, id, ...props }) => (
+    <h2 id={id} className={className || "mb-3 mt-6 text-3xl font-semibold"} {...props}>{children}</h2>
   ),
-  h3: ({ children }) => (
-    <h3 className="mb-2 mt-4 text-2xl font-semibold">{children}</h3>
+  h3: ({ children, className, id, ...props }) => (
+    <h3 id={id} className={className || "mb-2 mt-4 text-2xl font-semibold"} {...props}>{children}</h3>
   ),
-  h4: ({ children }) => (
-    <h4 className="mb-2 mt-4 text-xl font-semibold">{children}</h4>
+  h4: ({ children, className, id, ...props }) => (
+    <h4 id={id} className={className || "mb-2 mt-4 text-xl font-semibold"} {...props}>{children}</h4>
   ),
-  h5: ({ children }) => (
-    <h5 className="mb-2 mt-3 text-lg font-semibold">{children}</h5>
+  h5: ({ children, className, id, ...props }) => (
+    <h5 id={id} className={className || "mb-2 mt-3 text-lg font-semibold"} {...props}>{children}</h5>
   ),
-  h6: ({ children }) => (
-    <h6 className="mb-2 mt-3 text-base font-semibold">{children}</h6>
+  h6: ({ children, className, id, ...props }) => (
+    <h6 id={id} className={className || "mb-2 mt-3 text-base font-semibold"} {...props}>{children}</h6>
   ),
   p: ({ children }) => <p className="mb-4 leading-relaxed">{children}</p>,
   code: ({ children, ...props }) => (
