@@ -10,18 +10,24 @@ export const mdxComponents: MDXComponents = {
   img: ({ src, alt, ...props }) => {
     if (!src) return null;
 
+    // When a figcaption is rendered from the alt text, the <img> itself should
+    // use alt="" (empty/decorative) to avoid redundant screen-reader output.
+    // Per WCAG H67, an empty alt is correct when the adjacent caption fully
+    // describes the image. (a11y/image-redundant-alt fix)
+    const hasFigcaption = Boolean(alt);
+
     // External images
     if (src.startsWith("http")) {
       return (
         <figure className="my-8">
           <img
             src={src}
-            alt={alt || ""}
+            alt={hasFigcaption ? "" : ""}
             {...props}
             loading="lazy"
             className="w-full rounded-lg border-2 border-gray-200"
           />
-          {alt && (
+          {hasFigcaption && (
             <figcaption className="mt-2 text-center text-sm text-muted-foreground">
               {alt}
             </figcaption>
@@ -35,13 +41,13 @@ export const mdxComponents: MDXComponents = {
       <figure className="my-8">
         <Image
           src={src}
-          alt={alt || ""}
+          alt={hasFigcaption ? "" : ""}
           width={800}
           height={600}
           className="w-full rounded-lg border-2 border-gray-200"
           {...props}
         />
-        {alt && (
+        {hasFigcaption && (
           <figcaption className="mt-2 text-center text-sm text-muted-foreground">
             {alt}
           </figcaption>
@@ -53,6 +59,22 @@ export const mdxComponents: MDXComponents = {
   // Style links
   a: ({ href, children, ...props }) => {
     if (!href) return <a {...props}>{children}</a>;
+
+    // Footnote back-reference links: fix WCAG 2.5.3 Label in Name.
+    // remark-gfm generates aria-label="Back to reference N" with visible text "↩".
+    // The accessible name must contain the visible text character, so we use
+    // aria-hidden on the glyph and expose the descriptive text via sr-only.
+    if ((props as Record<string, unknown>)["data-footnote-backref"] !== undefined) {
+      const { "aria-label": ariaLabel, ...restProps } = props as Record<string, unknown> & {
+        "aria-label"?: string;
+      };
+      return (
+        <a href={href} {...(restProps as object)}>
+          <span aria-hidden="true">↩</span>
+          <span className="sr-only">{ariaLabel ?? "Back to reference"}</span>
+        </a>
+      );
+    }
 
     // External links
     if (href.startsWith("http")) {
@@ -89,23 +111,25 @@ export const mdxComponents: MDXComponents = {
   ),
 
   // Add more custom components as needed
-  h1: ({ children }) => (
-    <h1 className="mb-4 mt-8 text-4xl font-bold">{children}</h1>
+  // NOTE: always spread ...props so that attrs like id (used by remark-gfm
+  // for e.g. id="footnote-label") are preserved for aria-labelledby references.
+  h1: ({ children, ...props }) => (
+    <h1 className="mb-4 mt-8 text-4xl font-bold" {...props}>{children}</h1>
   ),
-  h2: ({ children }) => (
-    <h2 className="mb-3 mt-6 text-3xl font-semibold">{children}</h2>
+  h2: ({ children, ...props }) => (
+    <h2 className="mb-3 mt-6 text-3xl font-semibold" {...props}>{children}</h2>
   ),
-  h3: ({ children }) => (
-    <h3 className="mb-2 mt-4 text-2xl font-semibold">{children}</h3>
+  h3: ({ children, ...props }) => (
+    <h3 className="mb-2 mt-4 text-2xl font-semibold" {...props}>{children}</h3>
   ),
-  h4: ({ children }) => (
-    <h4 className="mb-2 mt-4 text-xl font-semibold">{children}</h4>
+  h4: ({ children, ...props }) => (
+    <h4 className="mb-2 mt-4 text-xl font-semibold" {...props}>{children}</h4>
   ),
-  h5: ({ children }) => (
-    <h5 className="mb-2 mt-3 text-lg font-semibold">{children}</h5>
+  h5: ({ children, ...props }) => (
+    <h5 className="mb-2 mt-3 text-lg font-semibold" {...props}>{children}</h5>
   ),
-  h6: ({ children }) => (
-    <h6 className="mb-2 mt-3 text-base font-semibold">{children}</h6>
+  h6: ({ children, ...props }) => (
+    <h6 className="mb-2 mt-3 text-base font-semibold" {...props}>{children}</h6>
   ),
   p: ({ children }) => <p className="mb-4 leading-relaxed">{children}</p>,
   code: ({ children, ...props }) => (
