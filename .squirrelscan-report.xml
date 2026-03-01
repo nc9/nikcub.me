@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audit version="0.0.0">
+<site url="https://nikcub.me" crawled="10" date="2026-03-01T06:05:22.566Z"/>
+<score overall="73" grade="C">
+ <cat name="Accessibility" score="91"/>
+ <cat name="Content" score="92"/>
+ <cat name="Performance" score="88"/>
+ <cat name="Core SEO" score="91"/>
+ <cat name="Security" score="90"/>
+ <cat name="Images" score="93"/>
+ <cat name="Links" score="88"/>
+ <cat name="E-E-A-T" score="56"/>
+ <cat name="Crawlability" score="98"/>
+ <cat name="URL Structure" score="99"/>
+ <cat name="Structured Data" score="100"/>
+ <cat name="Internationalization" score="100"/>
+ <cat name="Social Media" score="100"/>
+ <cat name="Mobile" score="100"/>
+ <cat name="Legal Compliance" score="100"/>
+</score>
+<summary passed="1004" warnings="101" failed="5"/>
+<issues>
+ <category name="Crawlability" errors="0" warnings="2">
+  <rule id="crawl/canonical-chain" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/canonical-chain">
+   Page redirects before content is served
+   Pages (1): /
+   Items (1):
+    - / (https://nikcub.me → https://nikcub.me/) [finalUrl: https://nikcub.me/, chain: {&quot;sourceUrl&quot;:&quot;https://nikcub.me/&quot;,&quot;finalUrl&quot;:&quot;https://nikcub.me/&quot;,&quot;hops&quot;:[{&quot;url&quot;:&quot;https://nikcub.me/&quot;,&quot;statusCode&quot;:200,&quot;type&quot;:&quot;http&quot;}],&quot;chainLength&quot;:0,&quot;isLoop&quot;:false,&quot;endsInError&quot;:false,&quot;httpsToHttp&quot;…]
+  </rule>
+  <rule id="crawl/sitemap-coverage" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-coverage">
+   34 sitemap URL(s) were not crawled
+   Items (5/34):
+    - /posts/notes-on-the-celebrity-data-theft
+    - /posts/multiple-vulnerabilities-in-disqus-wordpress-plugin
+    - /posts/cs-cart-v4-2-0-session-hijacking-and-other-vulnerabilities
+    - /posts/multiple-vulnerabilities-in-mygov-australian-government
+    - /posts/two-google-chrome-privacy-issues
+  </rule>
+ </category>
+ <category name="Core SEO" errors="0" warnings="13">
+  <rule id="core/meta-title" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-title">
+   Title too long; Title too short
+   Pages (5/8): /, /posts, /subscribe, /posts/60-minutes-australia-on-silk-road-and-bitcoin, /posts/analyzing-fbi-explanation-silk-road
+   Items (5/8):
+    - / (Nik Cubrilovic | Engineer writing about AI, data,  (69 chars))
+    - /posts/analyzing-fbi-explanation-silk-road (Analyzing the FBI’s Explanation of How They Locate (78 chars))
+    - /posts/60-minutes-australia-on-silk-road-and-bitcoin (60 Minutes Australia on Silk Road and Bitcoin | Ni (62 chars))
+    - /posts/onymous-part1 (Large Number of Tor Hidden Sites Seized by the FBI (113 chars))
+    - /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site (FBI seizes fake Tor hosted Jihad funding website a (115 chars))
+  </rule>
+  <rule id="core/meta-description" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-description">
+   Description too long; Description too short
+   Pages (5): /asides, /posts, /subscribe, /posts/craig-wright-is-not-satoshi-nakamoto, /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site
+   Items (5):
+    - /posts/craig-wright-is-not-satoshi-nakamoto (A detailed investigation into Craig Wright&apos;s claim (172 chars))
+    - /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site (During Operation Onymous the FBI seized a fake clo (168 chars))
+    - /asides (Short observations on security, technology, and cu (62 chars))
+    - /subscribe (Get notified when I publish new articles. Subscrib (115 chars))
+    - /posts (Long-form writing on security, privacy, and techno (54 chars))
+  </rule>
+ </category>
+ <category name="Security" errors="0" warnings="11">
+  <rule id="security/csp" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/csp">
+   No Content-Security-Policy header
+  </rule>
+  <rule id="security/form-captcha" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/form-captcha">
+   N public form(s) without CAPTCHA
+   Pages (5/10): /, /asides, /posts, /subscribe, /posts/60-minutes-australia-on-silk-road-and-bitcoin
+   Items (2):
+    - form[0]
+    - form[1]
+  </rule>
+ </category>
+ <category name="Links" errors="0" warnings="7">
+  <rule id="links/https-downgrade" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/https-downgrade">
+   N link(s) downgrade to HTTP
+   Pages (5): /posts/60-minutes-australia-on-silk-road-and-bitcoin, /posts/analyzing-fbi-explanation-silk-road, /posts/craig-wright-is-not-satoshi-nakamoto, /posts/onymous-part1, /posts/securing-blockchain-users-with-tor-and-ssl
+   Items (5/19):
+    - http://gavinandresen.ninja/satoshi
+    - http://gavinandresen.ninja/satoshi
+    - http://www.mcgrathnicol.com/app/uploads/D14-140526-Hotwire439AReport-BFK.pdf
+    - http://prwire.com.au/pr/51565/the-demorgan-ltd-group-of-companies-to-receive-up-to-54-million-from-ausindustry-r-amp-d-tax-rebate-scheme-1
+    - http://archive.is/3UwA7
+  </rule>
+  <rule id="links/orphan-pages" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/orphan-pages">
+   3 orphan page(s) with &lt;2 incoming links
+   Items (3):
+    - /asides
+    - /subscribe
+    - /posts/analyzing-fbi-explanation-silk-road
+  </rule>
+  <rule id="links/weak-internal-links" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/weak-internal-links">
+   1 page(s) have only 1 internal link
+   Items (1):
+    - /posts/analyzing-fbi-explanation-silk-road
+  </rule>
+ </category>
+ <category name="Content" errors="2" warnings="6">
+  <rule id="content/meta-in-body" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/content/meta-in-body">
+   Found 16 meta tags in &lt;body&gt;
+   Pages (2): /asides, /posts
+   Items (5/16):
+    - description (description=&quot;Short observations on security, technology, and cu...&quot;) [content: Short observations on security, technology, and cu...]
+    - og:title (og:title=&quot;Brief Notes &amp; Asides&quot;) [content: Brief Notes &amp; Asides]
+    - og:description (og:description=&quot;Short observations on security, technology, and cu...&quot;) [content: Short observations on security, technology, and cu...]
+    - og:url (og:url=&quot;https://nikcub.me/asides&quot;) [content: https://nikcub.me/asides]
+    - og:site_name (og:site_name=&quot;Nik Cubrilovic&quot;) [content: Nik Cubrilovic]
+  </rule>
+  <rule id="content/keyword-stuffing" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/keyword-stuffing">
+   1 word(s) may be overused
+   Pages (2): /posts, /posts/craig-wright-is-not-satoshi-nakamoto
+   Items (2):
+    - wright (&quot;wright&quot; (3.2%)) [count: 129, density: 3.1954421600198164]
+    - min (&quot;min&quot; (3.1%)) [count: 10, density: 3.076923076923077]
+  </rule>
+  <rule id="content/word-count" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/word-count">
+   Thin content: N words (min N)
+   Pages (4): /, /asides, /subscribe, /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site
+   Items (4):
+    - / (Thin content: 252 words (min 300))
+    - /asides (Thin content: 42 words (min 300))
+    - /subscribe (Thin content: 82 words (min 300))
+    - /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site (Thin content: 269 words (min 300))
+  </rule>
+ </category>
+ <category name="Images" errors="0" warnings="11">
+  <rule id="images/responsive-size" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/responsive-size">
+   1 small image(s) may be serving oversized files
+   Pages (5/10): /, /asides, /posts, /subscribe, /posts/60-minutes-australia-on-silk-road-and-bitcoin
+   Items (1):
+    - image (56x56, no srcset)
+  </rule>
+  <rule id="images/offscreen-lazy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/offscreen-lazy">
+   2 below-fold image(s) without lazy loading
+   Pages (1): /posts/securing-blockchain-users-with-tor-and-ssl
+   Items (2):
+    - BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf-20-page-2069-20of-2099-.webp
+    - Screen-20Shot-202014-12-04-20at-202.00.01-20AM.webp
+  </rule>
+ </category>
+ <category name="Performance" errors="1" warnings="31">
+  <rule id="perf/lcp-hints" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lcp-hints">
+   N potential LCP image(s) without preload
+   Pages (5/10): /, /asides, /posts, /subscribe, /posts/60-minutes-australia-on-silk-road-and-bitcoin
+   Items (2):
+    - /_next/image?url=%2Favatar.webp&amp;w=128&amp;q=75
+    - /_next/image?url=%2Fimages%2Fposts%2Fcraig_wright.webp&amp;w=1920&amp;q=75
+  </rule>
+  <rule id="perf/ttfb" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/perf/ttfb">
+   Slow server response (Nms); Very slow server response (1378ms)
+   Pages (5): /asides, /posts, /subscribe, /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site, /posts/securing-blockchain-users-with-tor-and-ssl
+   Items (5):
+    - /asides (Slow server response (609ms))
+    - /subscribe (Slow server response (627ms))
+    - /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site (Slow server response (677ms))
+    - /posts/securing-blockchain-users-with-tor-and-ssl (Slow server response (694ms))
+    - /posts (Very slow server response (1378ms))
+  </rule>
+  <rule id="perf/dom-size" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/dom-size">
+   Element with N children found; Large DOM (2113 nodes)
+   Pages (3): /posts/craig-wright-is-not-satoshi-nakamoto, /posts/onymous-part1, /posts/securing-blockchain-users-with-tor-and-ssl
+   Items (4):
+    - /posts/craig-wright-is-not-satoshi-nakamoto (Element with 118 children found)
+    - /posts/onymous-part1 (Element with 276 children found)
+    - /posts/securing-blockchain-users-with-tor-and-ssl (Element with 61 children found)
+    - /posts/onymous-part1 (Large DOM (2113 nodes))
+  </rule>
+  <rule id="perf/lazy-above-fold" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lazy-above-fold">
+   N above-fold image(s) with lazy loading
+   Pages (3): /posts/60-minutes-australia-on-silk-road-and-bitcoin, /posts/analyzing-fbi-explanation-silk-road, /posts/craig-wright-is-not-satoshi-nakamoto
+   Items (4):
+    - /_next/image?url=%2Fimages%2Fposts%2FChcGSpBUUAArMOs.webp&amp;w=1920&amp;q=75
+    - /_next/image?url=%2Fimages%2Fposts%2Fsr_reddit_screnshot.webp&amp;w=1920&amp;q=75
+    - /_next/image?url=%2Fimages%2Fposts%2F60min-silkroad_export.webp&amp;w=1920&amp;q=75
+    - /_next/image?url=%2Fimages%2Fposts%2F60_screenshot_export.webp&amp;w=1920&amp;q=75
+  </rule>
+  <rule id="perf/critical-request-chains" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/critical-request-chains">
+   2 critical request chain(s) found
+   Pages (5/10): /, /asides, /posts, /subscribe, /posts/60-minutes-australia-on-silk-road-and-bitcoin
+   Items (2):
+    - CSS: /_next/static/chunks/d17a1e4009825030.css?dpl=dpl_7obzf8foduejujVvtMcQFuib1AJs
+    - JS: /_next/static/chunks/a6dad97d9634a72d.js?dpl=dpl_7obzf8foduejujVvtMcQFuib1AJs
+  </rule>
+ </category>
+ <category name="Accessibility" errors="2" warnings="14">
+  <rule id="a11y/duplicate-id-aria" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/duplicate-id-aria">
+   1 problematic ID(s) in ARIA attributes
+   Pages (1): /posts/securing-blockchain-users-with-tor-and-ssl
+   Items (1):
+    - &quot;footnote-label&quot; (not found)
+  </rule>
+  <rule id="a11y/label-content-name-mismatch" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/label-content-name-mismatch">
+   1 element(s) where visible text doesn&apos;t match accessible name
+   Pages (1): /posts/securing-blockchain-users-with-tor-and-ssl
+   Items (1):
+    - a: visible=&quot;↩&quot; vs aria-label=&quot;back to reference 1&quot;
+  </rule>
+  <rule id="a11y/color-contrast" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/color-contrast">
+   N potential color contrast issue(s)
+   Pages (5/10): /, /asides, /posts, /subscribe, /posts/60-minutes-australia-on-silk-road-and-bitcoin
+   Items (5/24):
+    - p with class &quot;mt-1 text-sm text-muted-foregr...&quot; may have low contrast
+    - a with class &quot;text-muted-foreground transiti...&quot; may have low contrast
+    - a with class &quot;mt-4 inline-flex items-center ...&quot; may have low contrast
+    - h2 with class &quot;text-xs font-medium uppercase ...&quot; may have low contrast
+    - p with class &quot;text-[15px] leading-relaxed te...&quot; may have low contrast
+  </rule>
+  <rule id="a11y/identical-links-same-purpose" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/identical-links-same-purpose">
+   2 link text(s) lead to different destinations
+   Pages (1): /posts/craig-wright-is-not-satoshi-nakamoto
+   Items (2):
+    - &quot;wired&quot; → 3 different URLs
+    - &quot;the bbc&quot; → 2 different URLs
+  </rule>
+  <rule id="a11y/image-redundant-alt" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/image-redundant-alt">
+   N image(s) with redundant alt text
+   Pages (3): /posts/60-minutes-australia-on-silk-road-and-bitcoin, /posts/analyzing-fbi-explanation-silk-road, /posts/craig-wright-is-not-satoshi-nakamoto
+   Items (5/9):
+    - &quot;Craig Wright...&quot; duplicates figcaption
+    - &quot;Craig Wright&apos;s tweet...&quot; duplicates figcaption
+    - &quot;Reddit post showing ...&quot; duplicates figcaption
+    - &quot;60 minutes silk road...&quot; duplicates figcaption
+    - &quot;Browser tab showing ...&quot; duplicates figcaption
+  </rule>
+ </category>
+ <category name="URL Structure" errors="0" warnings="1">
+  <rule id="url/length" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/url/length">
+   URL is 121 characters (over 100)
+   Pages (1): /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site
+   Items (1):
+    - /posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site (URL is 121 characters (over 100))
+  </rule>
+ </category>
+ <category name="E-E-A-T" errors="0" warnings="5">
+  <rule id="eeat/author-byline" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/author-byline">
+   No content pages have author attribution
+  </rule>
+  <rule id="eeat/about-page" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/about-page">
+   No About page found
+  </rule>
+  <rule id="eeat/contact-page" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/contact-page">
+   No Contact page found
+  </rule>
+  <rule id="eeat/privacy-policy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/privacy-policy">
+   No Privacy Policy page found
+  </rule>
+  <rule id="eeat/content-dates" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/content-dates">
+   No content pages have datePublished
+  </rule>
+ </category>
+</issues>
+</audit>

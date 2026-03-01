@@ -15,19 +15,12 @@ interface PostsPageProps {
   searchParams: Promise<{ page?: string }>;
 }
 
-export async function generateMetadata({
-  searchParams,
-}: PostsPageProps): Promise<Metadata> {
-  const params = await searchParams;
-  const page = Number(params.page) || 1;
-  const suffix = page > 1 ? ` - Page ${page}` : "";
-
-  return generatePageMetadata({
-    title: `Articles${suffix}`,
-    description: `Long-form writing on security, privacy, and technology${suffix}`,
-    path: page > 1 ? `/posts?page=${page}` : "/posts",
-  });
-}
+export const metadata: Metadata = generatePageMetadata({
+  title: "Articles on Security, Privacy & Technology",
+  description:
+    "Long-form writing on security, privacy, and technology by Nik Cubrilovic. In-depth articles on data engineering, digital society, and software.",
+  path: "/posts",
+});
 
 export default async function PostsPage({ searchParams }: PostsPageProps) {
   const params = await searchParams;
