@@ -6,9 +6,9 @@ import { SiteHeader } from "@/components/site-header";
 import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata = generatePageMetadata({
-  title: "Subscribe",
+  title: "Subscribe - Get updates on new articles and posts",
   description:
-    "Get notified when I publish new articles. Subscribe via email newsletter or RSS feed. No spam, unsubscribe anytime.",
+    "Get notified when I publish new articles. Subscribe via email newsletter or RSS feed. Stay updated on security research, technology analysis, and digital society commentary.",
   path: "/subscribe",
 });
 

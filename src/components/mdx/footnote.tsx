@@ -42,14 +42,16 @@ export function FootnoteRef({ id, children }: FootnoteProps) {
 
 export function FootnoteContent({ id, children }: FootnoteProps) {
   const refId = id.replace("fn-", "fnref-");
+  const noteNumber = id.replace("fn-", "");
 
   return (
     <div id={id} className="my-2 text-sm">
-      <span className="mr-2 text-purple-600">{children}</span>
+      <span className="mr-2 text-purple-600" id={`${id}-label`}>{children}</span>
       <a
         href={`#${refId}`}
         className="ml-2 text-xs text-gray-500 no-underline hover:text-purple-600"
-        aria-label="Back to reference"
+        aria-labelledby={`${id}-label`}
+        title={`Back to reference ${noteNumber}`}
       >
         ↩
       </a>
