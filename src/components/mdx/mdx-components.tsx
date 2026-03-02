@@ -162,7 +162,7 @@ export const mdxComponents: MDXComponents = {
   },
 
   // Footnote section styling (GFM generates a section with class "footnotes")
-  section: ({ children, className, ...props }) => {
+  section: ({ children, className, 'aria-label': ariaLabel, ...props }) => {
     if (
       className &&
       typeof className === "string" &&
@@ -171,13 +171,14 @@ export const mdxComponents: MDXComponents = {
       return (
         <section
           className="mt-12 border-t border-gray-200 pt-6 text-sm text-gray-700"
+          aria-label={ariaLabel || "Footnotes"}
           {...props}
         >
           {children}
         </section>
       );
     }
-    return <section {...props}>{children}</section>;
+    return <section aria-label={ariaLabel} {...props}>{children}</section>;
   },
 
   // Lists in footnotes

@@ -23,8 +23,8 @@ export async function generateMetadata({
   const suffix = page > 1 ? ` - Page ${page}` : "";
 
   return generatePageMetadata({
-    title: `Articles${suffix}`,
-    description: `Long-form writing on security, privacy, and technology${suffix}`,
+    title: `Articles - Long-form writing on security, privacy, and technology${suffix}`,
+    description: `Long-form writing on security, privacy, and technology. Deep dives into cybersecurity, digital rights, and the technical aspects of our connected world.${suffix}`,
     path: page > 1 ? `/posts?page=${page}` : "/posts",
   });
 }

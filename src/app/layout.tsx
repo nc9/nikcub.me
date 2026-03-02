@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type React from "react";
 
 import { Analytics } from "@vercel/analytics/next";
 import { JetBrains_Mono, Source_Serif_4 } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -107,14 +108,21 @@ export default function RootLayout({
       className={`${sourceSerif.variable} ${jetbrainsMono.variable}`}
     >
       <head>
-        <link rel="preload" href="/avatar.webp" as="image" type="image/webp" />
-        <script
-          type="application/ld+json"
-          /* Safe: jsonLd is a static object defined in source code, not user input */
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        <link
+          rel="preload"
+          href="/avatar.webp"
+          as="image"
+          type="image/webp"
         />
       </head>
       <body className="font-sans antialiased">
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          /* Safe: jsonLd is a static object defined in source code, not user input */
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-foreground focus:text-background focus:px-4 focus:py-2 focus:rounded"
