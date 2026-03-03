@@ -18,7 +18,6 @@ export const mdxComponents: MDXComponents = {
             src={src}
             alt={alt || ""}
             {...props}
-            loading="lazy"
             className="w-full rounded-lg border-2 border-gray-200"
           />
           {alt && (
