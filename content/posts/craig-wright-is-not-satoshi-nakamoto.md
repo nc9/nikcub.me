@@ -10,11 +10,11 @@ Craig Wright has claimed to be anonymous Bitcoin creator Satoshi Nakamoto.
 
 Craig Wright is not Satoshi Nakamoto.
 
-He wasn’t Satoshi Nakamoto before or after [Wired](https://www.wired.com/2015/12/bitcoins-creator-satoshi-nakamoto-is-probably-this-unknown-australian-genius/) and [Gizmodo](https://gizmodo.com/this-australian-says-he-and-his-dead-friend-invented-bi-1746958692) suspected him to be last year.
+He wasn’t Satoshi Nakamoto before or after [Wired’s original report](https://www.wired.com/2015/12/bitcoins-creator-satoshi-nakamoto-is-probably-this-unknown-australian-genius/) and [Gizmodo](https://gizmodo.com/this-australian-says-he-and-his-dead-friend-invented-bi-1746958692) suspected him to be last year.
 
 Craig Wright still isn’t Satoshi Nakamoto after trying to reveal himself on [his own blog](https://www.drcraigwright.net/jean-paul-sartre-signing-significance/)
 
-Craig Wright is still not Satoshi Nakamoto even after his outcoming roadshow where he spoke to [The BBC](https://www.bbc.com/news/technology-36168863), [The Economist](https://www.economist.com/news/business-and-finance/21698060-craig-wright-reveals-himself-as-satoshi-nakamoto), [GQ](https://www.gq-magazine.co.uk/article/bitcoin-creator-satoshi-nakamoto-craig-wright), [Jon Matonis](https://themonetaryfuture.blogspot.sg/2016/05/how-i-met-satoshi.html) and [Gavin Andresen](https://gavinandresen.ninja/satoshi).
+Craig Wright is still not Satoshi Nakamoto even after his outcoming roadshow where he spoke to [the BBC for their initial story](https://www.bbc.com/news/technology-36168863), [The Economist](https://www.economist.com/news/business-and-finance/21698060-craig-wright-reveals-himself-as-satoshi-nakamoto), [GQ](https://www.gq-magazine.co.uk/article/bitcoin-creator-satoshi-nakamoto-craig-wright), [Jon Matonis](https://themonetaryfuture.blogspot.sg/2016/05/how-i-met-satoshi.html) and [Gavin Andresen](https://gavinandresen.ninja/satoshi).
 
 There is a long and fraught history in Bitcoin of claims and counterclaims about who Satoshi is, and one would think that lessons had been learned and a high standard would be set for subsequent claims regarding Satoshi Nakamoto. The proof posted today by Wright and others does not meet any standard for identifying him as Nakamoto.
 
@@ -56,7 +56,7 @@ Below i’ll outline all of the evidence to date pointing towards Wright as Naka
 
 > I was flown to London to meet Dr. Wright a couple of weeks ago, after an initial email conversation convinced me that there was a very good chance he was the same person I’d communicated with in 2010 and early 2011. After spending time with him I am convinced beyond a reasonable doubt: Craig Wright is Satoshi.
 
-**5.** There were 3 media outlets involved in the exclusive unveiling of Wright as Satoshi. [The Economist concluded](https://www.economist.com/news/business-and-finance/21698060-craig-wright-reveals-himself-as-satoshi-nakamoto): “Our conclusion is that he could well be Mr Nakamoto, but that nagging questions remain.” [The BBC](https://www.bbc.com/news/technology-36185267) interviewed Wright and asked him about the tax investigation in Australia amongst other things. The London Review of Books has [preview of a feature about Wright](https://www.lrb.co.uk/2016/05/01/andrew-ohagan/the-search-for-satoshi) up on their website. They state:
+**5.** There were 3 media outlets involved in the exclusive unveiling of Wright as Satoshi. [The Economist concluded](https://www.economist.com/news/business-and-finance/21698060-craig-wright-reveals-himself-as-satoshi-nakamoto): “Our conclusion is that he could well be Mr Nakamoto, but that nagging questions remain.” [The BBC later interviewed Wright](https://www.bbc.com/news/technology-36185267) and asked him about the tax investigation in Australia amongst other things. The London Review of Books has [preview of a feature about Wright](https://www.lrb.co.uk/2016/05/01/andrew-ohagan/the-search-for-satoshi) up on their website. They state:
 
 > News of Craig Wright’s ownership and use of Satoshi Nakamoto’s private keys, verified by central figures in the bitcoin community, will be reported today by the BBC and the Economist. The full, long-form account will be published here later this month.
 
@@ -81,7 +81,7 @@ and a [followup interview he conducted with Wired](https://www.wired.com/2016/05
 
 ###He forged old blog posts
 
-[Wired](https://www.wired.com/2015/12/new-clues-suggest-satoshi-suspect-craig-wright-may-be-a-hoaxer/) and Gizmodo, along with a number of other news outlets, went on to debunk large parts of the evidence supporting Wright as Nakamoto, and further discovered evidence that Wright may have been manipulating and falsifying evidence in support of the claim:
+[Wired's follow-up story](https://www.wired.com/2015/12/new-clues-suggest-satoshi-suspect-craig-wright-may-be-a-hoaxer/) and Gizmodo, along with a number of other news outlets, went on to debunk large parts of the evidence supporting Wright as Nakamoto, and further discovered evidence that Wright may have been manipulating and falsifying evidence in support of the claim:
 
 Wired found that Wright had manipulated and planted the old blog posts:
 
