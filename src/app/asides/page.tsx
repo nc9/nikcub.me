@@ -23,8 +23,8 @@ export async function generateMetadata({
   const suffix = page > 1 ? ` - Page ${page}` : "";
 
   return generatePageMetadata({
-    title: `Brief Observations & Notes on Tech and Security${suffix}`,
-    description: `Quick observations and brief notes on security developments, technology trends, digital privacy, and current events. Short-form writing from an engineer's perspective.${suffix}`,
+    title: `Brief Notes on Tech & Security${suffix}`,
+    description: `Quick observations on security developments, technology trends, digital privacy, and current events. Short-form writing from an engineer's perspective.${suffix}`,
     path: page > 1 ? `/asides?page=${page}` : "/asides",
   });
 }
