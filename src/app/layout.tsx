@@ -107,7 +107,10 @@ export default function RootLayout({
       className={`${sourceSerif.variable} ${jetbrainsMono.variable}`}
     >
       <head>
-        <link rel="preload" href="/avatar.webp" as="image" type="image/webp" />
+        {/* Preconnect to font sources for LCP optimization */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" href="/avatar.webp" as="image" type="image/webp" fetchPriority="high" />
         <script
           type="application/ld+json"
           /* Safe: jsonLd is a static object defined in source code, not user input */
