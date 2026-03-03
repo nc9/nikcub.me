@@ -59,6 +59,7 @@ export function NewsletterSignup({
             <button
               type="submit"
               disabled={status === "loading"}
+              aria-label="Subscribe to newsletter"
               className="h-11 rounded-sm bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90 disabled:opacity-50"
             >
               {status === "loading"
@@ -114,6 +115,7 @@ export function NewsletterSignup({
             <button
               type="submit"
               disabled={status === "loading"}
+              aria-label="Subscribe to newsletter"
               className="h-10 rounded-sm bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90 disabled:opacity-50"
             >
               {status === "loading"
