@@ -9,7 +9,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata = generatePageMetadata({
   title:
-    "Nik Cubrilovic | Engineer writing about AI, data, and digital society",
+    "Nik Cubrilovic | AI, Data Engineering & Digital Society",
   description:
     "Engineer writing about AI, data engineering, and digital society. Long-form articles and observations on technology's impact on our world.",
   path: "/",
