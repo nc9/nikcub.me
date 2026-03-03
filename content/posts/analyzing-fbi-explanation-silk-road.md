@@ -100,7 +100,7 @@ In this scenario, the description of packet sniffers and “inspecting each pack
 
 The FBI have good reason to not mention any bugs or forcing the server to do anything, and to pretend that they simply picked up the IP address from the wire, since such actions would raise concerns about how lawful their actions in uncovering the IP address were. What we do know is that their description of “packet sniffing” for the IP through a “leak” is impossible.
 
-_Thanks to: [harisec](https://www.twitter.com/harisec), [thegrugq](https://www.twitter.com/thegrugq) and the ever useful [Silk Road timeline](http://antilop.cc/sr/) by [moustach](https://twitter.com/lamoustache/) for links and tips._
+_Thanks to: [harisec](https://www.twitter.com/harisec), [thegrugq](https://www.twitter.com/thegrugq) and the ever useful [Silk Road timeline](https://antilop.cc/sr/) by [moustach](https://twitter.com/lamoustache/) for links and tips._
 
 ## Addendum
 

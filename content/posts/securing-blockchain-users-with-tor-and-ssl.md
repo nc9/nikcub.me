@@ -20,7 +20,7 @@ With an authenticated hidden service Blockchain users are able to access their B
 
 MITM attacks against users on Tor are simple to execute and remarkably effective. The type is attack is referred to as SSL stripping, where the MITM would intercept requests to an HTTPS service and downgrades the connection to plain unencrypted and unauthenticated HTTP. If the user doesn’t notice the switch to HTTP, or if the browser doesn’t enforce HTTPS, then any data or credentials submitted can be read and stored by the MITM.
 
-This technique was detailed and presented by Moxie Marlinspike in a [2009 talk at the Black Hat security conference](https://www.youtube.com/watch?v=MFol6IMbZ7Y), where he also released a tool for the purpose called [sslstrip](http://www.thoughtcrime.org/software/sslstrip/). It has been five years since the presentation and the release of the tool yet awareness of SSL stripping attacks amongst users is low and this type of attack is incredibly underrated.
+This technique was detailed and presented by Moxie Marlinspike in a [2009 talk at the Black Hat security conference](https://www.youtube.com/watch?v=MFol6IMbZ7Y), where he also released a tool for the purpose called [sslstrip](https://www.thoughtcrime.org/software/sslstrip/). It has been five years since the presentation and the release of the tool yet awareness of SSL stripping attacks amongst users is low and this type of attack is incredibly underrated.
 
 In an SSL stripping attack, the attacker first inserts their machine as a proxy between the victim and target website. This can be achieved with arp spoofing on a LAN or WiFi network, with DNS poisoning, by seizing a VPN server or HTTP proxy or by running a Tor exit node. Once inserted on the path between the victim and the connection to a web server, the sslstrip attack will intercept requests to an HTTPS based service and proxy them back to the user over HTTP.
 
@@ -30,7 +30,7 @@ It is an attack type that relies on the user not noticing that their connection 
 
 <img alt="Gmail login page with sslstrip showing fake lock favicon over HTTP" src="/images/posts/BlackHat-DC-09-Marlinspike-Defeating-SSL.pdf-20-page-2069-20of-2099-.webp" width="800" height="600"/>
 
-(Note: The last two slides are from Moxie’s [Black Hat talk](https://www.youtube.com/watch?v=MFol6IMbZ7Y), which is very accessible and worth seeing. His [followup talk](https://www.youtube.com/watch?v=ibF36Yyeehw) with details of other stripping techniques is also recommended, as is [Moxie’s blog](http://www.thoughtcrime.org).).
+(Note: The last two slides are from Moxie’s [Black Hat talk](https://www.youtube.com/watch?v=MFol6IMbZ7Y), which is very accessible and worth seeing. His [followup talk](https://www.youtube.com/watch?v=ibF36Yyeehw) with details of other stripping techniques is also recommended, as is [Moxie’s blog](https://www.thoughtcrime.org).).
 
 SSL Stripping is responsible for a large number of the attacks against Blockchain users, particularly those accessing the service over Tor. The recommended action for users it to always check the validity of their connection to the web server and to make sure it is secure and that the certificate they are presented validates (you can check this in most browsers by clicking on the (real) secure lock icon).
 
@@ -78,7 +78,7 @@ We are planning on coming up with a solution that would redirect Tor users to on
 
 ## Tor Use Cases
 
-In the media Tor is most often associated with drug markets, the darkweb and whistleblowers, but there are [many other use cases](https://www.torproject.org/about/torusers.html.en) and applications for the network. It pairs perfectly with Bitcoin (although you [shouldn’t run](http://orbilu.uni.lu/bitstream/10993/18679/1/Ccsfp614s-biryukovATS.pdf) a full p2p Bitcoin client on Tor), can provide user anonymity and access to web services where they may otherwise be blocked or intercepted.
+In the media Tor is most often associated with drug markets, the darkweb and whistleblowers, but there are [many other use cases](https://www.torproject.org/about/torusers.html.en) and applications for the network. It pairs perfectly with Bitcoin (although you [shouldn’t run](https://orbilu.uni.lu/bitstream/10993/18679/1/Ccsfp614s-biryukovATS.pdf) a full p2p Bitcoin client on Tor), can provide user anonymity and access to web services where they may otherwise be blocked or intercepted.
 
 I've seen a large amount of interest from various parties in providing alternate services on Tor, and i'm going to be working on bringing more businesses and web services onto the network. If you're interested in learning more about how Tor could work for you, want to setup your own services or would like help in finding the right onion address or configuring hidden services [get in touch](/contact).
 

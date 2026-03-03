@@ -14,7 +14,7 @@ He wasn’t Satoshi Nakamoto before or after [Wired](https://www.wired.com/2015/
 
 Craig Wright still isn’t Satoshi Nakamoto after trying to reveal himself on [his own blog](https://www.drcraigwright.net/jean-paul-sartre-signing-significance/)
 
-Craig Wright is still not Satoshi Nakamoto even after his outcoming roadshow where he spoke to [The BBC](https://www.bbc.com/news/technology-36168863), [The Economist](https://www.economist.com/news/business-and-finance/21698060-craig-wright-reveals-himself-as-satoshi-nakamoto), [GQ](https://www.gq-magazine.co.uk/article/bitcoin-creator-satoshi-nakamoto-craig-wright), [Jon Matonis](https://themonetaryfuture.blogspot.sg/2016/05/how-i-met-satoshi.html) and [Gavin Andresen](http://gavinandresen.ninja/satoshi).
+Craig Wright is still not Satoshi Nakamoto even after his outcoming roadshow where he spoke to [The BBC](https://www.bbc.com/news/technology-36168863), [The Economist](https://www.economist.com/news/business-and-finance/21698060-craig-wright-reveals-himself-as-satoshi-nakamoto), [GQ](https://www.gq-magazine.co.uk/article/bitcoin-creator-satoshi-nakamoto-craig-wright), [Jon Matonis](https://themonetaryfuture.blogspot.sg/2016/05/how-i-met-satoshi.html) and [Gavin Andresen](https://gavinandresen.ninja/satoshi).
 
 There is a long and fraught history in Bitcoin of claims and counterclaims about who Satoshi is, and one would think that lessons had been learned and a high standard would be set for subsequent claims regarding Satoshi Nakamoto. The proof posted today by Wright and others does not meet any standard for identifying him as Nakamoto.
 
@@ -52,7 +52,7 @@ Below i’ll outline all of the evidence to date pointing towards Wright as Naka
 
 > During the London proof sessions, I had the opportunity to review the relevant data along three distinct lines: cryptographic, social, and technical. Based on what I witnessed, it is my firm belief that Craig Steven Wright satisfies all three categories. For cryptographic proof in my presence, Craig signed and verified a message using the private key from block #1 newly-generated coins and from block #9 newly-generated coins (the first transaction to Hal Finney). The social evidence, including his unique personality, early emails that I received, and early drafts of the Bitcoin white paper, points to Craig as the creator. I also received satisfactory explanations to my questions about registering the bitcoin.org domain and the various time-of-day postings to the BitcoinTalk forum. Additionally, Craig’s technical working knowledge of public key cryptography, Bitcoin’s addressing system, and proof-of-work consensus in a distributed peer-to-peer environment is very strong.
 
-**4.** Gavin Andresen, a Bitcoin core developer who took over the project from Nakamoto, [posted](http://gavinandresen.ninja/satoshi) that he also participated in the London sessions and was satisfied that Wright is Nakamoto:
+**4.** Gavin Andresen, a Bitcoin core developer who took over the project from Nakamoto, [posted](https://gavinandresen.ninja/satoshi) that he also participated in the London sessions and was satisfied that Wright is Nakamoto:
 
 > I was flown to London to meet Dr. Wright a couple of weeks ago, after an initial email conversation convinced me that there was a very good chance he was the same person I’d communicated with in 2010 and early 2011. After spending time with him I am convinced beyond a reasonable doubt: Craig Wright is Satoshi.
 
@@ -119,7 +119,7 @@ It is known that Wright told a small number of people that he was Nakamoto. This
 
 Craig Wright is being investigated by the Australian Tax Office and appears to be accused of tax fraud. Wright operated under a number of different companies: Hotwire, DeMorgan, CloudCroft, Panopticrypt, Coin-Ex, Denariuz and at least a couple of others. We know that on the day the Wired and Gizmodo stories were written that Wright’s home and office in Sydney [were raided by agents](https://www.abc.net.au/news/2015-12-09/bitcoin-suspected-founder-craig-wright-home-raided-by-afp/7014254) investigating for the Australian Tax Office. It was speculated that this was because of Wright’s Bitcoin holdings, and Wright told The BBC he was “being audited”, but documents from the administrators of Wright’s companies tell a different story.
 
-[The administrators note from May 2014](http://www.mcgrathnicol.com/app/uploads/D14-140526-Hotwire439AReport-BFK.pdf) details what Hotwire did:
+[The administrators note from May 2014](https://www.mcgrathnicol.com/app/uploads/D14-140526-Hotwire439AReport-BFK.pdf) details what Hotwire did:
 
 > The Company’s main activity was the acquisition of various e-learning and e-payment software and undertaking research and development work in respect of this software and for software owned by related entities
 
@@ -141,7 +141,7 @@ The purpose for the structure and why someone could commit fraud in this way bec
 
 The sales tax (GST) component of the $29 million invested by Wright into the company was eligible for a refund. Thus by shuffling around some Bitcoin between entities you control yourself, it is possible to trigger a sales tax refund (in real cash).
 
-Another Wright entity, DeMorgan, made the largest ever R&D tax concession claim in Australia – [as per their own press release](http://prwire.com.au/pr/51565/the-demorgan-ltd-group-of-companies-to-receive-up-to-54-million-from-ausindustry-r-amp-d-tax-rebate-scheme-1). The R&D tax concession is a program in Australia where companies investing in R&D are eligible for a 45% tax refund on each dollar spent. We know now that the supercomputers that were claimed to be part of this spending didn’t exist, so it is possible that the refund was an attempt to make a false claim.
+Another Wright entity, DeMorgan, made the largest ever R&D tax concession claim in Australia – [as per their own press release](https://prwire.com.au/pr/51565/the-demorgan-ltd-group-of-companies-to-receive-up-to-54-million-from-ausindustry-r-amp-d-tax-rebate-scheme-1). The R&D tax concession is a program in Australia where companies investing in R&D are eligible for a 45% tax refund on each dollar spent. We know now that the supercomputers that were claimed to be part of this spending didn’t exist, so it is possible that the refund was an attempt to make a false claim.
 
 While it is still early in the investigations against Wright’s companies, one can come away from reading about his firms with the conclusion that their primary business was to seek tax refunds from the government, and that most of the businesses were setup precisely for this. The administrators in the Hotwire company said as much when they describe almost the entirety of the firms assets as two outstanding refunds from the tax office (one of which, a sales tax refund, was later declined and a penalty of $1.7 million was applied to the company).
 
@@ -237,7 +237,7 @@ The highlights are that Wright not only lost coins on MtGox, but was purchasing 
 
 ##2.9. Wright planning his own payments system 2011
 
-From [user avirunes on reddit](https://www.reddit.com/r/btc/comments/4i1hiv/if_you_want_proof_craig_wright_isnt_satoshi/), an archived [copy of his blog from 2011](http://archive.is/3UwA7) shows that Wright was planning his own online payments system backed by gold, making no reference to e-gold or Bitcoin:
+From [user avirunes on reddit](https://www.reddit.com/r/btc/comments/4i1hiv/if_you_want_proof_craig_wright_isnt_satoshi/), an archived [copy of his blog from 2011](https://archive.is/3UwA7) shows that Wright was planning his own online payments system backed by gold, making no reference to e-gold or Bitcoin:
 
 > A gold standard stops the havoc that governments have been setting on the global economy whilst also fixing inflation to natural means and not arbitrary measures created by politicians with rent seeking in mind.
 
