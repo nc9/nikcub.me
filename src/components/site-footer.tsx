@@ -11,13 +11,25 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <div className="mx-auto max-w-2xl px-6 py-8">
           <div className="flex flex-col gap-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <p>© 1999 - {new Date().getFullYear()} Nik Cubrilovic</p>
+              <Link
+                href="/about"
+                className="transition-colors hover:text-foreground"
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="transition-colors hover:text-foreground"
+              >
+                Contact
+              </Link>
               <Link
                 href="/privacy"
                 className="transition-colors hover:text-foreground"
               >
-                Privacy
+                Privacy Policy
               </Link>
             </div>
             <div className="flex gap-4">
