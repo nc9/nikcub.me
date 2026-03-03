@@ -16,7 +16,7 @@ On Friday [Wired reported](https://www.wired.com/2014/09/the-fbi-finally-says-ho
 
 > The FBI claims to have found the server’s location without the NSA’s help, simply by fiddling with the Silk Road’s login page until it leaked its true location.
 
-The government response consists of first [the DOJ filing](https://www.scribd.com/doc/238796613/Silk-Road-Prosecution-4th-Amendment-Rebuttall), and then the [affidavit from the FBI tech team](http://ia700603.us.archive.org/21/items/gov.uscourts.nysd.422824/gov.uscourts.nysd.422824.57.0.pdf) (PDF). The affidavit is more interesting since it delves into the “tech” of how the server was uncovered. Breaking it down:
+The government response consists of first [the DOJ filing](https://www.scribd.com/doc/238796613/Silk-Road-Prosecution-4th-Amendment-Rebuttall), and then the [affidavit from the FBI tech team](https://ia700603.us.archive.org/21/items/gov.uscourts.nysd.422824/gov.uscourts.nysd.422824.57.0.pdf) (PDF). The affidavit is more interesting since it delves into the “tech” of how the server was uncovered. Breaking it down:
 
 The first three sections go into the background and experience of the team investigating. The fourth briefly explains what Tor is, its purpose and how it works. The fifth section opens with:
 
