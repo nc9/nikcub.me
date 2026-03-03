@@ -23,8 +23,8 @@ export async function generateMetadata({
   const suffix = page > 1 ? ` - Page ${page}` : "";
 
   return generatePageMetadata({
-    title: `Articles${suffix}`,
-    description: `Long-form writing on security, privacy, and technology${suffix}`,
+    title: `Articles & Blog Posts${suffix}`,
+    description: `Explore in-depth articles and blog posts on security research, privacy investigations, and technology analysis. Long-form writing from an engineer's perspective.${suffix}`,
     path: page > 1 ? `/posts?page=${page}` : "/posts",
   });
 }
