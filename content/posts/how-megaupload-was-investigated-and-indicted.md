@@ -1,6 +1,7 @@
 ---
 title: How Megaupload Was Investigated and Indicted
 date: 2012-01-20T16:47:06+00:00
+excerpt: A breakdown of the evidence and investigation methods used by the DOJ to indict Megaupload, examining internal emails, financial records, and publicly accessible details
 ---
 
 <img alt="Megaupload website logo" width="800" height="600" src="/images/posts/image66.webp"/> The popular file upload site Megaupload was [taken down](https://www.techmeme.com/120119/p97#a120119p97) today as part of a US DOJ investigation into the site for breaches of US copyright law.

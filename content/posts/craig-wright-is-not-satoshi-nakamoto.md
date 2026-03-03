@@ -1,7 +1,7 @@
 ---
 title: Craig Wright is not Satoshi Nakamoto
 date: 2016-05-02T19:55:25+0000
-excerpt: An investigation into Craig Wright's claim to be Bitcoin's Satoshi Nakamoto, examining forged evidence and failed cryptographic proofs that disprove his assertion
+excerpt: An investigation into Craig Wright's claims to be Bitcoin creator Satoshi Nakamoto, examining forged evidence and failed cryptographic proofs
 featureImage: /images/posts/craig_wright.webp
 featureImageAlt: Craig Wright
 ---
