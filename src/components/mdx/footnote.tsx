@@ -20,6 +20,12 @@ export function FootnoteRef({ id, children }: FootnoteProps) {
     }
   };
 
+  // Extract the number from children for accessible name (fixes label-content-name-mismatch)
+  const footnoteText = String(children);
+  const footnoteNum = footnoteText.replace(/[^\d]/g, "");
+  // The accessible name must contain the visible text (the number)
+  const ariaLabel = `Footnote ${footnoteNum}`;
+
   return (
     <span className="relative">
       <a
@@ -27,6 +33,8 @@ export function FootnoteRef({ id, children }: FootnoteProps) {
         className="inline-block align-super text-xs text-purple-600 no-underline hover:text-purple-700"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setShowTooltip(false)}
+        aria-label={ariaLabel}
+        aria-describedby={id}
       >
         {children}
       </a>
