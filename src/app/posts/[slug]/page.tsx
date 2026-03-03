@@ -42,11 +42,12 @@ export async function generateMetadata({ params }: PostPageProps) {
 
   return {
     ...baseMeta,
-    authors: [{ name: "Nik Cubrilovic", url: "https://nikcub.me" }],
+    authors: [{ name: "Nik Cubrilovic", url: "https://nikcub.me/about" }],
     openGraph: {
       ...baseMeta.openGraph,
       type: "article" as const,
       publishedTime: post.frontmatter.date,
+      modifiedTime: post.frontmatter.lastModified,
       authors: ["Nik Cubrilovic"],
     },
   };
@@ -57,12 +58,14 @@ function ArticleJsonLd({
   description,
   slug,
   date,
+  modified,
   image,
 }: {
   title: string;
   description: string;
   slug: string;
   date: string;
+  modified?: string;
   image?: string;
 }) {
   const articleImage = image
@@ -76,13 +79,13 @@ function ArticleJsonLd({
     description,
     url: `https://nikcub.me/posts/${slug}`,
     datePublished: date,
-    dateModified: date,
+    dateModified: modified || date,
     image: articleImage,
     author: {
       "@type": "Person",
-      "@id": "https://nikcub.me/#person",
+      "@id": "https://nikcub.me/about",
       name: "Nik Cubrilovic",
-      url: "https://nikcub.me",
+      url: "https://nikcub.me/about",
     },
     publisher: {
       "@type": "Person",
@@ -127,6 +130,7 @@ export default async function PostPage({ params }: PostPageProps) {
         }
         slug={slug}
         date={post.frontmatter.date}
+        modified={post.frontmatter.lastModified}
         image={post.frontmatter.featureImage}
       />
       <SiteHeader />
@@ -138,9 +142,9 @@ export default async function PostPage({ params }: PostPageProps) {
               {post.frontmatter.title}
             </h1>
             <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-              <span className="font-medium text-foreground/80">
+              <Link href="/about" className="font-medium text-foreground/80 hover:text-highlight transition-colors">
                 Nik Cubrilovic
-              </span>
+              </Link>
               <span className="text-border">·</span>
               <time
                 dateTime={post.frontmatter.date}
@@ -149,6 +153,19 @@ export default async function PostPage({ params }: PostPageProps) {
                 <Calendar className="h-3.5 w-3.5" />
                 {formatDate(post.frontmatter.date)}
               </time>
+              {post.frontmatter.lastModified && post.frontmatter.lastModified !== post.frontmatter.date && (
+                <>
+                  <span className="text-border">·</span>
+                  <time
+                    dateTime={post.frontmatter.lastModified}
+                    className="inline-flex items-center gap-1.5"
+                    title="Last modified"
+                  >
+                    <span className="text-xs">Updated</span>
+                    {formatDate(post.frontmatter.lastModified)}
+                  </time>
+                </>
+              )}
               {post.readingTime > 0 && (
                 <>
                   <span className="text-border">·</span>
