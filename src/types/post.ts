@@ -1,9 +1,16 @@
 export type PostType = "article" | "aside";
 
+export interface Author {
+  name: string;
+  url?: string;
+}
+
 export interface PostFrontmatter {
   title: string;
   date: string;
   excerpt: string;
+  author?: string | Author;
+  lastModified?: string;
   status?: "draft" | "published";
   type?: PostType;
   featureImage?: string;
@@ -18,6 +25,7 @@ export interface Post {
   type: PostType;
   readingTime: number;
   wordCount: number;
+  lastModified?: string;
 }
 
 export interface PageFrontmatter {

@@ -1,4 +1,4 @@
-import { Calendar, Clock } from "lucide-react";
+import { Calendar, Clock, User } from "lucide-react";
 import Link from "next/link";
 
 import { formatDate } from "@/lib/utils";
@@ -80,7 +80,7 @@ function ArticleItem({ post }: { post: Post }) {
               {post.frontmatter.excerpt}
             </p>
           )}
-          <div className="flex items-center gap-3 text-xs text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
             <time
               dateTime={post.frontmatter.date}
               className="inline-flex items-center gap-1.5"
@@ -88,6 +88,19 @@ function ArticleItem({ post }: { post: Post }) {
               <Calendar className="h-3 w-3" />
               {formatDate(post.frontmatter.date)}
             </time>
+            {post.frontmatter.lastModified && post.frontmatter.lastModified !== post.frontmatter.date && (
+              <>
+                <span className="text-border">·</span>
+                <time
+                  dateTime={post.frontmatter.lastModified}
+                  className="inline-flex items-center gap-1"
+                  title="Last modified"
+                >
+                  <span>Updated</span>
+                  {formatDate(post.frontmatter.lastModified)}
+                </time>
+              </>
+            )}
             {post.readingTime > 0 && (
               <>
                 <span className="text-border">·</span>
@@ -97,6 +110,19 @@ function ArticleItem({ post }: { post: Post }) {
                 </span>
               </>
             )}
+            <>
+              <span className="text-border">·</span>
+              <span className="inline-flex items-center gap-1">
+                <User className="h-3 w-3" />
+                <Link
+                  href="/about"
+                  className="hover:text-highlight transition-colors"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Nik Cubrilovic
+                </Link>
+              </span>
+            </>
           </div>
           {post.frontmatter.tags && (
             <div className="mt-1 flex gap-2">
@@ -126,13 +152,40 @@ function AsideItem({ post }: { post: Post }) {
               {post.frontmatter.excerpt}
             </p>
           )}
-          <time
-            dateTime={post.frontmatter.date}
-            className="inline-flex items-center gap-1.5 text-xs text-muted-foreground"
-          >
-            <Calendar className="h-3 w-3" />
-            {formatDate(post.frontmatter.date)}
-          </time>
+          <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+            <time
+              dateTime={post.frontmatter.date}
+              className="inline-flex items-center gap-1.5"
+            >
+              <Calendar className="h-3 w-3" />
+              {formatDate(post.frontmatter.date)}
+            </time>
+            {post.frontmatter.lastModified && post.frontmatter.lastModified !== post.frontmatter.date && (
+              <>
+                <span className="text-border">·</span>
+                <time
+                  dateTime={post.frontmatter.lastModified}
+                  className="inline-flex items-center gap-1"
+                  title="Last modified"
+                >
+                  Updated
+                </time>
+              </>
+            )}
+            <>
+              <span className="text-border">·</span>
+              <span className="inline-flex items-center gap-1">
+                <User className="h-3 w-3" />
+                <Link
+                  href="/about"
+                  className="hover:text-highlight transition-colors"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Nik Cubrilovic
+                </Link>
+              </span>
+            </>
+          </div>
         </div>
       </Link>
     </article>

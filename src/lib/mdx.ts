@@ -4,6 +4,7 @@ import path from "node:path";
 import readingTime from "reading-time";
 
 import type {
+  Author,
   Page,
   PageFrontmatter,
   Post,
@@ -66,13 +67,37 @@ export function getPostBySlug(slug: string): Post | null {
       );
     }
 
+    // Get file modification time for lastModified
+    const stats_fs = fs.statSync(fullPath);
+    const lastModified = frontmatter.lastModified
+      ? String(frontmatter.lastModified)
+      : stats_fs.mtime.toISOString();
+
+    // Normalize author to Author object (default to site author)
+    let author: Author;
+    if (frontmatter.author) {
+      if (typeof frontmatter.author === "string") {
+        author = { name: frontmatter.author, url: "/about" };
+      } else {
+        author = frontmatter.author as Author;
+      }
+    } else {
+      // Default author for E-E-A-T compliance
+      author = { name: "Nik Cubrilovic", url: "/about" };
+    }
+
     return {
       slug,
-      frontmatter,
+      frontmatter: {
+        ...frontmatter,
+        author,
+        lastModified,
+      },
       content: processedContent,
       type,
       readingTime: Math.ceil(stats.minutes),
       wordCount: stats.words,
+      lastModified,
     };
   }
 
