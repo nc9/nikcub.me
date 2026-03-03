@@ -1,6 +1,6 @@
 import type React from "react";
 
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, User, Calendar } from "lucide-react";
 import Link from "next/link";
 
 import { formatDate } from "@/lib/utils";
@@ -28,9 +28,12 @@ export function ArticleLayout({ post, children }: ArticleLayoutProps) {
       {/* Article header */}
       <header className="mb-12">
         <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-          <time dateTime={post.frontmatter.date}>
-            {formatDate(post.frontmatter.date)}
-          </time>
+          <span className="inline-flex items-center gap-1.5">
+            <Calendar className="h-3.5 w-3.5" />
+            <time dateTime={post.frontmatter.date}>
+              {formatDate(post.frontmatter.date)}
+            </time>
+          </span>
           {post.readingTime > 0 && (
             <>
               <span className="text-border">·</span>
@@ -50,6 +53,27 @@ export function ArticleLayout({ post, children }: ArticleLayoutProps) {
         <h1 className="text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl text-balance">
           {post.frontmatter.title}
         </h1>
+
+        {/* Author byline */}
+        <div className="mt-4 flex items-center gap-2">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted">
+            <User className="h-4 w-4 text-muted-foreground" />
+          </div>
+          <div className="flex flex-col">
+            <Link
+              href="/about"
+              className="text-sm font-medium text-foreground hover:text-highlight transition-colors"
+            >
+              {typeof post.frontmatter.author === 'string' ? post.frontmatter.author : (post.frontmatter.author?.name || 'Nik Cubrilovic')}
+            </Link>
+            {post.lastModified && post.lastModified !== post.frontmatter.date && (
+              <span className="text-xs text-muted-foreground">
+                Updated {formatDate(post.lastModified)}
+              </span>
+            )}
+          </div>
+        </div>
+
         {post.frontmatter.excerpt && post.type === "article" && (
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
             {post.frontmatter.excerpt}
