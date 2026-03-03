@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 interface FootnoteProps {
   id: string;
@@ -10,6 +10,8 @@ interface FootnoteProps {
 export function FootnoteRef({ id, children }: FootnoteProps) {
   const [showTooltip, setShowTooltip] = useState(false);
   const [tooltipContent, setTooltipContent] = useState<string>("");
+  // Generate unique ID for accessibility to avoid duplicate ID issues
+  const uniqueDescribedById = useId();
 
   const handleMouseEnter = () => {
     // Find the footnote content
@@ -34,12 +36,15 @@ export function FootnoteRef({ id, children }: FootnoteProps) {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setShowTooltip(false)}
         aria-label={ariaLabel}
-        aria-describedby={id}
+        aria-describedby={uniqueDescribedById}
       >
         {children}
       </a>
       {showTooltip && tooltipContent && (
-        <span className="absolute bottom-full left-0 z-50 mb-2 w-64 rounded-lg border border-purple-200 bg-white p-3 text-sm font-normal text-gray-700 shadow-lg">
+        <span
+          id={uniqueDescribedById}
+          className="absolute bottom-full left-0 z-50 mb-2 w-64 rounded-lg border border-purple-200 bg-white p-3 text-sm font-normal text-gray-700 shadow-lg"
+        >
           {tooltipContent}
           <span className="absolute left-4 top-full h-0 w-0 border-8 border-transparent border-t-white" />
         </span>
