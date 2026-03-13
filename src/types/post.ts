@@ -7,6 +7,8 @@ export interface Author {
 
 export interface PostFrontmatter {
   title: string;
+  /** Optional shorter title used only in <title> / meta tags (max ~55 chars) */
+  seoTitle?: string;
   date: string;
   excerpt: string;
   author?: string | Author;
