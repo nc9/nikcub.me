@@ -44,3 +44,6 @@ next-env.d.ts
 scripts/
 content/posts.backup/
 BROWSER_TEST_REPORT.md
+
+# squirrelscan artifacts
+.squirrelscan-pr-description.md
