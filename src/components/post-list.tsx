@@ -114,13 +114,7 @@ function ArticleItem({ post }: { post: Post }) {
               <span className="text-border">·</span>
               <span className="inline-flex items-center gap-1">
                 <User className="h-3 w-3" />
-                <Link
-                  href="/about"
-                  className="hover:text-highlight transition-colors"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Nik Cubrilovic
-                </Link>
+                Nik Cubrilovic
               </span>
             </>
           </div>
@@ -176,13 +170,7 @@ function AsideItem({ post }: { post: Post }) {
               <span className="text-border">·</span>
               <span className="inline-flex items-center gap-1">
                 <User className="h-3 w-3" />
-                <Link
-                  href="/about"
-                  className="hover:text-highlight transition-colors"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Nik Cubrilovic
-                </Link>
+                Nik Cubrilovic
               </span>
             </>
           </div>
