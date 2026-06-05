@@ -21,8 +21,9 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params;
+export async function generateMetadata(props: PageProps) {
+  const params = await props.params;
+  const { slug } = params;
   const page = getPageBySlug(slug);
 
   if (!page) {
@@ -41,8 +42,9 @@ export async function generateMetadata({ params }: PageProps) {
   });
 }
 
-export default async function Page({ params }: PageProps) {
-  const { slug } = await params;
+export default async function Page(props: PageProps) {
+  const params = await props.params;
+  const { slug } = params;
   const page = getPageBySlug(slug);
 
   if (!page) {

@@ -23,9 +23,10 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: PostPageProps) {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+export async function generateMetadata(props: PostPageProps) {
+  const params = await props.params;
+  const { slug } = params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return { title: "Post Not Found" };
@@ -109,9 +110,10 @@ function ArticleJsonLd({
   );
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+export default async function PostPage(props: PostPageProps) {
+  const params = await props.params;
+  const { slug } = params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
