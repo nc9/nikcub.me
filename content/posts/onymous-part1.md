@@ -1,5 +1,6 @@
 ---
 title: Large Number of Tor Hidden Sites Seized by the FBI in Operation Onymous were Clone or Scam Sites
+seoTitle: Most Tor Sites Seized in Operation Onymous Were Fakes
 date: 2014-11-17T17:10:12+0000
 excerpt: The FBI announced the seizure of a large number of darkweb sites to much fanfare. It turns out most of what they got were fake clone sites
 ---
