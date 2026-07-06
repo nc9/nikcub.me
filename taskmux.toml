@@ -1,0 +1,14 @@
+name = "nikcub"
+auto_start = true
+
+# TanStack Start dev server (Vite). Listens on the taskmux-assigned $PORT;
+# reachable at https://nikcub.localhost via the daemon proxy.
+[tasks.web]
+command = "node_modules/.bin/vite dev --port $PORT --host"
+cwd = "."
+host = "@"
+auto_start = true
+restart_policy = "on-failure"
+max_restarts = 5
+health_interval = 10
+health_retries = 6

@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nikcub-me",
+  "account_id": "fe8c09050e3a4f5758a97d28a93c2a63",
+  "compatibility_date": "2026-06-08",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/server-entry.ts",
+  "observability": {
+    "enabled": true
+  },
+  // Preview lives on workers.dev until the apex DNS is cut over from Vercel.
+  // At cutover, add edge Workers Routes for nikcub.me/* (+ www) on the zone,
+  // same pattern as the other migrated sites. www->apex 301 is in server-entry.ts.
+  "routes": []
+}

@@ -1,19 +1,27 @@
-import { clsx, type ClassValue } from "clsx";
-import { format } from "date-fns";
-import { twMerge } from "tailwind-merge";
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
 
+/** Canonical site origin (no trailing slash). Build-time inlined from .env. */
+export const SITE_URL = (
+  (import.meta.env.VITE_SITE_URL as string | undefined) ??
+  "https://nikcub.me"
+).replace(/\/$/, "")
+
+// Format in UTC so server (workerd, UTC) and client (visitor's timezone) always
+// agree — avoids a hydration mismatch — and the authored calendar date is shown.
+const DATE_FMT = new Intl.DateTimeFormat("en-US", {
+  timeZone: "UTC",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+})
+
 export function formatDate(date: string): string {
-  try {
-    const parsed = new Date(date);
-    if (isNaN(parsed.getTime())) {
-      return date; // Return original if invalid
-    }
-    return format(parsed, "MMMM d, yyyy");
-  } catch {
-    return date; // Fallback to original on error
-  }
+  const parsed = new Date(date)
+  if (Number.isNaN(parsed.getTime())) return date
+  return DATE_FMT.format(parsed)
 }

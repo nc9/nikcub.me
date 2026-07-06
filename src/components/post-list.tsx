@@ -1,36 +1,32 @@
-import { Calendar, Clock, User } from "lucide-react";
-import Link from "next/link";
-
-import { formatDate } from "@/lib/utils";
-import { type Post } from "@/types/post";
+import { Calendar, Clock, User } from "lucide-react"
+import { Link } from "@/components/link"
+import type { ContentMeta } from "@/lib/content"
+import { formatDate } from "@/lib/utils"
 
 interface PostListProps {
-  posts: Post[];
-  showSections?: boolean;
+  posts: ContentMeta[]
+  showSections?: boolean
 }
 
 export function PostList({ posts, showSections = true }: PostListProps) {
-  const articles = posts.filter((p) => p.type === "article");
-  const asides = posts.filter((p) => p.type === "aside");
+  const articles = posts.filter((p) => p.type === "article")
+  const asides = posts.filter((p) => p.type === "aside")
 
   if (!showSections) {
-    // Simple list without sections
-    const hasArticles = articles.length > 0;
-    const hasAsides = asides.length > 0;
-
     return (
       <div className="space-y-10">
-        {hasArticles &&
-          articles.map((post) => <ArticleItem key={post.slug} post={post} />)}
-        {hasAsides &&
-          asides.map((post) => <AsideItem key={post.slug} post={post} />)}
+        {articles.map((post) => (
+          <ArticleItem key={post.slug} post={post} />
+        ))}
+        {asides.map((post) => (
+          <AsideItem key={post.slug} post={post} />
+        ))}
       </div>
-    );
+    )
   }
 
   return (
     <div className="space-y-16">
-      {/* Articles Section */}
       {articles.length > 0 && (
         <section>
           <div className="mb-8 flex items-center gap-4">
@@ -47,7 +43,6 @@ export function PostList({ posts, showSections = true }: PostListProps) {
         </section>
       )}
 
-      {/* Asides Section */}
       {asides.length > 0 && (
         <section>
           <div className="mb-8 flex items-center gap-4">
@@ -64,41 +59,40 @@ export function PostList({ posts, showSections = true }: PostListProps) {
         </section>
       )}
     </div>
-  );
+  )
 }
 
-function ArticleItem({ post }: { post: Post }) {
+function ArticleItem({ post }: { post: ContentMeta }) {
+  const updated =
+    post.lastModified && post.lastModified !== post.date
+      ? post.lastModified
+      : null
   return (
     <article className="group">
       <Link href={`/posts/${post.slug}`} className="block">
         <div className="flex flex-col gap-2">
           <h2 className="text-2xl font-semibold leading-tight text-foreground transition-colors group-hover:text-highlight">
-            {post.frontmatter.title}
+            {post.title}
           </h2>
-          {post.frontmatter.excerpt && (
+          {post.excerpt && (
             <p className="text-[15px] leading-relaxed text-muted-foreground">
-              {post.frontmatter.excerpt}
+              {post.excerpt}
             </p>
           )}
           <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
             <time
-              dateTime={post.frontmatter.date}
+              dateTime={post.date}
               className="inline-flex items-center gap-1.5"
             >
               <Calendar className="h-3 w-3" />
-              {formatDate(post.frontmatter.date)}
+              {formatDate(post.date)}
             </time>
-            {post.frontmatter.lastModified && post.frontmatter.lastModified !== post.frontmatter.date && (
+            {updated && (
               <>
                 <span className="text-border">·</span>
-                <time
-                  dateTime={post.frontmatter.lastModified}
-                  className="inline-flex items-center gap-1"
-                  title="Last modified"
-                >
-                  <span>Updated</span>
-                  {formatDate(post.frontmatter.lastModified)}
-                </time>
+                <span className="inline-flex items-center gap-1">
+                  Updated {formatDate(updated)}
+                </span>
               </>
             )}
             {post.readingTime > 0 && (
@@ -110,17 +104,15 @@ function ArticleItem({ post }: { post: Post }) {
                 </span>
               </>
             )}
-            <>
-              <span className="text-border">·</span>
-              <span className="inline-flex items-center gap-1">
-                <User className="h-3 w-3" />
-                Nik Cubrilovic
-              </span>
-            </>
+            <span className="text-border">·</span>
+            <span className="inline-flex items-center gap-1">
+              <User className="h-3 w-3" />
+              Nik Cubrilovic
+            </span>
           </div>
-          {post.frontmatter.tags && (
+          {post.tags && post.tags.length > 0 && (
             <div className="mt-1 flex gap-2">
-              {post.frontmatter.tags.map((tag) => (
+              {post.tags.map((tag) => (
                 <span key={tag} className="text-xs text-muted-foreground/70">
                   #{tag}
                 </span>
@@ -130,52 +122,36 @@ function ArticleItem({ post }: { post: Post }) {
         </div>
       </Link>
     </article>
-  );
+  )
 }
 
-function AsideItem({ post }: { post: Post }) {
+function AsideItem({ post }: { post: ContentMeta }) {
   return (
     <article className="group border-l-2 border-border pl-4 transition-colors hover:border-highlight">
       <Link href={`/posts/${post.slug}`} className="block">
         <div className="flex flex-col gap-1">
           <h2 className="text-lg font-semibold text-foreground transition-colors group-hover:text-highlight">
-            {post.frontmatter.title}
+            {post.title}
           </h2>
-          {post.frontmatter.excerpt && (
-            <p className="text-sm text-muted-foreground">
-              {post.frontmatter.excerpt}
-            </p>
+          {post.excerpt && (
+            <p className="text-sm text-muted-foreground">{post.excerpt}</p>
           )}
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
             <time
-              dateTime={post.frontmatter.date}
+              dateTime={post.date}
               className="inline-flex items-center gap-1.5"
             >
               <Calendar className="h-3 w-3" />
-              {formatDate(post.frontmatter.date)}
+              {formatDate(post.date)}
             </time>
-            {post.frontmatter.lastModified && post.frontmatter.lastModified !== post.frontmatter.date && (
-              <>
-                <span className="text-border">·</span>
-                <time
-                  dateTime={post.frontmatter.lastModified}
-                  className="inline-flex items-center gap-1"
-                  title="Last modified"
-                >
-                  Updated
-                </time>
-              </>
-            )}
-            <>
-              <span className="text-border">·</span>
-              <span className="inline-flex items-center gap-1">
-                <User className="h-3 w-3" />
-                Nik Cubrilovic
-              </span>
-            </>
+            <span className="text-border">·</span>
+            <span className="inline-flex items-center gap-1">
+              <User className="h-3 w-3" />
+              Nik Cubrilovic
+            </span>
           </div>
         </div>
       </Link>
     </article>
-  );
+  )
 }

@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/components/link"
 
 export function SiteHeader() {
   return (
@@ -8,13 +7,12 @@ export function SiteHeader() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex items-center gap-4">
             <Link href="/" className="shrink-0">
-              <Image
+              <img
                 src="/avatar.webp"
                 alt="Nik Cubrilovic"
                 width={56}
                 height={56}
-                className="aspect-square rounded-full ring-2 ring-highlight object-cover"
-                priority
+                className="aspect-square rounded-full object-cover ring-2 ring-highlight"
               />
             </Link>
             <div>
@@ -24,7 +22,7 @@ export function SiteHeader() {
                 </div>
               </Link>
               <p className="mt-1 text-sm text-muted-foreground">
-                Engineer writing about AI, data & society
+                Engineer writing about AI, data &amp; society
               </p>
             </div>
           </div>
@@ -51,5 +49,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  );
+  )
 }

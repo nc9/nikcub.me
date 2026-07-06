@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nik Cubrilovic</title>
+    <link>https://nikcub.me</link>
+    <description>Writing on security, privacy, and the intersection of technology and society</description>
+    <language>en</language>
+    <atom:link href="https://nikcub.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Craig Wright is not Satoshi Nakamoto]]></title>
+      <link>https://nikcub.me/posts/craig-wright-is-not-satoshi-nakamoto</link>
+      <guid>https://nikcub.me/posts/craig-wright-is-not-satoshi-nakamoto</guid>
+      <pubDate>Mon, 02 May 2016 19:55:25 GMT</pubDate>
+      <description><![CDATA[An investigation into Craig Wright's claims to be Bitcoin creator Satoshi Nakamoto, examining forged evidence and failed cryptographic proofs]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Securing Blockchain.info Users with Tor and SSL]]></title>
+      <link>https://nikcub.me/posts/securing-blockchain-users-with-tor-and-ssl</link>
+      <guid>https://nikcub.me/posts/securing-blockchain-users-with-tor-and-ssl</guid>
+      <pubDate>Wed, 03 Dec 2014 16:13:03 GMT</pubDate>
+      <description><![CDATA[Helping Blockchain.info become the second site after Facebook to offer a Tor hidden service with a CA-signed SSL certificate, protecting users from MITM attacks]]></description>
+    </item>
+    <item>
+      <title><![CDATA[FBI seizes fake Tor hosted Jihad funding website as part of Operation Onymous, leaves up real site]]></title>
+      <link>https://nikcub.me/posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site</link>
+      <guid>https://nikcub.me/posts/fbi-seizes-fake-tor-hosted-jihad-funding-website-as-part-of-operation-onymous-leaves-up-real-site</guid>
+      <pubDate>Mon, 17 Nov 2014 17:31:23 GMT</pubDate>
+      <description><![CDATA[During Operation Onymous the FBI seized a fake clone of a jihad funding site while leaving the real version online, highlighting the scattershot nature of the takedowns]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Large Number of Tor Hidden Sites Seized by the FBI in Operation Onymous were Clone or Scam Sites]]></title>
+      <link>https://nikcub.me/posts/onymous-part1</link>
+      <guid>https://nikcub.me/posts/onymous-part1</guid>
+      <pubDate>Mon, 17 Nov 2014 17:10:12 GMT</pubDate>
+      <description><![CDATA[The FBI announced the seizure of a large number of darkweb sites to much fanfare. It turns out most of what they got were fake clone sites]]></description>
+    </item>
+    <item>
+      <title><![CDATA[60 Minutes Australia on Silk Road and Bitcoin]]></title>
+      <link>https://nikcub.me/posts/60-minutes-australia-on-silk-road-and-bitcoin</link>
+      <guid>https://nikcub.me/posts/60-minutes-australia-on-silk-road-and-bitcoin</guid>
+      <pubDate>Sun, 14 Sep 2014 14:41:46 GMT</pubDate>
+      <description><![CDATA[A breakdown of 60 Minutes Australia's story on Silk Road and Bitcoin, including their confusion between the Deepweb and Darknet concepts]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Analyzing the FBI’s Explanation of How They Located Silk Road]]></title>
+      <link>https://nikcub.me/posts/analyzing-fbi-explanation-silk-road</link>
+      <guid>https://nikcub.me/posts/analyzing-fbi-explanation-silk-road</guid>
+      <pubDate>Sun, 07 Sep 2014 18:55:24 GMT</pubDate>
+      <description><![CDATA[A technical analysis of the FBI's claims about how they located Silk Road's server, showing their explanation doesn't match how Tor hidden services work]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Notes on the Celebrity Data Theft]]></title>
+      <link>https://nikcub.me/posts/notes-on-the-celebrity-data-theft</link>
+      <guid>https://nikcub.me/posts/notes-on-the-celebrity-data-theft</guid>
+      <pubDate>Tue, 02 Sep 2014 19:40:28 GMT</pubDate>
+      <description><![CDATA[An in-depth look at the underground networks behind "The Fappening" - how they operate, the techniques used to compromise iCloud accounts, and Apple's security weaknesses]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Vulnerabilities in Disqus WordPress Plugin]]></title>
+      <link>https://nikcub.me/posts/multiple-vulnerabilities-in-disqus-wordpress-plugin</link>
+      <guid>https://nikcub.me/posts/multiple-vulnerabilities-in-disqus-wordpress-plugin</guid>
+      <pubDate>Tue, 12 Aug 2014 21:08:35 GMT</pubDate>
+      <description><![CDATA[Disclosure and fixes for a number of bugs in the Wordpress plugin for the popular Disqus commenting system]]></description>
+    </item>
+    <item>
+      <title><![CDATA[CS-Cart v4.2.0 Session Hijacking and Other Vulnerabilities]]></title>
+      <link>https://nikcub.me/posts/cs-cart-v4-2-0-session-hijacking-and-other-vulnerabilities</link>
+      <guid>https://nikcub.me/posts/cs-cart-v4-2-0-session-hijacking-and-other-vulnerabilities</guid>
+      <pubDate>Thu, 07 Aug 2014 01:00:19 GMT</pubDate>
+      <description><![CDATA[How weak session ID generation using uniqid() in CS-Cart allows session hijacking through targeted brute-force, plus a frustrating disclosure timeline]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Multiple Vulnerabilities in MyGov, the Australian Government Single-sign-on Solution for Citizen Services.]]></title>
+      <link>https://nikcub.me/posts/multiple-vulnerabilities-in-mygov-australian-government</link>
+      <guid>https://nikcub.me/posts/multiple-vulnerabilities-in-mygov-australian-government</guid>
+      <pubDate>Thu, 15 May 2014 03:56:45 GMT</pubDate>
+      <description><![CDATA[Discovering XSS, SQL injection indicators, and poor cookie security in Australia's myGov portal that could expose 2.2 million citizens' tax and health records]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Two Google Chrome Privacy Issues]]></title>
+      <link>https://nikcub.me/posts/two-google-chrome-privacy-issues</link>
+      <guid>https://nikcub.me/posts/two-google-chrome-privacy-issues</guid>
+      <pubDate>Wed, 08 Aug 2012 14:12:17 GMT</pubDate>
+      <description><![CDATA[Two privacy issues in Chrome where browsing history data persists after deletion - zoom level settings and DNS prefetch data leave traces of visited domains]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Yahoo Axis Chrome Extension Leaks Private Certificate File]]></title>
+      <link>https://nikcub.me/posts/yahoo-axis-chrome-extension-leaks-private-certificate-file</link>
+      <guid>https://nikcub.me/posts/yahoo-axis-chrome-extension-leaks-private-certificate-file</guid>
+      <pubDate>Thu, 24 May 2012 04:16:17 GMT</pubDate>
+      <description><![CDATA[Yahoo shipped their Axis browser extension with the private certificate file used to sign it, allowing attackers to create forged extensions that Chrome trusts]]></description>
+    </item>
+    <item>
+      <title><![CDATA[BlockPlus v4 - Block Google+ widgets and links from other Google sites]]></title>
+      <link>https://nikcub.me/posts/blockplus-v4-released-block-google-widgets-and-links-from-other-google-sites</link>
+      <guid>https://nikcub.me/posts/blockplus-v4-released-block-google-widgets-and-links-from-other-google-sites</guid>
+      <pubDate>Tue, 21 Feb 2012 08:22:02 GMT</pubDate>
+      <description><![CDATA[An update to the BlockPlus browser extension which removes Google+ and other sites from the Google homepage and other properties]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Facebook and many other sites also bypass Internet Explorer privacy controls]]></title>
+      <link>https://nikcub.me/posts/facebook-also-doesnt-honor-p3p</link>
+      <guid>https://nikcub.me/posts/facebook-also-doesnt-honor-p3p</guid>
+      <pubDate>Tue, 21 Feb 2012 04:40:52 GMT</pubDate>
+      <description><![CDATA[Microsoft called out Google for P3P bypass but ignored Facebook doing the same thing - and a survey shows 5% of top sites set invalid P3P headers]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Facebook Is Losing E-Commerce]]></title>
+      <link>https://nikcub.me/posts/facebook-is-losing-e-commerce</link>
+      <guid>https://nikcub.me/posts/facebook-is-losing-e-commerce</guid>
+      <pubDate>Sun, 19 Feb 2012 02:45:12 GMT</pubDate>
+      <description><![CDATA[Analysis of Facebook's declining e-commerce presence and why users prefer external shopping experiences over Facebook's platform integration]]></description>
+    </item>
+    <item>
+      <title><![CDATA[How Megaupload Was Investigated and Indicted]]></title>
+      <link>https://nikcub.me/posts/how-megaupload-was-investigated-and-indicted</link>
+      <guid>https://nikcub.me/posts/how-megaupload-was-investigated-and-indicted</guid>
+      <pubDate>Fri, 20 Jan 2012 16:47:06 GMT</pubDate>
+      <description><![CDATA[A breakdown of the evidence and investigation methods used by the DOJ to indict Megaupload, examining internal emails, financial records, and publicly accessible details]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The Google Firefox search deal, Chrome and Lady GaGa]]></title>
+      <link>https://nikcub.me/posts/google-firefox-chrome-lady-gaga</link>
+      <guid>https://nikcub.me/posts/google-firefox-chrome-lady-gaga</guid>
+      <pubDate>Sun, 25 Dec 2011 11:37:14 GMT</pubDate>
+      <description><![CDATA[Why Google's claim that Chrome is purely altruistic doesn't match their $4.9B marketing spend including Lady Gaga ads and Super Bowl spots]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The Crunchpad is proof of obviousness in the iPad design]]></title>
+      <link>https://nikcub.me/posts/crunchpad-proof-obviousness-in-ipad-design</link>
+      <guid>https://nikcub.me/posts/crunchpad-proof-obviousness-in-ipad-design</guid>
+      <pubDate>Fri, 09 Dec 2011 13:09:38 GMT</pubDate>
+      <description><![CDATA[How the CrunchPad tablet project demonstrates the obviousness of the iPad's design, challenging Apple's claims of revolutionary innovation]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The Download Dot-Con]]></title>
+      <link>https://nikcub.me/posts/the-download-dot-con</link>
+      <guid>https://nikcub.me/posts/the-download-dot-con</guid>
+      <pubDate>Thu, 08 Dec 2011 17:15:33 GMT</pubDate>
+      <description><![CDATA[How CNet's Download.com bundles adware and toolbars with popular open source software, making them no different from the fake download sites they claim to protect against]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Google Android -  The Accidental Empire]]></title>
+      <link>https://nikcub.me/posts/google-android-the-accidental-empire</link>
+      <guid>https://nikcub.me/posts/google-android-the-accidental-empire</guid>
+      <pubDate>Wed, 07 Dec 2011 17:39:48 GMT</pubDate>
+      <description><![CDATA[How Larry and Sergey purchased Android for $50M without telling Eric Schmidt, and accidentally created a smartphone empire that crushed Nokia and Blackberry]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Introducing Frictionless - Taking the friction out of Facebook social-sharing applications]]></title>
+      <link>https://nikcub.me/posts/frictionless-browser-plugin</link>
+      <guid>https://nikcub.me/posts/frictionless-browser-plugin</guid>
+      <pubDate>Sun, 04 Dec 2011 21:02:09 GMT</pubDate>
+      <description><![CDATA[Launching Frictionless, a Chrome extension that bypasses Facebook's social reader apps and takes you directly to the original article without sharing your activity]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Lies, Damn Lies and Google+ Statistics]]></title>
+      <link>https://nikcub.me/posts/lies-damn-lies-and-google-statistics</link>
+      <guid>https://nikcub.me/posts/lies-damn-lies-and-google-statistics</guid>
+      <pubDate>Tue, 11 Oct 2011 00:46:03 GMT</pubDate>
+      <description><![CDATA[Debunking the viral "Google+ traffic drops 60%" story based on flawed Chitika statistics with no published methodology - and misunderstanding launch bumps]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Unicode U+F8FF - aka. The Apple Logo Character, on Macs]]></title>
+      <link>https://nikcub.me/posts/unicode-uf8ff-aka-the-apple-logo-character-on-macs</link>
+      <guid>https://nikcub.me/posts/unicode-uf8ff-aka-the-apple-logo-character-on-macs</guid>
+      <pubDate>Sat, 08 Oct 2011 07:31:40 GMT</pubDate>
+      <description><![CDATA[The Apple logo character U+F8FF only renders on Mac - on Windows it shows as boxes, Elvish, Tibetan, or embarrassingly as the Windows logo in Wingdings]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Facebook Re-Enables Controversial Tracking Cookie]]></title>
+      <link>https://nikcub.me/posts/facebook-re-enables-controversial-tracking-cookie</link>
+      <guid>https://nikcub.me/posts/facebook-re-enables-controversial-tracking-cookie</guid>
+      <pubDate>Mon, 03 Oct 2011 18:21:30 GMT</pubDate>
+      <description><![CDATA[Facebook quietly re-enabled the datr tracking cookie on third-party sites after previously removing it, setting cookies on users who never visited Facebook]]></description>
+    </item>
+    <item>
+      <title><![CDATA[How To Setup secure and private Facebook browsing]]></title>
+      <link>https://nikcub.me/posts/howto-setup-secure-and-private-facebook-browsing</link>
+      <guid>https://nikcub.me/posts/howto-setup-secure-and-private-facebook-browsing</guid>
+      <pubDate>Sun, 02 Oct 2011 07:20:31 GMT</pubDate>
+      <description><![CDATA[Step-by-step guide to securing your Facebook account with two-factor authentication, disabling tracking features, and setting up private browsing]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Facebook Fixes Logout Issue, Explains Cookies]]></title>
+      <link>https://nikcub.me/posts/facebook-fixes-logout-issue-explains-cookies</link>
+      <guid>https://nikcub.me/posts/facebook-fixes-logout-issue-explains-cookies</guid>
+      <pubDate>Tue, 27 Sep 2011 13:53:48 GMT</pubDate>
+      <description><![CDATA[Follow-up on Facebook's response to the logout cookie tracking issue, detailing the fixes they made and their explanation of how each cookie is used]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Logging out of Facebook is not enough]]></title>
+      <link>https://nikcub.me/posts/logging-out-of-facebook-is-not-enough</link>
+      <guid>https://nikcub.me/posts/logging-out-of-facebook-is-not-enough</guid>
+      <pubDate>Sun, 25 Sep 2011 08:09:52 GMT</pubDate>
+      <description><![CDATA[When it comes to losing track of Facebook online and preserving your digital privacy - being logged out is far from enough. We find some privacy issues with Facebook and report them.]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Persistent and Unblockable Cookies Using HTTP Headers]]></title>
+      <link>https://nikcub.me/posts/persistant-and-unblockable-cookies-using-http-headers</link>
+      <guid>https://nikcub.me/posts/persistant-and-unblockable-cookies-using-http-headers</guid>
+      <pubDate>Fri, 19 Aug 2011 04:40:44 GMT</pubDate>
+      <description><![CDATA[Using HTTP headers as unblockable super-cookies]]></description>
+    </item>
+    <item>
+      <title><![CDATA[BlockPlus - A browser extension to block Google+ notifications]]></title>
+      <link>https://nikcub.me/posts/blockplus-a-browser-extension-to-block-google-notifications</link>
+      <guid>https://nikcub.me/posts/blockplus-a-browser-extension-to-block-google-notifications</guid>
+      <pubDate>Wed, 06 Jul 2011 21:06:08 GMT</pubDate>
+      <description><![CDATA[Releasing BlockPlus, a Chrome extension that removes Google+ links and notifications from the nav bar to prevent the constant distraction of the new social network]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Numeronym]]></title>
+      <link>https://nikcub.me/posts/numeronym</link>
+      <guid>https://nikcub.me/posts/numeronym</guid>
+      <pubDate>Thu, 07 Apr 2011 08:46:21 GMT</pubDate>
+      <description><![CDATA[What i18n and l10n have in common with a16z - the history and rising popularity of numeronyms where letters between first and last are replaced with a count]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Pain and Gain]]></title>
+      <link>https://nikcub.me/posts/pain-and-gain</link>
+      <guid>https://nikcub.me/posts/pain-and-gain</guid>
+      <pubDate>Tue, 21 Dec 2010 08:35:00 GMT</pubDate>
+      <description><![CDATA[The true story of Miami bodybuilders turned amateur criminals using torture as a motivational tool, later adapted into a Michael Bay film]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Finding a Technical Co-Founder]]></title>
+      <link>https://nikcub.me/posts/finding-a-technical-co-founder</link>
+      <guid>https://nikcub.me/posts/finding-a-technical-co-founder</guid>
+      <pubDate>Fri, 05 Nov 2010 12:51:34 GMT</pubDate>
+      <description><![CDATA[Advice on finding a technical co-founder including where to network, how to prepare your startup materials, and evaluating technical capabilities]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Guide to Finding a Good and Safe Company or Product Name]]></title>
+      <link>https://nikcub.me/posts/guide-to-finding-a-good-and-safe-company-or-product-name</link>
+      <guid>https://nikcub.me/posts/guide-to-finding-a-good-and-safe-company-or-product-name</guid>
+      <pubDate>Thu, 04 Nov 2010 14:07:06 GMT</pubDate>
+      <description><![CDATA[A comprehensive guide to selecting a business or product name, covering domain availability, trademark safety, SEO considerations, and social media presence]]></description>
+    </item>
+    <item>
+      <title><![CDATA[The Google IPO Skeptics]]></title>
+      <link>https://nikcub.me/posts/the-google-ipo-skeptics</link>
+      <guid>https://nikcub.me/posts/the-google-ipo-skeptics</guid>
+      <pubDate>Wed, 03 Nov 2010 03:49:50 GMT</pubDate>
+      <description><![CDATA[A look back at the skepticism that surrounded the Google IPO in 2004, when tech industry experts warned investors away from buying shares]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Relevance Time for Twitter]]></title>
+      <link>https://nikcub.me/posts/relevance-time-for-twitter</link>
+      <guid>https://nikcub.me/posts/relevance-time-for-twitter</guid>
+      <pubDate>Fri, 29 Oct 2010 13:57:31 GMT</pubDate>
+      <description><![CDATA[Why chronological ordering in Twitter is baggage from old computer systems and why relevance-based sorting using user gestures is inevitable]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Fidelio - A browser plugin for secure web browsing]]></title>
+      <link>https://nikcub.me/posts/fidelio-a-browser-plugin-for-secure-web-browsing</link>
+      <guid>https://nikcub.me/posts/fidelio-a-browser-plugin-for-secure-web-browsing</guid>
+      <pubDate>Wed, 27 Oct 2010 09:20:57 GMT</pubDate>
+      <description><![CDATA[Releasing Fidelio, a Chrome plugin that defends against Firesheep by forcing HTTPS, rewriting embedded widgets, and setting secure flags on existing cookies]]></description>
+    </item>
+  </channel>
+</rss>

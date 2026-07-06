@@ -1,35 +1,28 @@
-"use client";
-
-import type React from "react";
-
-import { useState } from "react";
+import type React from "react"
+import { useState } from "react"
 
 interface NewsletterSignupProps {
-  variant?: "section" | "inline";
+  variant?: "section" | "inline"
 }
 
 export function NewsletterSignup({
   variant = "section",
 }: NewsletterSignupProps) {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
+  const [email, setEmail] = useState("")
+  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle")
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      return;
-    }
+    e.preventDefault()
+    if (!email) return
+    setStatus("loading")
+    await new Promise((resolve) => setTimeout(resolve, 800))
+    setStatus("success")
+    setEmail("")
+  }
 
-    setStatus("loading");
-    // Simulate API call - replace with actual newsletter API
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setStatus("success");
-    setEmail("");
-  };
+  const isInline = variant === "inline"
 
-  if (variant === "inline") {
+  if (isInline) {
     return (
       <div>
         {status === "success" ? (
@@ -51,20 +44,14 @@ export function NewsletterSignup({
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               required
-              aria-describedby={
-                status === "error" ? "email-error-inline" : undefined
-              }
               className="h-11 flex-1 rounded-sm border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              aria-label="Subscribe to newsletter"
               className="h-11 rounded-sm bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90 disabled:opacity-50"
             >
-              {status === "loading"
-                ? "Subscribing..."
-                : "Subscribe to newsletter"}
+              {status === "loading" ? "Subscribing..." : "Subscribe"}
             </button>
           </form>
         )}
@@ -72,7 +59,7 @@ export function NewsletterSignup({
           I'll only email you when I publish something new. Unsubscribe anytime.
         </p>
       </div>
-    );
+    )
   }
 
   return (
@@ -107,24 +94,18 @@ export function NewsletterSignup({
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               required
-              aria-describedby={
-                status === "error" ? "email-error-section" : undefined
-              }
               className="h-10 rounded-sm border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 sm:w-64"
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              aria-label="Subscribe to newsletter"
               className="h-10 rounded-sm bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90 disabled:opacity-50"
             >
-              {status === "loading"
-                ? "Subscribing..."
-                : "Subscribe to newsletter"}
+              {status === "loading" ? "Subscribing..." : "Subscribe"}
             </button>
           </form>
         )}
       </div>
     </section>
-  );
+  )
 }

@@ -41,6 +41,15 @@ yarn-error.log*
 next-env.d.ts
 .claude/
 .zed/
-scripts/
+# one-off migration scripts stay local; the build's feed generator is tracked
+scripts/*
+!scripts/generate-feeds.ts
 content/posts.backup/
 BROWSER_TEST_REPORT.md
+
+# tanstack start / cloudflare build artifacts + local reference copy of old Next app
+/dist
+/.wrangler
+/.reference-old
+/.tanstack
+/.output
