@@ -2,9 +2,12 @@ import { Github, Mail, Twitter } from "lucide-react"
 import { Link } from "@/components/link"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 
-const YEAR = new Date().getFullYear()
-
 export function SiteFooter() {
+  // Compute inside the component: at module top-level the Cloudflare Workers
+  // clock is frozen at the Unix epoch (1970) until the first request, which
+  // would mismatch the client's real year and break hydration.
+  const YEAR = new Date().getFullYear()
+
   return (
     <footer>
       <NewsletterSignup />
