@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "@fontsource-variable/jetbrains-mono";
-@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -102,16 +101,100 @@
   }
 }
 
-/* Custom prose styling for articles */
-.prose-article {
-  --tw-prose-body: var(--foreground);
-  --tw-prose-headings: var(--foreground);
-  --tw-prose-links: var(--primary);
+/*
+  Article/content typography. The old Next site never loaded
+  @tailwindcss/typography — every element was styled explicitly via its
+  mdxComponents map. Our markdown compiles to unclassed HTML, so we reproduce
+  those exact element styles here (sizes/spacing/weights match live 1:1).
+*/
+.prose {
+  color: var(--foreground);
+  font-size: 1rem; /* 16px base */
+  line-height: 1.625; /* leading-relaxed */
+}
+
+.prose h1 {
+  @apply mt-8 mb-4 text-4xl font-bold;
+}
+.prose h2 {
+  @apply mt-6 mb-3 text-3xl font-semibold;
+}
+.prose h3 {
+  @apply mt-4 mb-2 text-2xl font-semibold;
+}
+.prose h4 {
+  @apply mt-4 mb-2 text-xl font-semibold;
+}
+.prose h5 {
+  @apply mt-3 mb-2 text-lg font-semibold;
+}
+.prose h6 {
+  @apply mt-3 mb-2 text-base font-semibold;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose a {
+  @apply text-gray-700 underline decoration-purple-400/40 decoration-dashed underline-offset-4;
+}
+.prose a:hover {
+  @apply text-purple-700 decoration-purple-600/60;
+}
+.dark .prose a {
+  @apply text-gray-200 decoration-purple-400/50;
+}
+.dark .prose a:hover {
+  @apply text-purple-300 decoration-purple-400/70;
+}
+
+.prose blockquote {
+  @apply my-6 border-l-4 border-purple-600/30 bg-gray-50 py-2 pr-4 pl-6 text-gray-700 italic;
+}
+.dark .prose blockquote {
+  @apply bg-slate-800/40 text-gray-200;
+}
+
+.prose ul {
+  @apply my-4 ml-6 list-disc;
+}
+.prose ol {
+  @apply my-4 ml-6 list-decimal;
+}
+.prose li {
+  @apply leading-relaxed;
+}
+.prose li + li {
+  @apply mt-2;
+}
+
+.prose img {
+  @apply w-full rounded-lg border-2 border-gray-200;
+}
+.dark .prose img {
+  @apply border-slate-700;
+}
+
+.prose figure {
+  @apply my-8;
+}
+.prose figcaption {
+  @apply mt-2 text-center text-sm text-muted-foreground;
+}
+
+.prose hr {
+  @apply my-8 border-t border-border;
+}
+
+/* GFM footnote section */
+.prose section.footnotes {
+  @apply mt-12 border-t border-border pt-6 text-sm text-muted-foreground;
 }
 
 /* Code blocks — Shiki (rehype-pretty-code) sets its own bg via keepBackground */
 .prose pre {
-  @apply rounded-lg p-4 overflow-x-auto text-sm;
+  @apply my-4 rounded-lg p-4 overflow-x-auto text-sm;
 }
 
 .prose pre code {

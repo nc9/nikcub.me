@@ -1,10 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "nikcub-me",
-  "account_id": "fe8c09050e3a4f5758a97d28a93c2a63",
+  "account_id": "d067d141cf6baf99dadef9eab6e713b9",
   "compatibility_date": "2026-06-08",
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/server-entry.ts",
+  "workers_dev": true,
   "observability": {
     "enabled": true
   },

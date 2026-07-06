@@ -127,7 +127,7 @@ function PostPage() {
 
       {/* Content is trusted build-time HTML compiled from our own markdown. */}
       <div
-        className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground/90 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:not-italic prose-blockquote:font-normal prose-img:rounded-lg"
+        className="prose max-w-none"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: trusted first-party markdown
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
