@@ -141,9 +141,10 @@
   @apply my-8;
 }
 .dg-canvas {
+  --viz-canvas-bg: color-mix(in oklab, var(--viz-node-bg) 40%, var(--background));
   @apply flex flex-wrap items-center justify-center gap-x-2 gap-y-3 rounded-lg border px-4 py-6;
   border-color: var(--border);
-  background: color-mix(in oklab, var(--viz-node-bg) 40%, var(--background));
+  background: var(--viz-canvas-bg);
 }
 .dg-node {
   @apply rounded-md border px-3 py-2 text-center;
@@ -177,7 +178,7 @@
 
 /* Column ("spine") layout — one node per row, loop-back edge on the left. */
 .dg-canvas--col {
-  @apply flex-col py-10 pr-4 pl-14;
+  @apply flex-col py-10 pr-6 pl-24;
 }
 .dg-spine {
   @apply relative flex flex-col items-center;
@@ -192,7 +193,7 @@
   @apply text-xs;
 }
 .dg-arrow--down {
-  @apply flex-row gap-1.5 py-1.5 text-base;
+  @apply flex-col items-center gap-0 py-1.5 text-base;
 }
 .dg-arrow--down .dg-arrow-label {
   @apply text-[0.6875rem];
@@ -212,14 +213,16 @@
   right: -0.35rem;
   top: -0.5em;
 }
+/* Horizontal chip centered on the return line; canvas-bg masks the dash behind it. */
 .dg-return-label {
-  @apply absolute top-1/2 left-0 -rotate-90 font-mono text-[0.6875rem] whitespace-nowrap;
+  @apply absolute top-1/2 left-0 rounded px-1.5 py-0.5 font-mono text-[0.6875rem] whitespace-nowrap;
   color: var(--viz-label);
+  background: var(--viz-canvas-bg);
   translate: -50% -50%;
 }
 @media (max-width: 640px) {
   .dg-canvas--col {
-    @apply pl-10;
+    @apply pr-2 pl-16;
   }
   .dg-canvas--col .dg-node {
     @apply w-56;
@@ -227,6 +230,9 @@
   .dg-return {
     left: -2.25rem;
     width: 1.5rem;
+  }
+  .dg-return-label {
+    @apply text-[0.625rem];
   }
 }
 .dg-loop {

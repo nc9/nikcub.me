@@ -70,8 +70,8 @@ export function FlowArrow({
   if (direction === "down") {
     return (
       <div aria-hidden="true" className="dg-arrow dg-arrow--down">
-        <span>↓</span>
         {label && <span className="dg-arrow-label">{label}</span>}
+        <span>↓</span>
       </div>
     )
   }
