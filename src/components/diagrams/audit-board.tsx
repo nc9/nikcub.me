@@ -7,7 +7,7 @@ import { KanbanBoard, KanbanCard, KanbanColumn } from "./kanban"
  */
 export function AuditBoardDiagram() {
   return (
-    <KanbanBoard caption="The board is the state machine — the loop only ever touches Ready, In Progress, and In Review.">
+    <KanbanBoard caption="The board is the state machine: the loop only ever touches Ready, In Progress, and In Review.">
       <KanbanColumn color="gray" name="Draft" sub="loop ignores">
         <KanbanCard number={103} title="Google Search Console integration" />
         <KanbanCard number={99} title="content gap analysis rules" />

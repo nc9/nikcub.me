@@ -6,7 +6,7 @@ export function AgentLoopDiagram() {
     <FlowDiagram
       layout="column"
       returnLabel="next issue"
-      caption="One pass of the loop — every issue gets a cold session; state lives in the issue, the board, and the PR."
+      caption="One pass of the loop: every issue gets a cold session; state lives in the issue, the board, and the PR."
     >
       {/* inner loop: review findings go back to code (implement=3 … review=6) */}
       <FlowReturn side="right" from={3} to={6} label="fix findings" />

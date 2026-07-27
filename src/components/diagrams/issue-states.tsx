@@ -9,7 +9,7 @@ export function IssueStatesDiagram() {
   return (
     <FlowDiagram
       layout="column"
-      caption="The states an issue moves through — the loop pushes it down; Blocked (needs-decision, dep-open, ci-red, rubric-fail) is the exit only a human can reverse."
+      caption="The states an issue moves through: the loop pushes it down; Blocked (needs-decision, dep-open, ci-red, rubric-fail) is the exit only a human can reverse."
     >
       <FlowReturn dot="red" from={2} to={4} label="Blocked" />
       <FlowReturn side="right" from={3} to={4} label="review findings" />
