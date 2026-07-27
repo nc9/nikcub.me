@@ -55,6 +55,7 @@ interface Meta {
   featureImage?: string
   featureImageAlt?: string
   tags?: string[]
+  summary?: string[]
 }
 
 function buildMeta(slug: string, raw: string): Meta {
@@ -83,6 +84,9 @@ function buildMeta(slug: string, raw: string): Meta {
       ? String(data.featureImageAlt)
       : undefined,
     tags: Array.isArray(data.tags) ? (data.tags as string[]) : undefined,
+    summary: Array.isArray(data.summary)
+      ? (data.summary as unknown[]).map(String)
+      : undefined,
   }
 }
 

@@ -12,6 +12,7 @@ export interface ContentMeta {
   featureImage?: string
   featureImageAlt?: string
   tags?: string[]
+  summary?: string[]
 }
 
 export type ContentDoc = ContentMeta & { html: string }

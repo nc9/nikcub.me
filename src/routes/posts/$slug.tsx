@@ -98,6 +98,30 @@ function PostPage() {
         {post.excerpt && post.type === "article" && (
           <p className="text-lg text-muted-foreground">{post.excerpt}</p>
         )}
+        {post.summary && post.summary.length > 0 && (
+          <aside
+            aria-label="Article summary"
+            className="mt-6 rounded-lg border border-border bg-card/50 p-5"
+          >
+            <h2 className="mb-3 font-mono text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Summary
+            </h2>
+            <ul className="space-y-2">
+              {post.summary.map((point) => (
+                <li
+                  key={point}
+                  className="flex gap-3 text-[0.95rem] leading-relaxed text-foreground/90"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"
+                  />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
       </header>
 
       {post.featureImage && (
