@@ -434,6 +434,34 @@
   @apply mt-2;
 }
 
+/* GFM task lists — suppress the bullet, style the checkbox */
+.prose ul.contains-task-list {
+  @apply ml-1 list-none;
+}
+.prose li.task-list-item input[type="checkbox"] {
+  @apply mr-2 size-3.5 align-[-2px] accent-purple-600;
+}
+
+/* GFM tables — warm header band, hairline rows, scroll when too wide */
+.prose table {
+  @apply my-6 w-full border-collapse text-sm;
+}
+.prose thead th {
+  @apply border-b-2 px-3 py-2 text-left font-semibold;
+  border-color: var(--viz-node-border);
+  background: color-mix(in oklab, var(--card) 55%, var(--background));
+}
+.prose tbody td {
+  @apply border-b px-3 py-2 align-top;
+  border-color: var(--border);
+}
+.prose tbody tr:last-child td {
+  @apply border-b-0;
+}
+.prose tbody tr:nth-child(even) {
+  background: color-mix(in oklab, var(--card) 30%, var(--background));
+}
+
 .prose img {
   @apply w-full rounded-lg border-2 border-gray-200;
 }
@@ -460,6 +488,12 @@
 /* Code blocks — Shiki (rehype-pretty-code) sets its own bg via keepBackground */
 .prose pre {
   @apply my-4 rounded-lg p-4 overflow-x-auto text-sm;
+}
+
+/* Plain ``` fences skip Shiki (no data-theme) — match github-dark by hand */
+.prose pre:not([data-theme]) {
+  background: #24292e;
+  color: #e1e4e8;
 }
 
 .prose pre code {
