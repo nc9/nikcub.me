@@ -3,7 +3,7 @@ import { Link } from "@/components/link"
 export function SiteHeader() {
   return (
     <header className="border-b border-border">
-      <div className="mx-auto max-w-2xl px-6 py-8">
+      <div className="mx-auto max-w-4xl px-6 py-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex items-center gap-4">
             <Link href="/" className="shrink-0">

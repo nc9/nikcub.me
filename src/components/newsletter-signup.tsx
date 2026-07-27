@@ -64,7 +64,7 @@ export function NewsletterSignup({
 
   return (
     <section className="border-t border-border bg-muted/30">
-      <div className="mx-auto max-w-2xl px-6 py-12">
+      <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="text-center">
           <p className="font-serif text-xl text-foreground">
             Subscribe to the newsletter

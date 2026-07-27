@@ -21,7 +21,7 @@ function HomePage() {
   const latestAsides = ASIDES.slice(0, 5)
 
   return (
-    <div className="mx-auto max-w-2xl px-6 py-12">
+    <div className="mx-auto max-w-4xl px-6 py-12">
       <div className="mb-16">
         <h1 className="sr-only">Nik Cubrilovic - Engineer</h1>
         <p className="text-lg leading-relaxed text-foreground">

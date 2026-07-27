@@ -62,7 +62,7 @@ function PostPage() {
   const post = Route.useLoaderData()
 
   return (
-    <article className="mx-auto max-w-2xl px-6 py-12">
+    <article className="mx-auto max-w-4xl px-6 py-12">
       <header className="mb-12">
         <h1 className="mb-4 text-3xl font-semibold text-foreground">
           {post.title}

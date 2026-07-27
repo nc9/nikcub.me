@@ -13,7 +13,7 @@ export function SiteFooter() {
       <NewsletterSignup />
 
       <div className="border-t border-border">
-        <div className="mx-auto max-w-2xl px-6 py-8">
+        <div className="mx-auto max-w-4xl px-6 py-8">
           <div className="flex flex-col gap-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
             <div className="flex gap-4">
               <p>© 1999 - {YEAR} Nik Cubrilovic</p>

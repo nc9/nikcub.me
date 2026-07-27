@@ -16,7 +16,7 @@ export const Route = createFileRoute("/subscribe")({
 
 function SubscribePage() {
   return (
-    <div className="mx-auto max-w-2xl px-6 py-16">
+    <div className="mx-auto max-w-4xl px-6 py-16">
       <header className="mb-12">
         <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
           Subscribe

@@ -103,7 +103,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function NotFound() {
   return (
-    <div className="mx-auto max-w-2xl px-6 py-24 text-center">
+    <div className="mx-auto max-w-4xl px-6 py-24 text-center">
       <p className="text-6xl font-semibold text-highlight">404</p>
       <h1 className="mt-4 mb-3 text-3xl font-semibold text-foreground">
         Page not found
