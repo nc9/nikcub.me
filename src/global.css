@@ -102,6 +102,92 @@
 }
 
 /*
+  Diagram & chart theme ("viz"). Shared by all post diagrams and future charts —
+  see .claude/skills/post-diagrams. Categorical series colors are validated
+  (colorblind-safe, in-band lightness, >=3:1 contrast) against each mode's
+  surface; keep the fixed order, never cycle or generate hues.
+*/
+:root {
+  --viz-series-1: #764be5; /* purple (brand highlight) */
+  --viz-series-2: #ac543f; /* rust (brand accent) */
+  --viz-series-3: #00939c; /* teal */
+  --viz-series-4: #8f7a1e; /* gold */
+  --viz-series-5: #3a6fb0; /* blue */
+  --viz-series-6: #b0487a; /* rose */
+  --viz-node-bg: var(--card);
+  --viz-node-border: oklch(0.82 0.02 85);
+  --viz-node-text: var(--foreground);
+  --viz-node-sub: var(--muted-foreground);
+  --viz-accent: var(--highlight);
+  --viz-accent-bg: oklch(0.95 0.03 290);
+  --viz-edge: oklch(0.55 0.02 45);
+  --viz-label: var(--muted-foreground);
+}
+.dark {
+  --viz-series-1: #9477fc;
+  --viz-series-2: #ce6c54;
+  --viz-series-3: #00a2a3;
+  --viz-series-4: #a9912b;
+  --viz-series-5: #5188cd;
+  --viz-series-6: #c66295;
+  --viz-node-bg: var(--card);
+  --viz-node-border: oklch(0.32 0.015 45);
+  --viz-accent-bg: oklch(0.22 0.05 290);
+  --viz-edge: oklch(0.6 0.02 85);
+}
+
+/* Diagram building blocks (flow charts). Mono labels, warm card nodes. */
+.dg {
+  @apply my-8;
+}
+.dg-canvas {
+  @apply flex flex-wrap items-center justify-center gap-x-2 gap-y-3 rounded-lg border px-4 py-6;
+  border-color: var(--border);
+  background: color-mix(in oklab, var(--viz-node-bg) 40%, var(--background));
+}
+.dg-node {
+  @apply rounded-md border px-3 py-2 text-center;
+  background: var(--viz-node-bg);
+  border-color: var(--viz-node-border);
+  box-shadow: 0 1px 2px oklch(0.2 0.02 45 / 0.06);
+}
+.dg-node-label {
+  @apply block font-mono text-[0.8125rem] leading-snug font-medium;
+  color: var(--viz-node-text);
+}
+.dg-node-sub {
+  @apply mt-0.5 block font-mono text-[0.6875rem] leading-snug;
+  color: var(--viz-node-sub);
+}
+.dg-node--accent {
+  background: var(--viz-accent-bg);
+  border-color: color-mix(in oklab, var(--viz-accent) 45%, var(--viz-node-border));
+}
+.dg-node--accent .dg-node-label {
+  color: color-mix(in oklab, var(--viz-accent) 60%, var(--viz-node-text));
+}
+.dg-arrow {
+  @apply flex flex-col items-center px-0.5 font-mono text-sm select-none;
+  color: var(--viz-edge);
+}
+.dg-arrow-label {
+  @apply font-mono text-[0.625rem];
+  color: var(--viz-label);
+}
+.dg-loop {
+  @apply mt-3 flex w-full items-center justify-center gap-2 font-mono text-[0.6875rem];
+  color: var(--viz-label);
+}
+.dg-loop-line {
+  @apply h-px max-w-24 flex-1 border-t border-dashed;
+  border-color: var(--viz-edge);
+}
+.dg-caption {
+  @apply mt-2 text-center text-sm;
+  color: var(--muted-foreground);
+}
+
+/*
   Article/content typography. The old Next site never loaded
   @tailwindcss/typography — every element was styled explicitly via its
   mdxComponents map. Our markdown compiles to unclassed HTML, so we reproduce

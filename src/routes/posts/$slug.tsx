@@ -1,5 +1,6 @@
 import { createFileRoute, notFound } from "@tanstack/react-router"
 import { Calendar, Clock } from "lucide-react"
+import { PostContent } from "@/components/post-content"
 import { getPostMeta, loadPost } from "@/lib/posts"
 import { seo } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
@@ -115,11 +116,7 @@ function PostPage() {
       )}
 
       {/* Content is trusted build-time HTML compiled from our own markdown. */}
-      <div
-        className="prose max-w-none"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: trusted first-party markdown
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+      <PostContent html={post.html} className="prose max-w-none" />
     </article>
   )
 }
