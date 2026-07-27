@@ -1,9 +1,12 @@
 import handler from "@tanstack/react-start/server-entry"
+import { handleAgentMarkdown, isNegotiatedPath } from "@/lib/agent-markdown"
 
 /**
- * Custom Worker entry. Delegates to the TanStack Start handler and adds baseline
- * security headers to every response. Once the domain is cut over, the www host
- * is 301'd to the apex here (no-op on the workers.dev preview).
+ * Custom Worker entry. Serves the agent-facing Markdown surface (llms.txt,
+ * `.md` variants, `Accept: text/markdown` negotiation), then delegates to the
+ * TanStack Start handler, adding baseline security headers to every response.
+ * Once the domain is cut over, the www host is 301'd to the apex here (no-op
+ * on the workers.dev preview).
  */
 const APEX = "nikcub.me"
 
@@ -40,9 +43,19 @@ export default {
       return Response.redirect(url.toString(), 301)
     }
 
-    const res = await tanstack.fetch(request, env, ctx)
+    const res =
+      (await handleAgentMarkdown(request, url)) ??
+      (await tanstack.fetch(request, env, ctx))
     const headers = new Headers(res.headers)
     for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v)
+    // Negotiated paths serve HTML or Markdown per Accept — caches must key on it.
+    if (isNegotiatedPath(url.pathname)) {
+      const vary = headers.get("Vary")
+      const hasAccept = vary
+        ?.split(",")
+        .some((v) => v.trim().toLowerCase() === "accept")
+      if (!hasAccept) headers.append("Vary", "Accept")
+    }
     return new Response(res.body, {
       status: res.status,
       statusText: res.statusText,

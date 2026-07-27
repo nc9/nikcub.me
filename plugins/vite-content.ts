@@ -18,10 +18,13 @@ import type { Plugin } from "vite"
  * instead of compiling to React components. The HTML lands in per-file lazy
  * chunks, keeping post bodies out of the listing bundles.
  *
- * Two import flavours (selected by query):
- *   `?meta` → `export default <PostMeta>` (frontmatter + derived, no html). Used
- *             eagerly by listing pages — small.
- *   default → `export default { ...meta, html }`. Loaded lazily per post/page.
+ * Three import flavours (selected by query):
+ *   `?meta`     → `export default <PostMeta>` (frontmatter + derived, no html).
+ *                 Used eagerly by listing pages — small.
+ *   `?markdown` → `export default <string>`: a clean agent-facing Markdown doc
+ *                 (title/byline header + body, comments and diagram markers
+ *                 stripped). Served via content negotiation and `.md` URLs.
+ *   default     → `export default { ...meta, html }`. Loaded lazily per post.
  */
 
 const CONTENT_RE = /\/content\/(?:posts|pages)\/[^/]+\.m(?:d|dx)$/
@@ -90,6 +93,31 @@ function buildMeta(slug: string, raw: string): Meta {
   }
 }
 
+/**
+ * Agent-facing Markdown: the post body as authored, minus HTML comments
+ * (drafting notes) and diagram markers (client-only React), with a plain
+ * title/byline header instead of YAML frontmatter.
+ */
+function buildMarkdown(slug: string, raw: string): string {
+  const { data, content } = matter(raw)
+  const title = String(data.title ?? slug)
+  const parsedDate = data.date ? new Date(String(data.date)) : null
+  const date =
+    parsedDate && !Number.isNaN(parsedDate.getTime())
+      ? parsedDate.toISOString().slice(0, 10)
+      : ""
+  const body = rewriteAssets(content)
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(
+      /<div data-diagram="([\w-]+)"><\/div>/g,
+      "> *[Interactive diagram “$1” — rendered on the web version of this post.]*",
+    )
+    .replace(/\n{3,}/g, "\n\n")
+    .trim()
+  const header = date ? `# ${title}\n\n*${date}*` : `# ${title}`
+  return `${header}\n\n${body}\n`
+}
+
 async function buildHtml(raw: string): Promise<string> {
   const { content } = matter(raw)
   const file = await processor.process(rewriteAssets(content))
@@ -110,6 +138,13 @@ export function markdownContent(): Plugin {
       if (query === "meta") {
         return {
           code: `export default ${JSON.stringify(meta)}`,
+          map: null,
+        }
+      }
+
+      if (query === "markdown") {
+        return {
+          code: `export default ${JSON.stringify(buildMarkdown(slug, code))}`,
           map: null,
         }
       }
