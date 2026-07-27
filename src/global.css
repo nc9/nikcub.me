@@ -283,6 +283,19 @@
   background: color-mix(in oklab, var(--viz-node-border) 55%, transparent);
 }
 
+/* Worktree lane pool (worktree-lanes diagram) */
+.dg-lanes {
+  @apply my-2 grid w-full gap-2;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  max-width: 40rem;
+}
+.dg-canvas--col .dg-lanes .dg-node {
+  @apply w-full px-3;
+}
+.dg-lanes + .dg-chip {
+  @apply mt-2 max-w-none;
+}
+
 /* Hollow board-status dot inline with a node label or return chip */
 .dg-dot {
   @apply mr-1.5 inline-block size-2.5 rounded-full border-2 align-[-1px];

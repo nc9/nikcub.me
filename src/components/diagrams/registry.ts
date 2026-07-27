@@ -3,6 +3,8 @@ import { AgentLoopDiagram } from "./agent-loop"
 import { AuditBoardDiagram } from "./audit-board"
 import { IssueStatesDiagram } from "./issue-states"
 import { LoopSessionsDiagram } from "./loop-sessions"
+import { PrChecksDiagram } from "./pr-checks"
+import { WorktreeLanesDiagram } from "./worktree-lanes"
 
 /**
  * Diagrams embeddable from markdown via `<div data-diagram="name"></div>`.
@@ -14,4 +16,6 @@ export const DIAGRAMS: Record<string, ComponentType> = {
   "audit-board": AuditBoardDiagram,
   "issue-states": IssueStatesDiagram,
   "loop-sessions": LoopSessionsDiagram,
+  "pr-checks": PrChecksDiagram,
+  "worktree-lanes": WorktreeLanesDiagram,
 }
