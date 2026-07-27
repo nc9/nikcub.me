@@ -1,6 +1,5 @@
 import { createFileRoute, notFound } from "@tanstack/react-router"
-import { ArrowLeft, Calendar, Clock } from "lucide-react"
-import { Link } from "@/components/link"
+import { Calendar, Clock } from "lucide-react"
 import { getPostMeta, loadPost } from "@/lib/posts"
 import { seo } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
@@ -64,16 +63,6 @@ function PostPage() {
 
   return (
     <article className="mx-auto max-w-2xl px-6 py-12">
-      <div className="mb-8">
-        <Link
-          href="/posts"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to writing
-        </Link>
-      </div>
-
       <header className="mb-12">
         <h1 className="mb-4 text-3xl font-semibold text-foreground">
           {post.title}
