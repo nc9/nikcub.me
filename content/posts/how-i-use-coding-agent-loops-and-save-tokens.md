@@ -12,28 +12,30 @@ status: draft
 
 I'm going to go over the software development loop I use across projects using coding agents. It allows me to implement features and fixes in a safe manner with supervision, and implemented in a way that saves tokens by picking the right model for each task.
 
-I have abstracted this process into a deterministic tool that I wrote which I'll introduce at the end - but I'm not asking you to use it, or even follow my own process exactly. Use your own coding agent to setup your own loop and process that suits your, or your teams, process. 
+I have abstracted this process into a tool that I wrote which I'll introduce at the end - but I'm not asking you to use it, or even follow my own process exactly. Use your own coding agent to setup your own loop and process that suits your, or your teams, process. 
+
+The key is to have a process and to enforce it with a process backed by a deterministic process 
 
 ## Overview
 
 Here is how it works:
 
-1. I use my coding agent to create issues - tagged as features, bug fixes, security issues, etc. I don't use built in plan modes but rather have planning sessions where the issue is the plan, with everything required for an agent to implement it.
+1. I use my coding agent to create issues - tagged as features, bug fixes, security issues, etc. I don't use built in plan modes but rather have planning sessions where the issue is the plan, with everything required for an agent to implement it. Each issue has acceptance criteria that are checked by the parent loop on review and merge.
 2. I assign a harness, model and effort level to the task as well as priority, etc.
 2. Once an issue is marked ready, my primary agent loop picks it up and spins up a subagent  (claude can fire up codex, or opencode, and vice-versa) and runs the implementation from the plan. It operates in a worktree in one of `x` assigned lanes. 
 3. Local review skill is run in a loop until satisfied by the parent monitoring agent, where a pull request is created 
 4. CI is run on the server along with cloud review (claude, greptile, bugbot, etc.) and any human review or comments
 4. Pull request is reviewed by a human and any comments or feedback left are polled by the implementing agent and updated 
-5. Once review is satisfied, the issue is marked as ready and if it isn't marked as sensitive is auto-merged
+5. Once review is satisfied, the parent agent checks against the acceptance critereathe issue is marked as ready and if it isn't marked as sensitive is auto-merged
 6. Sensitive issues (designated security, auth, payments, etc. - all options specified via labels) are human merged
 
-I use a coding agent with a smart model (Fable, Sol, class) at a high thinking level (high or xhigh) to monitor the loop. I use a separate session to maange the issue stack.
+I use a coding agent with a smart model (Fable, Sol, class) at a high thinking level (high or xhigh) to instantiate and then monitor the loop. I use a separate session to manange the issues and docs that feed into the loop.
 
-The agent can work through the backlog unattended and continusouly integrate into a development environment autonomously. Production deploys are still human managed, as are the designated sensitive tasks - but otherwise most work is engineering management with issues.
+The agent can work through the backlog unattended and continusouly deploy into a development environment autonomously. Production deploys are still human managed, as are the designated sensitive tasks - but otherwise most work is engineering management with issues.
 
 Delegating issues to specific models and effort levels mean we can save a lot on costs - up to 80% or so, and implement faster without projects becoming a token inferno. 
 
-I use Github issues and a private project board. I previously used Linear but found that native Github was fine and the cli worked better than the Linear MCP server[^1] - but that is also user preference. 
+I use Github issues and a private project board. I previously used Linear but found that native Github was fine and the cli worked better than the Linear MCP server[^1] - but that comes down to user preference.
 
 Here is what the board looks like once setup
 
@@ -44,7 +46,16 @@ Concretely, the batch I'll walk through at the end: five issues off a real backl
 
 <div data-diagram="issue-states"></div>
 
-## Step 0: make your repo worktree-compatible
+## Step 0: Engineering hygeine 
+
+Projects need a solid foundation to build on. It enqusre quality and prevents drift. A good project setup contains:
+
+- Worktrees setup - this allows you to work on more than one issue at once 
+- Repo docs in `{CLAUDE,AGENTS}.md` (symlink them) that set out the purpose of the project and the overall structure
+- A solid architecture (layout, schemas, types, interfaces, etc.)[^2]
+- Extensive unit testing and e2e tests 
+- Both local hook and CI that run formatting / linting, typechecking, unit tests 
+- Docs on how acceptance testing works (browser testing, cli testing, etc.)
 
 Before any of this works, one primitive you have to internalize: **the agents never touch your checkout.** Every session runs in a git worktree — a second working copy sharing the same repo — so an overnight loop can't trash the branch you're on. Claude and Codex both operate fine inside worktrees; the loop hands each session one and takes it back after.
 
@@ -463,3 +474,5 @@ Every expensive thing in an agent loop has a cheap deterministic equivalent, and
 Use the model for judgement. Use code for decisions. A good loop is mostly the second thing.
 
 [^1]: This is a rare example of where I've found a cli option to work better than the MCP
+
+[^2]: An environment of good code usually leads to agents writing better code.
