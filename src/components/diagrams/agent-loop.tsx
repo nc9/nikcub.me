@@ -1,25 +1,28 @@
-import { FlowArrow, FlowDiagram, FlowLoop, FlowNode } from "./flow"
+import { FlowArrow, FlowDiagram, FlowNode } from "./flow"
 
 /** The coding-agent loop from "How I Use Coding Agent Loops and Save Tokens". */
 export function AgentLoopDiagram() {
   return (
-    <FlowDiagram caption="One pass of the loop — every issue gets a cold session; state lives in the issue, the board, and the PR.">
-      <FlowNode label="claim issue" sub="board: Ready" />
-      <FlowArrow />
-      <FlowNode label="worktree" />
-      <FlowArrow />
-      <FlowNode label="implement" sub="headless session" />
-      <FlowArrow />
-      <FlowNode label="PR" />
-      <FlowArrow />
+    <FlowDiagram
+      layout="column"
+      returnLabel="next issue"
+      caption="One pass of the loop — every issue gets a cold session; state lives in the issue, the board, and the PR."
+    >
+      <FlowNode label="claim an issue" sub="board status: Ready" />
+      <FlowArrow direction="down" />
+      <FlowNode label="worktree" sub="isolated checkout" />
+      <FlowArrow direction="down" />
+      <FlowNode label="implement" sub="headless session · cold start" />
+      <FlowArrow direction="down" />
+      <FlowNode label="open PR" sub="the work, on record" />
+      <FlowArrow direction="down" />
       <FlowNode label="CI" />
-      <FlowArrow />
-      <FlowNode label="adversarial review" sub="second session" />
-      <FlowArrow />
+      <FlowArrow direction="down" label="green" />
+      <FlowNode label="adversarial review" sub="second cold session" />
+      <FlowArrow direction="down" label="rubric = acceptance criteria" />
       <FlowNode accent label="deterministic gate" sub="code, not a prompt" />
-      <FlowArrow />
+      <FlowArrow direction="down" />
       <FlowNode label="merge or block" />
-      <FlowLoop label="next issue" />
     </FlowDiagram>
   )
 }

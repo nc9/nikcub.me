@@ -8,14 +8,36 @@ import type { ReactNode } from "react"
 
 export function FlowDiagram({
   caption,
+  layout = "row",
+  returnLabel,
   children,
 }: {
   caption?: string
+  /** "row" wraps nodes horizontally; "column" stacks them down a spine. */
+  layout?: "row" | "column"
+  /** Column layout only: dashed loop-back edge up the left side. */
+  returnLabel?: string
   children: ReactNode
 }) {
+  const canvasClass =
+    layout === "column" ? "dg-canvas dg-canvas--col" : "dg-canvas"
   return (
     <figure className="dg">
-      <div className="dg-canvas">{children}</div>
+      <div className={canvasClass}>
+        {layout === "column" ? (
+          <div className="dg-spine">
+            {returnLabel && (
+              <div aria-hidden="true" className="dg-return">
+                <span className="dg-return-head">▸</span>
+                <span className="dg-return-label">↺ {returnLabel}</span>
+              </div>
+            )}
+            {children}
+          </div>
+        ) : (
+          children
+        )}
+      </div>
       {caption && <figcaption className="dg-caption">{caption}</figcaption>}
     </figure>
   )
@@ -38,7 +60,21 @@ export function FlowNode({
   )
 }
 
-export function FlowArrow({ label }: { label?: string }) {
+export function FlowArrow({
+  label,
+  direction = "right",
+}: {
+  label?: string
+  direction?: "right" | "down"
+}) {
+  if (direction === "down") {
+    return (
+      <div aria-hidden="true" className="dg-arrow dg-arrow--down">
+        <span>↓</span>
+        {label && <span className="dg-arrow-label">{label}</span>}
+      </div>
+    )
+  }
   return (
     <div aria-hidden="true" className="dg-arrow">
       {label && <span className="dg-arrow-label">{label}</span>}

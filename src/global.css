@@ -174,6 +174,61 @@
   @apply font-mono text-[0.625rem];
   color: var(--viz-label);
 }
+
+/* Column ("spine") layout — one node per row, loop-back edge on the left. */
+.dg-canvas--col {
+  @apply flex-col py-10 pr-4 pl-14;
+}
+.dg-spine {
+  @apply relative flex flex-col items-center;
+}
+.dg-canvas--col .dg-node {
+  @apply w-64 px-5 py-3;
+}
+.dg-canvas--col .dg-node-label {
+  @apply text-sm;
+}
+.dg-canvas--col .dg-node-sub {
+  @apply text-xs;
+}
+.dg-arrow--down {
+  @apply flex-row gap-1.5 py-1.5 text-base;
+}
+.dg-arrow--down .dg-arrow-label {
+  @apply text-[0.6875rem];
+}
+/* Dashed loop-back: hugs the node column, first-node-center → last-node-center. */
+.dg-return {
+  @apply absolute rounded-l-lg border-y border-l border-dashed;
+  border-color: var(--viz-edge);
+  left: -3rem;
+  width: 2.25rem;
+  top: 1.5rem;
+  bottom: 1.5rem;
+}
+.dg-return-head {
+  @apply absolute font-mono text-sm leading-none;
+  color: var(--viz-edge);
+  right: -0.35rem;
+  top: -0.5em;
+}
+.dg-return-label {
+  @apply absolute top-1/2 left-0 -rotate-90 font-mono text-[0.6875rem] whitespace-nowrap;
+  color: var(--viz-label);
+  translate: -50% -50%;
+}
+@media (max-width: 640px) {
+  .dg-canvas--col {
+    @apply pl-10;
+  }
+  .dg-canvas--col .dg-node {
+    @apply w-56;
+  }
+  .dg-return {
+    left: -2.25rem;
+    width: 1.5rem;
+  }
+}
 .dg-loop {
   @apply mt-3 flex w-full items-center justify-center gap-2 font-mono text-[0.6875rem];
   color: var(--viz-label);
