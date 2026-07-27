@@ -1,4 +1,5 @@
 import { Link } from "@/components/link"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
   return (
@@ -26,7 +27,7 @@ export function SiteHeader() {
               </p>
             </div>
           </div>
-          <nav className="flex gap-6 text-sm">
+          <nav className="flex items-center gap-6 text-sm">
             <Link
               href="/posts"
               className="text-muted-foreground transition-colors hover:text-highlight"
@@ -45,6 +46,7 @@ export function SiteHeader() {
             >
               Contact
             </Link>
+            <ThemeToggle />
           </nav>
         </div>
       </div>
