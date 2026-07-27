@@ -6,7 +6,7 @@ export const siteConfig = {
   url: "https://nikcub.me",
   ogImage: "/og-default.png",
   author: "Nik Cubrilovic",
-  twitter: "@nikcub",
+  twitter: "@dir",
   social: {
     twitter: "https://twitter.com/dir",
     github: "https://github.com/nc9",
