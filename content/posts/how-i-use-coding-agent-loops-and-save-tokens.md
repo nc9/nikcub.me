@@ -32,6 +32,23 @@ Concretely, the batch I'll walk through at the end: five issues off a real backl
 
 <div data-diagram="issue-states"></div>
 
+## Step 0: make your repo worktree-compatible
+
+Before any of this works, one primitive you have to internalize: **the agents never touch your checkout.** Every session runs in a git worktree — a second working copy sharing the same repo — so an overnight loop can't trash the branch you're on. Claude and Codex both operate fine inside worktrees; the loop hands each session one and takes it back after.
+
+Spinning up a fresh worktree per issue is heavy, though — a cold `bun install` every time, and none of your local env. So hamster keeps a small pool of persistent **lanes** (`lane-0`, `lane-1`, …) and reuses them: `node_modules` and build caches stay warm, and per-issue prep is salvage-anything-left-behind → reset → branch off the fresh base → incremental install. `worktree_lanes` in the config sizes the pool.
+
+The part everyone hits first: worktrees are born **without your git-ignored files**. Your `.env`, `.dev.vars`, local config — invisible to every session, so builds and tests fail in ways your main checkout never shows. Declare what gets copied in with a `.worktreeinclude` at the repo root, gitignore-style:
+
+```
+# copied into every lane before a session runs
+.env
+.env.*
+.dev.vars
+```
+
+`hamster doctor` warns about env-style files you haven't covered, and `hamster init` scaffolds the file from what it detects. Do this once, before the first run — it's the difference between a loop that works the first night and an evening of debugging phantom CI failures.
+
 ## What a loop actually is
 
 Not a chat that runs long. A loop is:
