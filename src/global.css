@@ -276,6 +276,92 @@
 }
 
 /*
+  Kanban board (GitHub Projects style). Column colors mirror the real board's
+  single-select option colors (GRAY/GREEN/BLUE/PURPLE/RED/PINK) in GitHub's
+  own light/dark hexes — status colors, kept separate from --viz-series-*.
+*/
+:root {
+  --kb-gray: #59636e;
+  --kb-green: #1a7f37;
+  --kb-blue: #0969da;
+  --kb-purple: #8250df;
+  --kb-red: #cf222e;
+  --kb-pink: #bf3989;
+}
+.dark {
+  --kb-gray: #9198a1;
+  --kb-green: #3fb950;
+  --kb-blue: #4493f8;
+  --kb-purple: #ab7df8;
+  --kb-red: #f85149;
+  --kb-pink: #f778ba;
+}
+/* Breakout: widen a figure past the prose column, centered, capped to viewport */
+.dg--wide {
+  width: min(72.5rem, calc(100vw - 3rem));
+  margin-inline: calc((100% - min(72.5rem, calc(100vw - 3rem))) / 2);
+}
+.kb-scroll {
+  --viz-canvas-bg: color-mix(in oklab, var(--viz-node-bg) 40%, var(--background));
+  @apply overflow-x-auto rounded-lg border px-4 py-4;
+  border-color: var(--border);
+  background: var(--viz-canvas-bg);
+}
+.kb-board {
+  @apply flex min-w-max gap-3;
+}
+.kb-col {
+  @apply w-44 shrink-0 rounded-md border px-2 pt-2 pb-2;
+  border-color: var(--viz-node-border);
+  background: color-mix(in oklab, var(--viz-node-bg) 55%, var(--background));
+}
+.kb-col-head {
+  @apply flex items-center gap-1.5 px-1 pb-0.5;
+}
+/* GitHub-style hollow status dot */
+.kb-col-dot {
+  @apply size-3 shrink-0 rounded-full border-2;
+  border-color: var(--kb-color);
+}
+.kb-col-name {
+  @apply font-mono text-[0.8125rem] font-medium;
+  color: var(--viz-node-text);
+}
+.kb-col-count {
+  @apply ml-auto rounded-full px-1.5 font-mono text-[0.6875rem] tabular-nums;
+  color: var(--viz-label);
+  background: color-mix(in oklab, var(--viz-node-border) 45%, transparent);
+}
+.kb-col-sub {
+  @apply mb-1.5 block px-1 font-mono text-[0.625rem] leading-snug;
+  color: var(--viz-node-sub);
+}
+.kb-card {
+  @apply mt-1.5 rounded-md border px-2 py-1.5;
+  background: var(--viz-node-bg);
+  border-color: var(--viz-node-border);
+  box-shadow: 0 1px 2px oklch(0.2 0.02 45 / 0.06);
+}
+.kb-card-num {
+  @apply block font-mono text-[0.625rem];
+  color: var(--viz-node-sub);
+}
+.kb-card-title {
+  @apply block text-[0.75rem] leading-snug font-medium;
+  color: var(--viz-node-text);
+}
+.kb-card-labels {
+  @apply mt-1 flex flex-wrap gap-1;
+}
+/* GitHub-style label pill; --kb-label is the label's own hex, tinted for theme */
+.kb-label {
+  @apply rounded-full border px-1.5 font-mono text-[0.5625rem] leading-4 whitespace-nowrap;
+  color: color-mix(in oklab, var(--kb-label) 60%, var(--foreground));
+  border-color: color-mix(in oklab, var(--kb-label) 45%, transparent);
+  background: color-mix(in oklab, var(--kb-label) 14%, transparent);
+}
+
+/*
   Article/content typography. The old Next site never loaded
   @tailwindcss/typography — every element was styled explicitly via its
   mdxComponents map. Our markdown compiles to unclassed HTML, so we reproduce
