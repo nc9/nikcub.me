@@ -8,9 +8,9 @@ import { seo } from "@/lib/seo"
 export const Route = createFileRoute("/")({
   head: () =>
     seo({
-      title: "Nik Cubrilovic | AI, Data Engineering & Digital Society",
+      title: "Nik Cubrilovic | AI, Data Engineering & Tech",
       description:
-        "Engineer writing about AI, data engineering, and digital society. Long-form articles and observations on technology's impact on our world.",
+        "Engineer writing about AI, data engineering, and tech. Long-form articles and observations on technology.",
       path: "/",
     }),
   component: HomePage,
@@ -25,9 +25,8 @@ function HomePage() {
       <div className="mb-16">
         <h1 className="sr-only">Nik Cubrilovic - Engineer</h1>
         <p className="text-lg leading-relaxed text-foreground">
-          I write about AI, data engineering, and the intersection of technology
-          and society. Building systems, exploring ideas, and examining how
-          technology shapes our digital world.
+          I write about AI, data engineering, and tech. Building systems,
+          exploring ideas, and writing down what I learn along the way.
         </p>
         <Link
           href="/about"

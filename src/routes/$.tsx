@@ -16,7 +16,7 @@ export const Route = createFileRoute("/$")({
     return seo({
       title: meta.title,
       description:
-        meta.excerpt || "Engineer writing about AI, data, and digital society",
+        meta.excerpt || "Engineer writing about AI, data, and tech",
       path: `/${meta.slug}`,
       image: meta.featureImage,
     })

@@ -1,9 +1,8 @@
 export const siteConfig = {
   name: "Nik Cubrilovic",
-  title:
-    "Nik Cubrilovic | Engineer writing about AI, data, and digital society",
+  title: "Nik Cubrilovic | Engineer writing about AI, data, and tech",
   description:
-    "Engineer writing about AI, data engineering, and digital society. Long-form articles and observations on technology's impact on our world.",
+    "Engineer writing about AI, data engineering, and tech. Long-form articles and observations on technology.",
   url: "https://nikcub.me",
   ogImage: "/og-default.png",
   author: "Nik Cubrilovic",

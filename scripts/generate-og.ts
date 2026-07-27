@@ -31,7 +31,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
   <text x="${cx}" y="402" text-anchor="middle" font-family="Georgia" font-weight="bold"
     font-size="82" fill="${FG}">Nik Cubrilovic</text>
   <text x="${cx}" y="454" text-anchor="middle" font-family="Georgia"
-    font-size="33" fill="${MUT}">Engineer writing about AI, data &amp; society</text>
+    font-size="33" fill="${MUT}">Engineer writing about AI, data &amp; tech.</text>
   <line x1="${cx - 40}" y1="500" x2="${cx + 40}" y2="500" stroke="${PUR}" stroke-width="4"/>
   <text x="${cx}" y="562" text-anchor="middle" font-family="Georgia" font-weight="500"
     font-size="27" fill="${PRI}">nikcub.me</text>
