@@ -2,33 +2,45 @@
 title: How I Use Coding Agent Loops and Save Tokens
 date: 2026-07-26T00:00:00+0000
 excerpt: An autonomous loop that grinds through a GitHub backlog overnight, and the context discipline that makes it affordable. The merge decision is thirty lines of TypeScript, not a prompt.
+summary:
+  - A deterministic loop turns a GitHub backlog into reviewed, merged PRs overnight — issues in, deploys out.
+  - Every issue runs in its own git worktree with a fresh headless agent session, so nothing touches your checkout.
+  - The merge decision is thirty lines of TypeScript, not a prompt — use the model for judgement, code for decisions.
+  - Picking the right model per task and keeping each session's context small is where the token savings come from.
 status: draft
 ---
 
-<!--
-OUTLINE DRAFT — Nik to rewrite in his voice. Every number and quote below is
-real, pulled from the squirrelscan loop's memory corpus and source comments.
-Markers:
-  [CUT] = candidate to cut if long
-~5200 words. Every number and quote is real, from the 2026-07-26 batch.
-NOW LONG ENOUGH TO SPLIT. Natural break: everything through "A run, in full"
-is post one (the loop + the real batch); "Now the token half" onward is post
-two (context economy). The five-bugs table is the strongest thing here and
-should anchor whichever post keeps it.
--->
+I'm going to go over the software development loop I use across projects using coding agents. It allows me to implement features and fixes in a safe manner with supervision, and implemented in a way that saves tokens by picking the right model for each task.
 
-## The setup
+I have abstracted this process into a deterministic tool that I wrote which I'll introduce at the end - but I'm not asking you to use it, or even follow my own process exactly. Use your own coding agent to setup your own loop and process that suits your, or your teams, process. 
 
-Two claims worth separating, because writing about agent loops usually conflates them:
+## Overview
 
-1. An agent can work through a backlog unattended.
-2. Doing that is affordable and safe.
+Here is how it works:
 
-The first is nearly free now. Everything interesting is in the second.
+1. I use my coding agent to create issues - tagged as features, bug fixes, security issues, etc. I don't use built in plan modes but rather have planning sessions where the issue is the plan, with everything required for an agent to implement it.
+2. I assign a harness, model and effort level to the task as well as priority, etc.
+2. Once an issue is marked ready, my primary agent loop picks it up and spins up a subagent  (claude can fire up codex, or opencode, and vice-versa) and runs the implementation from the plan. It operates in a worktree in one of `x` assigned lanes. 
+3. Local review skill is run in a loop until satisfied by the parent monitoring agent, where a pull request is created 
+4. CI is run on the server along with cloud review (claude, greptile, bugbot, etc.) and any human review or comments
+4. Pull request is reviewed by a human and any comments or feedback left are polled by the implementing agent and updated 
+5. Once review is satisfied, the issue is marked as ready and if it isn't marked as sensitive is auto-merged
+6. Sensitive issues (designated security, auth, payments, etc. - all options specified via labels) are human merged
+
+I use a coding agent with a smart model (Fable, Sol, class) at a high thinking level (high or xhigh) to monitor the loop. I use a separate session to maange the issue stack.
+
+The agent can work through the backlog unattended and continusouly integrate into a development environment autonomously. Production deploys are still human managed, as are the designated sensitive tasks - but otherwise most work is engineering management with issues.
+
+Delegating issues to specific models and effort levels mean we can save a lot on costs - up to 80% or so, and implement faster without projects becoming a token inferno. 
+
+I use Github issues and a private project board. I previously used Linear but found that native Github was fine and the cli worked better than the Linear MCP server[^1] - but that is also user preference. 
+
+Here is what the board looks like once setup
+
+<div data-diagram="audit-board"></div>
 
 Concretely, the batch I'll walk through at the end: five issues off a real backlog, four pull requests, three of them good, one correctly caught as a regression, one correctly refused because it touched a database migration. The loop's judgement was right in every single case. Everything that went wrong went wrong in the plumbing around it — five separate bugs, every one of them a signal that reported success when nothing had happened.
 
-<div data-diagram="audit-board"></div>
 
 <div data-diagram="issue-states"></div>
 
@@ -449,3 +461,5 @@ Every expensive thing in an agent loop has a cheap deterministic equivalent, and
 | an unbounded review loop | a cap of four |
 
 Use the model for judgement. Use code for decisions. A good loop is mostly the second thing.
+
+[^1]: This is a rare example of where I've found a cli option to work better than the MCP
