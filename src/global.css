@@ -176,12 +176,18 @@
   color: var(--viz-label);
 }
 
-/* Column ("spine") layout — one node per row, loop-back edge on the left. */
+/* Column ("spine") layout — grid: [left gutter | nodes | right gutter].
+   Loop-back edges (FlowReturn) live in the gutters and span node rows. */
 .dg-canvas--col {
-  @apply flex-col py-10 pr-6 pl-24;
+  @apply flex-col px-12 py-10;
 }
 .dg-spine {
-  @apply relative flex flex-col items-center;
+  @apply grid;
+  grid-template-columns: 3.25rem minmax(0, auto) 3.25rem;
+}
+.dg-cell {
+  @apply flex items-center justify-center;
+  grid-column: 2;
 }
 .dg-canvas--col .dg-node {
   @apply w-64 px-5 py-3;
@@ -198,38 +204,59 @@
 .dg-arrow--down .dg-arrow-label {
   @apply text-[0.6875rem];
 }
-/* Dashed loop-back: hugs the node column, first-node-center → last-node-center. */
+/* Dashed loop-back bracket; margins pull its ends to the node midlines. */
 .dg-return {
-  @apply absolute rounded-l-lg border-y border-l border-dashed;
+  @apply relative border-y border-dashed;
   border-color: var(--viz-edge);
-  left: -3rem;
-  width: 2.25rem;
-  top: 1.5rem;
-  bottom: 1.5rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+.dg-return--left {
+  @apply rounded-l-lg border-l;
+  grid-column: 1;
+  margin-right: 0.875rem;
+  margin-left: 0.125rem;
+}
+.dg-return--right {
+  @apply rounded-r-lg border-r;
+  grid-column: 3;
+  margin-left: 0.875rem;
+  margin-right: 0.125rem;
 }
 .dg-return-head {
   @apply absolute font-mono text-sm leading-none;
   color: var(--viz-edge);
-  right: -0.35rem;
   top: -0.5em;
+}
+.dg-return--left .dg-return-head {
+  right: -0.35rem;
+}
+.dg-return--right .dg-return-head {
+  left: -0.35rem;
 }
 /* Horizontal chip centered on the return line; canvas-bg masks the dash behind it. */
 .dg-return-label {
-  @apply absolute top-1/2 left-0 rounded px-1.5 py-0.5 font-mono text-[0.6875rem] whitespace-nowrap;
+  @apply absolute top-1/2 rounded px-1.5 py-0.5 font-mono text-[0.6875rem] whitespace-nowrap;
   color: var(--viz-label);
   background: var(--viz-canvas-bg);
+}
+.dg-return--left .dg-return-label {
+  left: 0;
   translate: -50% -50%;
+}
+.dg-return--right .dg-return-label {
+  right: 0;
+  translate: 50% -50%;
 }
 @media (max-width: 640px) {
   .dg-canvas--col {
-    @apply pr-2 pl-16;
+    @apply px-4;
+  }
+  .dg-spine {
+    grid-template-columns: 2rem minmax(0, auto) 2rem;
   }
   .dg-canvas--col .dg-node {
     @apply w-56;
-  }
-  .dg-return {
-    left: -2.25rem;
-    width: 1.5rem;
   }
   .dg-return-label {
     @apply text-[0.625rem];

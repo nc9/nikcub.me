@@ -1,4 +1,4 @@
-import { FlowArrow, FlowDiagram, FlowNode } from "./flow"
+import { FlowArrow, FlowDiagram, FlowNode, FlowReturn } from "./flow"
 
 /** The coding-agent loop from "How I Use Coding Agent Loops and Save Tokens". */
 export function AgentLoopDiagram() {
@@ -8,6 +8,8 @@ export function AgentLoopDiagram() {
       returnLabel="next issue"
       caption="One pass of the loop — every issue gets a cold session; state lives in the issue, the board, and the PR."
     >
+      {/* inner loop: review findings go back to code (implement=3 … review=6) */}
+      <FlowReturn side="right" from={3} to={6} label="fix findings" />
       <FlowNode label="claim an issue" sub="board status: Ready" />
       <FlowArrow direction="down" />
       <FlowNode label="worktree" sub="isolated checkout" />
