@@ -1,6 +1,7 @@
 import type { ComponentType } from "react"
 import { AgentLoopDiagram } from "./agent-loop"
 import { AuditBoardDiagram } from "./audit-board"
+import { IssueStatesDiagram } from "./issue-states"
 
 /**
  * Diagrams embeddable from markdown via `<div data-diagram="name"></div>`.
@@ -10,4 +11,5 @@ import { AuditBoardDiagram } from "./audit-board"
 export const DIAGRAMS: Record<string, ComponentType> = {
   "agent-loop": AgentLoopDiagram,
   "audit-board": AuditBoardDiagram,
+  "issue-states": IssueStatesDiagram,
 }

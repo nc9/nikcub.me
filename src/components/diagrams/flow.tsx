@@ -87,6 +87,17 @@ export function FlowDiagram({
   )
 }
 
+/** Small status dot (board colors) — `color` is a --kb-* token name. */
+function StatusDot({ color }: { color: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className="dg-dot"
+      style={{ "--kb-color": `var(--kb-${color})` } as CSSProperties}
+    />
+  )
+}
+
 interface FlowReturnProps {
   /** 1-based node number the edge re-enters (the arrowhead end). */
   from: number
@@ -94,6 +105,8 @@ interface FlowReturnProps {
   to: number
   side?: "left" | "right"
   label: string
+  /** Board-status dot in the chip instead of the ↺ glyph (--kb-* name). */
+  dot?: string
   /** Grid placement — injected by FlowDiagram, don't pass manually. */
   style?: CSSProperties
 }
@@ -102,6 +115,7 @@ interface FlowReturnProps {
 export function FlowReturn({
   side = "left",
   label,
+  dot,
   style,
 }: FlowReturnProps) {
   return (
@@ -111,7 +125,10 @@ export function FlowReturn({
       style={style}
     >
       <span className="dg-return-head">{side === "left" ? "▸" : "◂"}</span>
-      <span className="dg-return-label">↺ {label}</span>
+      <span className="dg-return-label">
+        {dot ? <StatusDot color={dot} /> : "↺ "}
+        {label}
+      </span>
     </div>
   )
 }
@@ -120,14 +137,20 @@ export function FlowNode({
   label,
   sub,
   accent = false,
+  dot,
 }: {
   label: string
   sub?: string
   accent?: boolean
+  /** Board-status dot before the label (--kb-* token name, e.g. "green"). */
+  dot?: string
 }) {
   return (
     <div className={accent ? "dg-node dg-node--accent" : "dg-node"}>
-      <span className="dg-node-label">{label}</span>
+      <span className="dg-node-label">
+        {dot && <StatusDot color={dot} />}
+        {label}
+      </span>
       {sub && <span className="dg-node-sub">{sub}</span>}
     </div>
   )
