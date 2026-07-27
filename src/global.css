@@ -234,6 +234,55 @@
 .dg-return--right .dg-return-head {
   left: -0.35rem;
 }
+/* Two-session topology (loop-sessions): [left | connector | right] grid */
+.dg-duo {
+  @apply grid w-full items-center justify-items-center gap-x-2 gap-y-1;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  max-width: 36rem;
+}
+.dg-duo-span {
+  grid-column: 1 / -1;
+}
+.dg-duo-left {
+  @apply w-full;
+  grid-column: 1;
+}
+.dg-duo-mid {
+  grid-column: 2;
+}
+.dg-duo-mid .dg-arrow-label {
+  @apply max-w-16 text-center whitespace-normal;
+}
+.dg-duo-right {
+  @apply w-full;
+  grid-column: 3;
+}
+.dg-duo .dg-node {
+  @apply mx-auto max-w-60 px-4 py-2.5;
+}
+/* Static dashed chip (non-positioned cousin of .dg-return-label) */
+.dg-chip {
+  @apply mx-auto block max-w-44 rounded border border-dashed px-2 py-1 text-center font-mono text-[0.6875rem];
+  border-color: var(--viz-edge);
+  color: var(--viz-label);
+  background: var(--viz-canvas-bg);
+}
+/* Rough kanban skeleton inside the board node */
+.dg-board-skel {
+  @apply mt-2 mb-0.5 flex justify-center gap-1.5;
+}
+.dg-board-skel-col {
+  @apply flex flex-col items-center gap-1 rounded-sm border p-1.5;
+  border-color: color-mix(in oklab, var(--viz-node-border) 70%, transparent);
+}
+.dg-board-skel-col .dg-dot {
+  @apply mr-0 size-2 border-[1.5px];
+}
+.dg-board-skel-bar {
+  @apply h-1.5 w-8 rounded-[2px];
+  background: color-mix(in oklab, var(--viz-node-border) 55%, transparent);
+}
+
 /* Hollow board-status dot inline with a node label or return chip */
 .dg-dot {
   @apply mr-1.5 inline-block size-2.5 rounded-full border-2 align-[-1px];
