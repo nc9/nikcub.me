@@ -26,7 +26,7 @@ const POST_MD_RE = /^\/posts\/([\w-]+)\.md$/
 const POST_HTML_RE = /^\/posts\/[\w-]+$/
 
 async function loadPostMarkdown(slug: string): Promise<string | null> {
-  // getPostMeta only knows visible posts, so drafts 404 here just like HTML.
+  // getPostMeta includes drafts, matching the HTML route: a direct URL serves them.
   if (!getPostMeta(slug)) return null
   const load = markdownModules[`/content/posts/${slug}.md`]
   return load ? await load() : null

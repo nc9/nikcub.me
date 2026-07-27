@@ -290,37 +290,9 @@ The best failure in the project. I launched an overnight run against a sandbox w
 
 The security design was right. The driver was wrong to classify a config error as an implement failure. Errors need a taxonomy: a precondition that will fail identically for every item must **abort the run on first occurrence**. Fail closed, but fail closed at the right scope.
 
-## Model and effort tiering
-
-Not every issue deserves the frontier model. Policy resolves per issue across six axes — runner, model and effort, independently for implement and review — as: validated label → config default → heuristic.
-
-The heuristic: P0/P1 or size ≥ M gets the strong model; XS, or docs/test/chore/style/ci-shaped work, gets the cheap one. **Unsized defaults to expensive**, which is the right way round.
-
-An invalid label falls back to the heuristic *silently*, deliberately. A typo that reaches the spawn exits non-zero and reads as a generic implement failure, and you'll debug the wrong thing for an hour.
-
-Three CLIs can drive this, all taking model and effort as headless flags:
-
-| runner | headless | model | effort | structured output |
-|---|---|---|---|---|
-| `claude` | `claude -p` | `--model` | `--effort` | `--output-format json` |
-| `codex` | `codex exec` | `-m` | `-c model_reasoning_effort=` | `--json`, `--output-schema` |
-| `opencode` | `opencode run` | `-m provider/model` | `--variant` | `--format json` |
-
-I implement with Claude and review with Codex. Cross-vendor review isn't a gimmick — a reviewer sharing the implementer's blind spots is worth much less. Codex also takes `--output-schema`, so the rubric verdict comes back as schema-enforced JSON instead of prose to parse. [NUM — did cross-vendor review catch anything the same-vendor one didn't?]
-
-Unattended, there's a trap: **nested tools have their own consent model.** Codex reviews stalled overnight on permission prompts at two independent layers — the harness prompt, and codex's own approval elicitation for command execution, which the harness allowlist doesn't cover. Both need bypassing, in the argv, every call.
-
-### Cold sessions beat long ones
-
-A chat pays for its entire history on every turn. Fifty turns in, each new message re-reads everything before it. A headless session per issue starts near zero, does one job, exits.
-
-This inverts an instinct. Context feels like an asset — the agent "knows more". But most accumulated context is irrelevant to the next action and you pay full price for it every turn. A seventeen-issue night is eighteen small contexts instead of one enormous one.
-
-The structural version: **the parent keeps the decisions, each child keeps the evidence.** Reads, diffs, CI logs and review chatter die with the session that needed them.
-
 ### Truncate the expensive inputs
 
-The rubric grader gets the PR diff capped at 60k characters. There's no code review where character 60,001 changes the verdict, and unbounded inputs are how a routine run becomes a surprising bill. Read-only graders get exactly three tools.
+The rubric grader gets the PR diff capped at 60k characters. There's no code review where character 60,001 changes the verdict, and unbounded inputs are how a routine run becomes a surprising bill. Read-only graders get exactly three tools - we strip away the rest of the context.
 
 ## Splitting this out as an app
 
@@ -420,10 +392,9 @@ $ claude
 > issue. Don't touch anything a [[human]] rule parked.
 ```
 
+The loop init above is implemented as a slash command.
+
 The supervisor narrates claims and merges as they happen, and everything it reports comes from the structured `--json` events, not vibes. The read-only commands are its instruments: `plan` (the queue and every skip reason), `triage` (what needs a human), `reconcile` (in-flight items with no live session behind them). Start a new repo with `--pr-only` — the identical pipeline, stopped at the open PR, so you inspect real output before the merge path runs unsupervised.
-
-Two footguns in that config file, both of which cost me a run. `scripts.setup` is argv-split and never goes through a shell, so `a && b` silently doesn't work — anything compound ships as a script in the repo (the script does get `HAMSTER_*` env vars, including a cold/warm flag, so branching lives inside it). And the loop builds its worktrees from `origin/<base_branch>`, so that script has to be **merged to main** before the first run; a version sitting on your feature branch is invisible to every session.
-
 
 ## The actual lesson
 
@@ -438,6 +409,18 @@ Every expensive thing in an agent loop has a cheap deterministic equivalent, and
 | an unbounded review loop | a cap of four |
 
 Use the model for judgement. Use code for decisions. A good loop is mostly the second thing.
+
+## The Human Role
+
+With the software factory loop setup, the human role becomes:
+
+1. Writing issues alongside a coding agent - research, spec, and file
+2. Move issues to ready on the board so they can be picked up by the loop
+3. Review PRs when necassery 
+4. human acceptance tasks when prompted by the loop
+5. Production deployments
+
+The role is now software management.
 
 [^1]: This is a rare example of where I've found a cli option to work better than the MCP
 

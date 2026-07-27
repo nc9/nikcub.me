@@ -51,6 +51,13 @@ export const Route = createFileRoute("/posts/$slug")({
     }
     return {
       ...base,
+      // Drafts are reachable by direct URL only — keep crawlers from widening that.
+      meta: [
+        ...(base.meta ?? []),
+        ...(meta.status === "draft"
+          ? [{ name: "robots", content: "noindex, nofollow" }]
+          : []),
+      ],
       scripts: [
         { type: "application/ld+json", children: JSON.stringify(articleLd) },
       ],
@@ -91,6 +98,14 @@ function PostPage() {
               <span className="text-border">·</span>
               <span className="rounded bg-muted px-2 py-0.5 text-xs font-medium uppercase">
                 Aside
+              </span>
+            </>
+          )}
+          {post.status === "draft" && (
+            <>
+              <span className="text-border">·</span>
+              <span className="rounded bg-amber-500/15 px-2 py-0.5 text-xs font-medium uppercase text-amber-600 dark:text-amber-400">
+                Draft
               </span>
             </>
           )}

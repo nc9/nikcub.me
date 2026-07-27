@@ -21,22 +21,28 @@ const bodyModules = import.meta.glob<{ default: ContentDoc }>(
   "/content/posts/*.md",
 )
 
-export const POSTS: ContentMeta[] = Object.values(metaModules)
-  .filter(isVisible)
-  .sort(byDateDesc)
+const ALL_POSTS: ContentMeta[] = Object.values(metaModules)
+
+/** Listings, feeds and sitemap: visible posts only — drafts never appear here. */
+export const POSTS: ContentMeta[] = ALL_POSTS.filter(isVisible).sort(byDateDesc)
 
 export const ARTICLES = POSTS.filter((p) => p.type === "article")
 export const ASIDES = POSTS.filter((p) => p.type === "aside")
 
+/** Includes drafts: a direct URL is the sharing mechanism for a draft. */
 export function getPostMeta(slug: string): ContentMeta | undefined {
-  return POSTS.find((p) => p.slug === slug)
+  return ALL_POSTS.find((p) => p.slug === slug)
 }
 
+/**
+ * Drafts DO load here: knowing the URL is the access control (they carry
+ * noindex and appear in no listing, feed or sitemap).
+ */
 export async function loadPost(slug: string): Promise<ContentDoc | null> {
   const load = bodyModules[`/content/posts/${slug}.md`]
   if (!load) return null
   const mod = await load()
-  return isVisible(mod.default) ? mod.default : null
+  return mod.default
 }
 
 export function postSlugs(): string[] {
