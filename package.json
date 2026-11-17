@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "typecheck": "bun check",
     "dev": "vite dev --port ${PORT:-3001}",
     "build": "bun run scripts/generate-feeds.ts && vite build",
     "preview": "vite preview",
